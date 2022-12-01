@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import CreateClienteUseCase from '../@core/application/useCases/cliente/createClienteUseCase';
 import GetClienteByIDUseCase from '../@core/application/useCases/cliente/getClienteByIDUseCase';
-import { ClienteDTO } from '../@core/domain/dto/clienteDTO';
+import { ClienteDTO } from '../@core/domain/dto/clienteInputDTO';
 
 @Injectable()
 export class ClientesService {

@@ -20,7 +20,6 @@ export default class Cliente{
     endereco: string,
     cidade: string,
     estado: string,
-    dataCadastro: Date,
     dataAtualizacao: Date,
   ) {
     this.id = id;
@@ -30,7 +29,7 @@ export default class Cliente{
     this.endereco = endereco;
     this.cidade = cidade;
     this.estado = estado;
-    this.dataCadastro = dataCadastro;
-    this.dataAtualizacao = dataAtualizacao;
+    this.dataCadastro = new Date();
+    this.dataAtualizacao = dataAtualizacao || null;
   }
 }

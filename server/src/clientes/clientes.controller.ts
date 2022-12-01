@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, HttpException, HttpStatus } from '@nestjs/common';
-import { ClienteDTO } from '../@core/domain/dto/clienteDTO';
+import { ClienteDTO } from '../@core/domain/dto/clienteInputDTO';
 import { ClientesService } from './clientes.service';
 
 @Controller('clientes')

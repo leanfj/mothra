@@ -1,6 +1,6 @@
 import { IsEmail } from 'class-validator';
 
-export class ClienteDTO {
+export class ClienteInputDTO {
   id: number;
   nome: string;
 
@@ -11,6 +11,5 @@ export class ClienteDTO {
   endereco: string;
   cidade: string;
   estado: string;
-  dataCadastro: Date;
-  dataAtualizacao: Date;
+  dataAtualizacao?: Date;
 }
