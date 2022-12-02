@@ -1,11 +1,11 @@
 import { ClienteInputDTO } from '../../../domain/dto/clienteInputDTO';
 import ClienteInMemoryRepository from '../../../infra/repository/clienteInMemoryRepository';
-import CreateClienteUseCase from "./createClienteUseCase";
+import GetClienteByIDUseCase from './getClienteByIdUseCase';
 
 describe('GetClienteByIdUseCase', () => {
   it('should by return cliente by id', async () => {
     const clienteRepository = new ClienteInMemoryRepository();
-    const createClienteUseCase = new CreateClienteUseCase(clienteRepository);
+    const getClienteByIdUseCase = new GetClienteByIDUseCase(clienteRepository);
 
     const cliente: ClienteInputDTO = {
       id: 1,
@@ -17,9 +17,9 @@ describe('GetClienteByIdUseCase', () => {
       estado: 'Estado 1',
     };
 
-    await createClienteUseCase.execute(cliente);
+    await clienteRepository.create(cliente);
 
-    const clienteData = await clienteRepository.findById(1)
+    const clienteData = await getClienteByIdUseCase.execute(cliente.id)
     
     expect(cliente.nome).toBe(clienteData.nome);
   });

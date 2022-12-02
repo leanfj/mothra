@@ -1,11 +1,11 @@
 import { ClienteInputDTO } from '../../../domain/dto/clienteInputDTO';
 import ClienteInMemoryRepository from '../../../infra/repository/clienteInMemoryRepository';
-import CreateClienteUseCase from './createClienteUseCase';
 import UpdateClienteUseCase from './updateClienteUseCase';
 
 describe('UpdateClienteUseCase', () => {
   it('should be update a Cliente',async () => {
     const clienteRepository = new ClienteInMemoryRepository();
+    const updateClienteUseCase = new UpdateClienteUseCase(clienteRepository);
     
     const cliente: ClienteInputDTO = {
       id: 1,
@@ -31,7 +31,7 @@ describe('UpdateClienteUseCase', () => {
       dataAtualizacao: new Date()
     };
 
-    const clienteUpdated = await clienteRepository.update(clienteData.id, newClienteData)
+    const clienteUpdated = await updateClienteUseCase.execute(clienteData.id, newClienteData)
 
     expect(newClienteData.email).toBe(clienteUpdated.email);
   });

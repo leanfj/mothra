@@ -1,12 +1,11 @@
 import { ClienteInputDTO } from '../../../domain/dto/clienteInputDTO';
 import ClienteInMemoryRepository from '../../../infra/repository/clienteInMemoryRepository';
-import CreateClienteUseCase from './createClienteUseCase';
+import DeleteClienteUseCase from './deleteClienteUseCase';
 
-describe('UpdateClienteUseCase', () => {
+describe('DeleteClienteUseCase', () => {
   it('should be delete a Cliente',async () => {
     const clienteRepository = new ClienteInMemoryRepository();
-    const createClienteUseCase = new CreateClienteUseCase(clienteRepository);
-    
+    const deleteClienteUseCase = new DeleteClienteUseCase(clienteRepository);
     const cliente: ClienteInputDTO = {
       id: 1,
       nome: 'Cliente 1',
@@ -16,11 +15,12 @@ describe('UpdateClienteUseCase', () => {
       cidade: 'Cidade 1',
       estado: 'Estado 1',
     };
-    await createClienteUseCase.execute(cliente)
+    await clienteRepository.create(cliente)
 
     const clienteData = await clienteRepository.findById(1)
 
-    await clienteRepository.delete(clienteData.id)
+    await deleteClienteUseCase.execute(clienteData.id)
+    
     try {
       await clienteRepository.findById(1)
     } catch (error) {

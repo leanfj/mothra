@@ -5,7 +5,8 @@ import { ClientesService } from './clientes.service';
 import ClienteInMemoryRepository from '../@core/infra/repository/clienteInMemoryRepository';
 import CreateClienteUseCase from '../@core/application/useCases/cliente/createClienteUseCase';
 import ClienteRepository from '../@core/domain/repository/clienteRepository';
-import GetClienteByIDUseCase from '../@core/application/useCases/cliente/getClienteByIDUseCase';
+import GetClienteByIDUseCase from '../@core/application/useCases/cliente/getClienteByIdUseCase';
+import GetAllClienteUseCase from '../@core/application/useCases/cliente/getAllClienteUseCase';
 
 describe('ClientesController', () => {
   let controller: ClientesController;
@@ -30,6 +31,13 @@ describe('ClientesController', () => {
           provide: GetClienteByIDUseCase,
           useFactory: (clienteRepository: ClienteRepository) => {
             return new GetClienteByIDUseCase(clienteRepository);
+          },
+          inject: ['ClienteInMemoryRepository'],
+        },
+        {
+          provide: GetAllClienteUseCase,
+          useFactory: (clienteRepository: ClienteRepository) => {
+            return new GetAllClienteUseCase(clienteRepository);
           },
           inject: ['ClienteInMemoryRepository'],
         }

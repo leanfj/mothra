@@ -49,7 +49,7 @@ export default class ClienteInMemoryRepository implements ClienteRepository {
 
     const index = this.clientes.findIndex((c) => c.id === id);
 
-    if(!index) {
+    if(index === -1) {
       throw new Error("Cliente not found");
     }
 
@@ -61,7 +61,7 @@ export default class ClienteInMemoryRepository implements ClienteRepository {
   async delete(id: number): Promise<void> {
     const index = this.clientes.findIndex((c) => c.id === id);
 
-    if(!index) {
+    if(index === -1) {
       throw new Error("Cliente not found");
     }
 
