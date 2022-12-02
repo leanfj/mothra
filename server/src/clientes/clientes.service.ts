@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import CreateClienteUseCase from '../@core/application/useCases/cliente/createClienteUseCase';
 import GetClienteByIDUseCase from '../@core/application/useCases/cliente/getClienteByIDUseCase';
-import { ClienteDTO } from '../@core/domain/dto/clienteInputDTO';
+import { ClienteInputDTO } from '../@core/domain/dto/clienteInputDTO';
 
 @Injectable()
 export class ClientesService {
@@ -9,7 +9,7 @@ export class ClientesService {
     private createClienteUseCase: CreateClienteUseCase,
     private getClienteByIDUseCase: GetClienteByIDUseCase,
   ) {}
-  create(createClienteDto: ClienteDTO) {
+  create(createClienteDto: ClienteInputDTO) {
     return this.createClienteUseCase.execute(createClienteDto);
   }
 
@@ -21,7 +21,7 @@ export class ClientesService {
       return this.getClienteByIDUseCase.execute(id);
   }
 
-  update(id: number, updateClienteDto: ClienteDTO) {
+  update(id: number, updateClienteDto: ClienteInputDTO) {
     return `This action updates a #${id} cliente`;
   }
 
