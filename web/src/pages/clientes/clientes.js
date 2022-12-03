@@ -13,10 +13,19 @@ import DataGrid, {
   FilterRow,
   Editing,
   ColumnChooser,
-  SearchPanel
+  SearchPanel,
+  Lookup
 } from 'devextreme-react/data-grid';
 
 export default function Clientes() {
+
+  const generoList = [
+    { nome: 'Masculino' },
+    { nome: 'Feminino' },
+    { nome: 'Outro (Qual?)' },
+    { nome: 'Prefiro não dizer' },
+  ]
+
   return (
     <React.Fragment>
       <h2 className={'content-block'}>Clientes</h2>
@@ -53,16 +62,21 @@ export default function Clientes() {
 
         <Column
           dataField={'id'}
-          width={90}
           visible={false}
           allowEditing={false}
+          formItem={{ visible: false }}
         />
+
         <Column
           dataField={'nome'}
-          width={190}
           caption={'Nome'}
           hidingPriority={6}
         />
+
+        <Column dataField={'genero'} caption="Gênero" >
+          <Lookup dataSource={generoList} valueExpr="nome" displayExpr={'nome'} />
+        </Column>
+
         <Column
           dataField={'email'}
           caption={'Email'}
@@ -72,8 +86,7 @@ export default function Clientes() {
           dataField={'telefone'}
           caption={'Telefone'}
           hidingPriority={4}
-        >
-        </Column>
+        />
         <Column
           dataField={'endereco'}
           caption={'Endereço'}
@@ -103,6 +116,7 @@ const store = new CustomStore({
     return await axios.get(`${baseUrl}/clientes`)
   },
   insert: async (values) => {
+    console.log("🚀 ~ file: clientes.js:119 ~ insert: ~ values", values)
     return axios.post(`${baseUrl}/clientes`, values).then(data => data).catch(err => {
       if (err) {
         const data = err.response.data.message;
@@ -114,9 +128,6 @@ const store = new CustomStore({
     });
   },
   update: (key, values) => {
-    console.log("🚀 ~ file: clientes.js:114 ~ key", key)
-    console.log("🚀 ~ file: clientes.js:121 ~ values", values)
-
     return axios.patch(`${baseUrl}/clientes/${key}`, values)
   },
   remove: (key) => {

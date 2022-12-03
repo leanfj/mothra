@@ -94,7 +94,7 @@
   background-color: #363640;
   color: #fff;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   font-family: Roboto,RobotoFallback,"Noto Kufi Arabic",Helvetica,Arial,sans-serif;
   line-height: 1.2857;
 }
@@ -108,52 +108,52 @@
 .dx-theme-material-typography .dx-swatch-additional h1,
 .dx-theme-material-typography.dx-swatch-additional h1 {
   font-weight: 300;
-  font-size: 96px;
+  font-size: 64px;
   letter-spacing: -1.5px;
 }
 .dx-theme-material-typography .dx-swatch-additional h2,
 .dx-theme-material-typography.dx-swatch-additional h2 {
   font-weight: 300;
-  font-size: 60px;
+  font-size: 42px;
   letter-spacing: -.5px;
 }
 .dx-theme-material-typography .dx-swatch-additional h3,
 .dx-theme-material-typography.dx-swatch-additional h3 {
   font-weight: 400;
-  font-size: 48px;
+  font-size: 20px;
 }
 .dx-theme-material-typography .dx-swatch-additional h4,
 .dx-theme-material-typography.dx-swatch-additional h4 {
   font-weight: 400;
-  font-size: 34px;
+  font-size: 18px;
   letter-spacing: .25px;
 }
 .dx-theme-material-typography .dx-swatch-additional h5,
 .dx-theme-material-typography.dx-swatch-additional h5 {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 16px;
 }
 .dx-theme-material-typography .dx-swatch-additional h6,
 .dx-theme-material-typography.dx-swatch-additional h6 {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 14px;
   letter-spacing: .15px;
 }
 .dx-theme-material-typography .dx-swatch-additional .dx-font-xl,
 .dx-theme-material-typography.dx-swatch-additional .dx-font-xl {
-  font-size: 34px;
+  font-size: 24px;
 }
 .dx-theme-material-typography .dx-swatch-additional .dx-font-l,
 .dx-theme-material-typography.dx-swatch-additional .dx-font-l {
-  font-size: 28px;
+  font-size: 20px;
 }
 .dx-theme-material-typography .dx-swatch-additional .dx-font-m,
 .dx-theme-material-typography.dx-swatch-additional .dx-font-m {
-  font-size: 20px;
+  font-size: 16px;
 }
 .dx-theme-material-typography .dx-swatch-additional .dx-font-s,
 .dx-theme-material-typography.dx-swatch-additional .dx-font-s {
-  font-size: 18px;
+  font-size: 14px;
 }
 .dx-theme-material-typography .dx-swatch-additional .dx-font-xs,
 .dx-theme-material-typography .dx-swatch-additional small,
@@ -163,7 +163,7 @@
 }
 .dx-theme-material-typography .dx-swatch-additional a,
 .dx-theme-material-typography.dx-swatch-additional a {
-  color: #ff5722;
+  color: #03a9f4;
 }
 .dx-swatch-additional .dx-icon-add,
 .dx-swatch-additional .dx-icon-addcolumnleft,
@@ -1682,7 +1682,7 @@
   print-color-adjust: exact;
   color: #fff;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   font-family: Roboto,RobotoFallback,"Noto Kufi Arabic",Helvetica,Arial,sans-serif;
   line-height: 1.2857;
 }
@@ -1728,7 +1728,7 @@
   overflow: hidden;
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
   box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: #363640;
   margin: 2px 2px 3px;
 }
@@ -1747,7 +1747,7 @@
   position: relative;
   color: #fff;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   font-family: Roboto,RobotoFallback,"Noto Kufi Arabic",Helvetica,Arial,sans-serif;
   line-height: 1.2857;
   padding: 0;
@@ -1807,19 +1807,19 @@
 }
 .dx-swatch-additional .dx-field-value.dx-attention {
   color: #f44336;
-  padding: 21px 10px 20px 32px;
+  padding: 21px 8px 20px 24px;
   position: relative;
 }
 .dx-swatch-additional .dx-field-value.dx-attention::before {
   pointer-events: none;
   position: absolute;
   top: 50%;
-  margin-top: -11px;
-  width: 22px;
-  height: 22px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
   text-align: center;
-  line-height: 23px;
-  font-size: 14px;
+  line-height: 17px;
+  font-size: 13px;
   font-weight: 500;
   background-color: #f44336;
   color: rgba(0,0,0,.87);
@@ -1837,7 +1837,7 @@
   cursor: default;
   -ms-flex-item-align: center;
   align-self: center;
-  padding-right: 15px;
+  padding-right: 12px;
 }
 .dx-swatch-additional .dx-field-value.dx-widget,
 .dx-swatch-additional .dx-field-value:not(.dx-widget) > .dx-widget {
@@ -1850,26 +1850,26 @@
 }
 .dx-swatch-additional .dx-field-value.dx-checkbox,
 .dx-swatch-additional .dx-field-value:not(.dx-widget) > .dx-checkbox {
-  margin: 15px 0;
+  margin: 8px 0;
 }
 .dx-swatch-additional .dx-field-value.dx-switch,
 .dx-swatch-additional .dx-field-value:not(.dx-widget) > .dx-switch {
-  margin: 14px 0;
+  margin: 7px 0;
 }
 .dx-swatch-additional .dx-field-value.dx-slider,
 .dx-swatch-additional .dx-field-value:not(.dx-widget) > .dx-slider {
-  margin: 10px 0;
+  margin: 2px 0;
 }
 .dx-swatch-additional .dx-field-value.dx-radiogroup,
 .dx-swatch-additional .dx-field-value:not(.dx-widget) > .dx-radiogroup {
-  margin: 11px 0;
+  margin: 3px 0;
 }
 .dx-swatch-additional .dx-field-value-static {
   white-space: normal;
-  padding: 21px 10px 20px;
+  padding: 21px 8px 20px;
 }
 .dx-swatch-additional .dx-fieldset {
-  margin: 30px 20px;
+  margin: 20px 16px;
   padding: 0;
 }
 .dx-swatch-additional .dx-rtl .dx-fieldset .dx-field-value:not(.dx-widget) > .dx-button,
@@ -1881,11 +1881,11 @@
   float: left;
 }
 .dx-swatch-additional .dx-fieldset-header {
-  margin: 0 0 20px;
-  font-size: 18px;
+  margin: 0 0 16px;
+  font-size: 14px;
 }
 .dx-swatch-additional .dx-field {
-  margin: 0 0 30px;
+  margin: 0 0 20px;
 }
 .dx-swatch-additional .dx-field:last-of-type {
   margin: 0;
@@ -1904,7 +1904,7 @@
 }
 .dx-swatch-additional .dx-device-mobile .dx-fieldset-header {
   margin: 0 0 20px;
-  font-size: 18px;
+  font-size: 14px;
 }
 .dx-swatch-additional .dx-device-mobile .dx-field {
   margin: 0 0 10px;
@@ -1913,10 +1913,10 @@
   margin: 0;
 }
 .dx-swatch-additional .dx-theme-marker {
-  font-family: "dx.material.orange-dark";
+  font-family: "dx.material.blue-dark-compact";
 }
 .dx-swatch-additional .dx-theme-accent-as-text-color {
-  color: #ff5722!important;
+  color: #03a9f4!important;
 }
 .dx-swatch-additional .dx-theme-text-color {
   color: #fff!important;
@@ -1928,8 +1928,8 @@
   color: #515159!important;
 }
 .dx-swatch-additional .dx-theme-accent-as-background-color {
-  background-color: #ff5722!important;
-  fill: #ff5722!important;
+  background-color: #03a9f4!important;
+  fill: #03a9f4!important;
 }
 .dx-swatch-additional .dx-theme-text-color-as-background-color {
   background-color: #fff!important;
@@ -1944,7 +1944,7 @@
   fill: #515159!important;
 }
 .dx-swatch-additional .dx-theme-accent-as-border-color {
-  border-color: #ff5722!important;
+  border-color: #03a9f4!important;
 }
 .dx-swatch-additional .dx-theme-text-color-as-border-color {
   border-color: #fff!important;
@@ -2433,7 +2433,7 @@
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-drag: none;
-  min-width: 36px;
+  min-width: 28px;
 }
 .dx-swatch-additional .dx-button .dx-icon {
   -webkit-user-drag: none;
@@ -2462,7 +2462,7 @@
 .dx-swatch-additional .dx-button-text {
   display: inline;
   vertical-align: middle;
-  line-height: 23px;
+  line-height: 17px;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: .04em;
@@ -2484,18 +2484,18 @@
   text-decoration: none;
 }
 .dx-swatch-additional .dx-button .dx-button-content {
-  padding: 6px;
+  padding: 5px;
   position: relative;
 }
 .dx-swatch-additional .dx-button .dx-icon {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   background-position: 0 0;
-  background-size: 24px 24px;
+  background-size: 18px 18px;
   padding: 0;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
-  line-height: 24px;
+  line-height: 18px;
   margin-right: 0;
   margin-left: 0;
   color: #fff;
@@ -2512,20 +2512,20 @@
   margin-left: 0;
 }
 .dx-swatch-additional .dx-button-has-icon {
-  min-width: 36px;
+  min-width: 28px;
 }
 .dx-swatch-additional .dx-button-has-icon .dx-button-content {
-  padding: 6px;
+  padding: 5px;
 }
 .dx-swatch-additional .dx-button-has-icon .dx-icon {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   background-position: 0 0;
-  background-size: 24px 24px;
+  background-size: 18px 18px;
   padding: 0;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
-  line-height: 24px;
+  line-height: 18px;
   margin-right: 0;
   margin-left: 0;
 }
@@ -2541,75 +2541,75 @@
   margin-left: 0;
 }
 .dx-swatch-additional .dx-button-has-text {
-  min-width: 64px;
+  min-width: 48px;
 }
 .dx-swatch-additional .dx-button-has-text .dx-button-content {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 6px 16px;
+  padding: 5px 16px;
 }
 .dx-swatch-additional .dx-button-has-text .dx-icon {
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   background-position: 0 0;
-  background-size: 18px 18px;
+  background-size: 12px 12px;
   padding: 0;
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
-  line-height: 18px;
-  margin-right: 12px;
+  line-height: 12px;
+  margin-right: 9px;
   margin-left: 0;
 }
 .dx-swatch-additional .dx-button-has-text .dx-icon.dx-icon-right,
 .dx-swatch-additional .dx-rtl .dx-button-has-text .dx-icon,
 .dx-swatch-additional .dx-rtl.dx-button-has-text .dx-icon {
-  margin-left: 12px;
+  margin-left: 9px;
   margin-right: 0;
 }
 .dx-swatch-additional .dx-rtl .dx-button-has-text .dx-icon.dx-icon-right,
 .dx-swatch-additional .dx-rtl.dx-button-has-text .dx-icon.dx-icon-right {
-  margin-right: 12px;
+  margin-right: 9px;
   margin-left: 0;
 }
 .dx-swatch-additional .dx-button-has-text.dx-button-mode-text .dx-button-content {
-  padding: 6px 8px;
+  padding: 5px;
 }
 .dx-swatch-additional .dx-button-has-text.dx-button-mode-text .dx-icon {
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   background-position: 0 0;
-  background-size: 18px 18px;
+  background-size: 12px 12px;
   padding: 0;
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
-  line-height: 18px;
-  margin-right: 12px;
+  line-height: 12px;
+  margin-right: 9px;
   margin-left: 0;
 }
 .dx-swatch-additional .dx-button-has-text.dx-button-mode-text .dx-icon.dx-icon-right,
 .dx-swatch-additional .dx-rtl .dx-button-has-text.dx-button-mode-text .dx-icon,
 .dx-swatch-additional .dx-rtl.dx-button-has-text.dx-button-mode-text .dx-icon {
-  margin-left: 12px;
+  margin-left: 9px;
   margin-right: 0;
 }
 .dx-swatch-additional .dx-rtl .dx-button-has-text.dx-button-mode-text .dx-icon.dx-icon-right,
 .dx-swatch-additional .dx-rtl.dx-button-has-text.dx-button-mode-text .dx-icon.dx-icon-right {
-  margin-right: 12px;
+  margin-right: 9px;
   margin-left: 0;
 }
 .dx-swatch-additional .dx-button-has-icon.dx-button-has-text .dx-button-content {
-  padding: 6px 16px;
+  padding: 5px 16px;
 }
 .dx-swatch-additional .dx-button-has-icon.dx-button-has-text .dx-icon {
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   background-position: 0 0;
-  background-size: 18px 18px;
+  background-size: 12px 12px;
   padding: 0;
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
-  line-height: 18px;
+  line-height: 12px;
   margin-right: 8px;
   margin-left: 0;
 }
@@ -2632,29 +2632,29 @@
   padding-right: 12px;
 }
 .dx-swatch-additional .dx-button-has-icon.dx-button-has-text.dx-button-mode-text .dx-button-content {
-  padding: 6px 8px;
+  padding: 5px;
 }
 .dx-swatch-additional .dx-button-has-icon.dx-button-has-text.dx-button-mode-text .dx-icon {
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   background-position: 0 0;
-  background-size: 18px 18px;
+  background-size: 12px 12px;
   padding: 0;
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
-  line-height: 18px;
-  margin-right: 12px;
+  line-height: 12px;
+  margin-right: 9px;
   margin-left: 0;
 }
 .dx-swatch-additional .dx-button-has-icon.dx-button-has-text.dx-button-mode-text .dx-icon.dx-icon-right,
 .dx-swatch-additional .dx-rtl .dx-button-has-icon.dx-button-has-text.dx-button-mode-text .dx-icon,
 .dx-swatch-additional .dx-rtl.dx-button-has-icon.dx-button-has-text.dx-button-mode-text .dx-icon {
-  margin-left: 12px;
+  margin-left: 9px;
   margin-right: 0;
 }
 .dx-swatch-additional .dx-rtl .dx-button-has-icon.dx-button-has-text.dx-button-mode-text .dx-icon.dx-icon-right,
 .dx-swatch-additional .dx-rtl.dx-button-has-icon.dx-button-has-text.dx-button-mode-text .dx-icon.dx-icon-right {
-  margin-right: 12px;
+  margin-right: 9px;
   margin-left: 0;
 }
 .dx-swatch-additional .dx-button.dx-button-has-icon:not(.dx-button-has-text):not(.dx-shape-standard) {
@@ -2663,10 +2663,10 @@
   box-shadow: none;
 }
 .dx-swatch-additional .dx-button {
-  height: 36px;
+  height: 28px;
   position: relative;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: #363640;
   color: #fff;
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -2706,8 +2706,8 @@
   background-color: rgba(255,255,255,.2);
 }
 .dx-swatch-additional .dx-button.dx-button-default {
-  border-radius: 4px;
-  background-color: #ff5722;
+  border-radius: 2px;
+  background-color: #03a9f4;
   color: rgba(0,0,0,.87);
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -2716,17 +2716,17 @@
   color: rgba(0,0,0,.87);
 }
 .dx-swatch-additional .dx-button.dx-button-default.dx-state-hover {
-  background-color: #ff784d;
+  background-color: #26bafc;
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
 }
 .dx-swatch-additional .dx-button.dx-button-default.dx-state-focused {
-  background-color: #ff784d;
+  background-color: #26bafc;
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.48);
   box-shadow: 0 1px 3px rgba(0,0,0,.48);
 }
 .dx-swatch-additional .dx-button.dx-button-default.dx-state-active {
-  background-color: #ffc4b1;
+  background-color: #88d9fe;
   -webkit-box-shadow: 0 4px 6px rgba(0,0,0,.48);
   box-shadow: 0 4px 6px rgba(0,0,0,.48);
 }
@@ -2745,7 +2745,7 @@
   background-color: rgba(0,0,0,.2);
 }
 .dx-swatch-additional .dx-button.dx-button-danger {
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: #f44336;
   color: rgba(0,0,0,.87);
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -2784,7 +2784,7 @@
   background-color: rgba(0,0,0,.2);
 }
 .dx-swatch-additional .dx-button.dx-button-success {
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: #8bc34a;
   color: rgba(0,0,0,.87);
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -2828,7 +2828,7 @@
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 50%;
-  min-width: 36px;
+  min-width: 28px;
 }
 .dx-swatch-additional .dx-button.dx-button-back.dx-state-focused,
 .dx-swatch-additional .dx-button.dx-button-back.dx-state-hover {
@@ -2856,18 +2856,18 @@
   background-color: rgba(255,255,255,.2);
 }
 .dx-swatch-additional .dx-button.dx-button-back .dx-button-content {
-  padding: 6px;
+  padding: 5px;
 }
 .dx-swatch-additional .dx-button.dx-button-back .dx-icon {
   color: #fff;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   background-position: 0 0;
-  background-size: 24px 24px;
+  background-size: 18px 18px;
   padding: 0;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
-  line-height: 24px;
+  line-height: 18px;
   margin-right: 0;
   margin-left: 0;
 }
@@ -2921,21 +2921,21 @@
 }
 .dx-swatch-additional .dx-button-mode-text.dx-button-default {
   background-color: transparent;
-  color: #ff5722;
+  color: #03a9f4;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .dx-swatch-additional .dx-button-mode-text.dx-button-default .dx-icon {
-  color: #ff5722;
+  color: #03a9f4;
 }
 .dx-swatch-additional .dx-button-mode-text.dx-button-default.dx-state-focused,
 .dx-swatch-additional .dx-button-mode-text.dx-button-default.dx-state-hover {
-  background-color: rgba(255,87,34,.08);
+  background-color: rgba(3,169,244,.08);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .dx-swatch-additional .dx-button-mode-text.dx-button-default.dx-state-active {
-  background-color: rgba(255,87,34,.36);
+  background-color: rgba(3,169,244,.36);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2951,7 +2951,7 @@
   color: rgba(255,255,255,.35);
 }
 .dx-swatch-additional .dx-button-mode-text.dx-button-default .dx-inkripple-wave {
-  background-color: rgba(255,87,34,.2);
+  background-color: rgba(3,169,244,.2);
 }
 .dx-swatch-additional .dx-button-mode-text.dx-button-danger {
   background-color: transparent;
@@ -3058,22 +3058,22 @@
 }
 .dx-swatch-additional .dx-button-mode-outlined.dx-button-default {
   background-color: transparent;
-  color: #ff5722;
+  color: #03a9f4;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: 1px solid #ff5722;
+  border: 1px solid #03a9f4;
 }
 .dx-swatch-additional .dx-button-mode-outlined.dx-button-default .dx-icon {
-  color: #ff5722;
+  color: #03a9f4;
 }
 .dx-swatch-additional .dx-button-mode-outlined.dx-button-default.dx-state-focused,
 .dx-swatch-additional .dx-button-mode-outlined.dx-button-default.dx-state-hover {
-  background-color: rgba(255,87,34,.08);
+  background-color: rgba(3,169,244,.08);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .dx-swatch-additional .dx-button-mode-outlined.dx-button-default.dx-state-active {
-  background-color: rgba(255,87,34,.36);
+  background-color: rgba(3,169,244,.36);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -3089,7 +3089,7 @@
   color: rgba(255,255,255,.35);
 }
 .dx-swatch-additional .dx-button-mode-outlined.dx-button-default .dx-inkripple-wave {
-  background-color: rgba(255,87,34,.2);
+  background-color: rgba(3,169,244,.2);
 }
 .dx-swatch-additional .dx-button-mode-outlined.dx-button-danger {
   background-color: transparent;
@@ -3233,7 +3233,7 @@
 .dx-swatch-additional .dx-checkbox.dx-checkbox-checked.dx-state-focused .dx-checkbox-icon::after,
 .dx-swatch-additional .dx-checkbox.dx-checkbox-indeterminate.dx-state-active .dx-checkbox-icon::after,
 .dx-swatch-additional .dx-checkbox.dx-checkbox-indeterminate.dx-state-focused .dx-checkbox-icon::after {
-  background-color: rgba(255,87,34,.1);
+  background-color: rgba(3,169,244,.1);
   -webkit-transform: scale(1);
   transform: scale(1);
 }
@@ -3251,19 +3251,19 @@
   transform: scale(1);
 }
 .dx-swatch-additional .dx-checkbox-icon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border: 2px solid rgba(255,255,255,.54);
   border-radius: 2px;
 }
 .dx-swatch-additional .dx-checkbox-icon::after {
   content: "";
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.14em;
+  height: 2.14em;
   top: 50%;
   left: 50%;
-  margin-top: -1.25em;
-  margin-left: -1.25em;
+  margin-top: -1.07em;
+  margin-left: -1.07em;
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -3278,9 +3278,9 @@
 }
 .dx-swatch-additional .dx-checkbox-checked .dx-checkbox-icon {
   color: #363640;
-  background-color: #ff5722;
+  background-color: #03a9f4;
   border: none;
-  font: 16px/1em DXIcons;
+  font: 14px/1em DXIcons;
   text-align: center;
 }
 .dx-swatch-additional .dx-checkbox-checked .dx-checkbox-icon::before {
@@ -3301,10 +3301,10 @@
   margin-right: -.5em;
 }
 .dx-swatch-additional .dx-checkbox-indeterminate .dx-checkbox-icon {
-  background-color: #ff5722;
+  background-color: #03a9f4;
   color: #363640;
   border: none;
-  font: 20px/1em DXIcons;
+  font: 18px/1em DXIcons;
   text-align: center;
 }
 .dx-swatch-additional .dx-checkbox-indeterminate .dx-checkbox-icon::before {
@@ -3737,7 +3737,7 @@
 .dx-swatch-additional .dx-scrollview-pull-down-text,
 .dx-swatch-additional .dx-scrollview-scrollbottom-text {
   margin-left: 10px;
-  top: 18px;
+  top: 18.5px;
   display: inline-block;
 }
 .dx-swatch-additional .dx-rtl .dx-scrollview-pull-down-text,
@@ -3759,11 +3759,11 @@
   float: left;
 }
 .dx-swatch-additional .dx-badge {
-  padding: 3px 9px;
+  padding: 2px 7px;
   border-radius: 14px;
-  background-color: #ff5722;
+  background-color: #03a9f4;
   color: rgba(0,0,0,.87);
-  font-size: 12px;
+  font-size: 11px;
   margin-left: 4px;
   line-height: normal;
   margin-top: 1px;
@@ -3788,7 +3788,7 @@
   border: none;
   background-color: #2f2f38;
   position: absolute;
-  height: 48px;
+  height: 36px;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -3842,8 +3842,8 @@
   opacity: 0;
 }
 .dx-swatch-additional .dx-tab {
-  padding: 12px 16px;
-  min-width: 90px;
+  padding: 6px 12px;
+  min-width: 82px;
   background-color: #2f2f38;
   color: rgba(255,255,255,.54);
 }
@@ -3853,19 +3853,19 @@
 .dx-swatch-additional .dx-tab .dx-icon {
   color: rgba(255,255,255,.54);
   vertical-align: middle;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   background-position: 0 0;
-  background-size: 24px 24px;
+  background-size: 18px 18px;
   padding: 0;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
-  line-height: 24px;
+  line-height: 18px;
   margin: 0 auto;
 }
 .dx-swatch-additional .dx-tab.dx-tab-selected,
 .dx-swatch-additional .dx-tab.dx-tab-selected .dx-icon {
-  color: #ff5722;
+  color: #03a9f4;
 }
 .dx-swatch-additional .dx-tab.dx-tab-selected::before {
   content: "";
@@ -3874,7 +3874,7 @@
   height: 2px;
   left: 0;
   right: 0;
-  background-color: #ff5722;
+  background-color: #03a9f4;
 }
 .dx-swatch-additional .dx-tab-content,
 .dx-swatch-additional .dx-tab-text {
@@ -3954,14 +3954,14 @@
 }
 .dx-swatch-additional .dx-navbar .dx-nav-item .dx-icon,
 .dx-swatch-additional .dx-navbar .dx-rtl .dx-nav-item .dx-icon {
-  width: 31px;
-  height: 31px;
+  width: 28px;
+  height: 28px;
   background-position: 0 0;
-  background-size: 31px 31px;
+  background-size: 28px 28px;
   padding: 0;
-  font-size: 31px;
+  font-size: 28px;
   text-align: center;
-  line-height: 31px;
+  line-height: 28px;
   color: #fff;
 }
 .dx-swatch-additional .dx-nav-item.dx-state-active::after,
@@ -4009,7 +4009,7 @@
   z-index: 1000;
   color: #fff;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   font-family: Roboto,RobotoFallback,"Noto Kufi Arabic",Helvetica,Arial,sans-serif;
   line-height: 1.2857;
 }
@@ -4056,15 +4056,15 @@
 .dx-swatch-additional .dx-invalid-message > .dx-overlay-content {
   background-color: transparent;
   color: #f44336;
-  padding: 6px 0 0;
+  padding: 4px 0 0;
 }
 .dx-swatch-additional .dx-editor-filled .dx-invalid-message > .dx-overlay-content,
 .dx-swatch-additional .dx-editor-outlined .dx-invalid-message > .dx-overlay-content {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 11px;
+  padding-right: 11px;
 }
 .dx-swatch-additional .dx-validationsummary > .dx-validationsummary-item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .dx-swatch-additional .dx-form-validation-summary {
   margin-top: 20px;
@@ -4099,7 +4099,7 @@
   cursor: text;
   pointer-events: none;
   color: gray;
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-placeholder::before {
   display: inline-block;
@@ -4165,7 +4165,7 @@
   margin: 0;
   background-color: transparent;
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-texteditor-input:-webkit-autofill + .dx-placeholder {
   display: none!important;
@@ -4213,8 +4213,8 @@
   -webkit-user-modify: read-write-plaintext-only;
 }
 .dx-swatch-additional .dx-texteditor {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
   position: relative;
 }
 .dx-swatch-additional .dx-texteditor::before {
@@ -4240,8 +4240,8 @@
 }
 .dx-swatch-additional .dx-texteditor.dx-state-focused .dx-texteditor-label,
 .dx-swatch-additional .dx-texteditor.dx-state-focused.dx-state-hover .dx-texteditor-label {
-  color: #ff5722;
-  font-size: 12px;
+  color: #03a9f4;
+  font-size: 11px;
 }
 .dx-swatch-additional .dx-texteditor.dx-state-focused.dx-invalid .dx-texteditor-label,
 .dx-swatch-additional .dx-texteditor.dx-state-focused.dx-state-hover.dx-invalid .dx-texteditor-label {
@@ -4253,7 +4253,7 @@
 }
 .dx-swatch-additional .dx-texteditor.dx-state-active::before,
 .dx-swatch-additional .dx-texteditor.dx-state-focused::before {
-  border-bottom: 2px solid #ff5722;
+  border-bottom: 2px solid #03a9f4;
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: -webkit-transform .6s cubic-bezier(.4, 0, .02, 1);
@@ -4262,30 +4262,30 @@
 }
 .dx-swatch-additional .dx-texteditor.dx-invalid.dx-editor-underlined .dx-texteditor-input,
 .dx-swatch-additional .dx-texteditor.dx-valid.dx-editor-underlined .dx-texteditor-input {
-  padding-right: 46px;
+  padding-right: 30px;
 }
 .dx-swatch-additional .dx-texteditor.dx-invalid.dx-editor-underlined.dx-rtl .dx-texteditor-input,
 .dx-swatch-additional .dx-texteditor.dx-valid.dx-editor-underlined.dx-rtl .dx-texteditor-input {
-  padding-left: 46px;
+  padding-left: 30px;
   padding-right: 0;
 }
 .dx-swatch-additional .dx-texteditor.dx-invalid.dx-editor-filled .dx-texteditor-input,
 .dx-swatch-additional .dx-texteditor.dx-invalid.dx-editor-outlined .dx-texteditor-input,
 .dx-swatch-additional .dx-texteditor.dx-valid.dx-editor-filled .dx-texteditor-input,
 .dx-swatch-additional .dx-texteditor.dx-valid.dx-editor-outlined .dx-texteditor-input {
-  padding-right: 62px;
+  padding-right: 41px;
 }
 .dx-swatch-additional .dx-texteditor.dx-invalid.dx-editor-filled.dx-rtl .dx-texteditor-input,
 .dx-swatch-additional .dx-texteditor.dx-invalid.dx-editor-outlined.dx-rtl .dx-texteditor-input,
 .dx-swatch-additional .dx-texteditor.dx-valid.dx-editor-filled.dx-rtl .dx-texteditor-input,
 .dx-swatch-additional .dx-texteditor.dx-valid.dx-editor-outlined.dx-rtl .dx-texteditor-input {
-  padding: 15px 16px 14px 62px;
+  padding: 9px 11px 8px 41px;
 }
 .dx-swatch-additional .dx-texteditor.dx-invalid.dx-editor-filled .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-texteditor.dx-invalid.dx-editor-outlined .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-texteditor.dx-valid.dx-editor-filled .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-texteditor.dx-valid.dx-editor-outlined .dx-texteditor-input-container::after {
-  right: 12px;
+  right: 7px;
 }
 .dx-swatch-additional .dx-rtl .dx-texteditor.dx-invalid.dx-editor-filled .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl .dx-texteditor.dx-invalid.dx-editor-outlined .dx-texteditor-input-container::after,
@@ -4295,59 +4295,59 @@
 .dx-swatch-additional .dx-rtl.dx-texteditor.dx-invalid.dx-editor-outlined .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl.dx-texteditor.dx-valid.dx-editor-filled .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl.dx-texteditor.dx-valid.dx-editor-outlined .dx-texteditor-input-container::after {
-  left: 12px;
+  left: 7px;
   right: auto;
 }
 .dx-swatch-additional .dx-texteditor.dx-invalid .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-texteditor.dx-valid .dx-texteditor-input-container::after {
-  right: 6px;
+  right: 3.5px;
 }
 .dx-swatch-additional .dx-rtl .dx-texteditor.dx-invalid .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl .dx-texteditor.dx-valid .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl.dx-texteditor.dx-invalid .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl.dx-texteditor.dx-valid .dx-texteditor-input-container::after {
-  left: 6px;
+  left: 3.5px;
   right: auto;
 }
 .dx-swatch-additional .dx-texteditor.dx-validation-pending.dx-editor-underlined .dx-texteditor-input {
-  padding-right: 46px;
+  padding-right: 30px;
 }
 .dx-swatch-additional .dx-texteditor.dx-validation-pending.dx-editor-underlined.dx-rtl .dx-texteditor-input {
-  padding-left: 46px;
+  padding-left: 30px;
   padding-right: 0;
 }
 .dx-swatch-additional .dx-texteditor.dx-validation-pending.dx-editor-filled .dx-texteditor-input,
 .dx-swatch-additional .dx-texteditor.dx-validation-pending.dx-editor-outlined .dx-texteditor-input {
-  padding-right: 62px;
+  padding-right: 41px;
 }
 .dx-swatch-additional .dx-texteditor.dx-validation-pending.dx-editor-filled.dx-rtl .dx-texteditor-input,
 .dx-swatch-additional .dx-texteditor.dx-validation-pending.dx-editor-outlined.dx-rtl .dx-texteditor-input {
-  padding: 15px 16px 14px 62px;
+  padding: 9px 11px 8px 41px;
 }
 .dx-swatch-additional .dx-texteditor.dx-validation-pending.dx-editor-filled .dx-texteditor-input-container .dx-pending-indicator,
 .dx-swatch-additional .dx-texteditor.dx-validation-pending.dx-editor-outlined .dx-texteditor-input-container .dx-pending-indicator {
-  right: 12px;
+  right: 7px;
 }
 .dx-swatch-additional .dx-rtl .dx-texteditor.dx-validation-pending.dx-editor-filled .dx-texteditor-input-container .dx-pending-indicator,
 .dx-swatch-additional .dx-rtl .dx-texteditor.dx-validation-pending.dx-editor-outlined .dx-texteditor-input-container .dx-pending-indicator,
 .dx-swatch-additional .dx-rtl.dx-texteditor.dx-validation-pending.dx-editor-filled .dx-texteditor-input-container .dx-pending-indicator,
 .dx-swatch-additional .dx-rtl.dx-texteditor.dx-validation-pending.dx-editor-outlined .dx-texteditor-input-container .dx-pending-indicator {
-  left: 12px;
+  left: 7px;
   right: auto;
 }
 .dx-swatch-additional .dx-texteditor.dx-validation-pending .dx-texteditor-input-container .dx-pending-indicator {
-  right: 6px;
+  right: 3.5px;
 }
 .dx-swatch-additional .dx-rtl .dx-texteditor.dx-validation-pending .dx-texteditor-input-container .dx-pending-indicator,
 .dx-swatch-additional .dx-rtl.dx-texteditor.dx-validation-pending .dx-texteditor-input-container .dx-pending-indicator {
-  left: 6px;
+  left: 3.5px;
   right: auto;
 }
 .dx-swatch-additional .dx-texteditor.dx-editor-filled .dx-placeholder::before,
 .dx-swatch-additional .dx-texteditor.dx-editor-filled .dx-texteditor-input,
 .dx-swatch-additional .dx-texteditor.dx-editor-outlined .dx-placeholder::before,
 .dx-swatch-additional .dx-texteditor.dx-editor-outlined .dx-texteditor-input {
-  padding: 15px 16px 14px;
+  padding: 9px 11px 8px;
 }
 .dx-swatch-additional .dx-texteditor.dx-editor-filled {
   background-color: rgba(255,255,255,.04);
@@ -4382,7 +4382,7 @@
 }
 .dx-swatch-additional .dx-texteditor.dx-editor-underlined .dx-placeholder::before,
 .dx-swatch-additional .dx-texteditor.dx-editor-underlined .dx-texteditor-input {
-  padding: 7px 0 6px;
+  padding: 6px 0 5px;
 }
 .dx-swatch-additional .dx-texteditor.dx-editor-underlined.dx-state-disabled::after,
 .dx-swatch-additional .dx-texteditor.dx-editor-underlined.dx-state-readonly.dx-state-hover::after,
@@ -4395,7 +4395,7 @@
 }
 .dx-swatch-additional .dx-texteditor.dx-editor-outlined {
   background-color: transparent;
-  border-radius: 4px;
+  border-radius: 2px;
   -webkit-box-shadow: inset 0 0 0 1px rgba(255,255,255,.42);
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.42);
 }
@@ -4418,8 +4418,8 @@
   color: rgba(255,255,255,.5);
 }
 .dx-swatch-additional .dx-texteditor.dx-editor-outlined.dx-state-focused {
-  -webkit-box-shadow: inset 0 0 0 2px #ff5722;
-  box-shadow: inset 0 0 0 2px #ff5722;
+  -webkit-box-shadow: inset 0 0 0 2px #03a9f4;
+  box-shadow: inset 0 0 0 2px #03a9f4;
 }
 .dx-swatch-additional .dx-texteditor.dx-editor-outlined.dx-state-focused.dx-invalid {
   -webkit-box-shadow: inset 0 0 0 2px #f44336;
@@ -4430,8 +4430,8 @@
   box-shadow: inset 0 0 0 1px rgba(244,67,54,.4);
 }
 .dx-swatch-additional .dx-show-clear-button .dx-clear-button-area {
-  width: 22px;
-  min-width: 22px;
+  width: 16px;
+  min-width: 16px;
   right: 0;
 }
 .dx-swatch-additional .dx-show-clear-button .dx-icon-clear {
@@ -4440,51 +4440,51 @@
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  margin-top: -11px;
-  width: 22px;
-  height: 22px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
   background-position: 0 0;
-  background-size: 22px 22px;
+  background-size: 16px 16px;
   padding: 0;
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
-  line-height: 12px;
+  line-height: 10px;
 }
 .dx-swatch-additional .dx-show-clear-button .dx-icon-clear::before {
   position: absolute;
   display: block;
-  width: 12px;
+  width: 10px;
   top: 50%;
-  margin-top: -6px;
+  margin-top: -5px;
   left: 50%;
-  margin-left: -6px;
+  margin-left: -5px;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid.dx-editor-underlined .dx-texteditor-input,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-valid.dx-editor-underlined .dx-texteditor-input {
-  padding-right: 46px;
+  padding-right: 30px;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid.dx-editor-underlined.dx-rtl .dx-texteditor-input,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-valid.dx-editor-underlined.dx-rtl .dx-texteditor-input {
-  padding-left: 46px;
+  padding-left: 30px;
   padding-right: 0;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid.dx-editor-filled .dx-texteditor-input,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid.dx-editor-outlined .dx-texteditor-input,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-valid.dx-editor-filled .dx-texteditor-input,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-valid.dx-editor-outlined .dx-texteditor-input {
-  padding-right: 62px;
+  padding-right: 41px;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid.dx-editor-filled.dx-rtl .dx-texteditor-input,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid.dx-editor-outlined.dx-rtl .dx-texteditor-input,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-valid.dx-editor-filled.dx-rtl .dx-texteditor-input,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-valid.dx-editor-outlined.dx-rtl .dx-texteditor-input {
-  padding: 15px 16px 14px 62px;
+  padding: 9px 11px 8px 41px;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid.dx-editor-filled .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid.dx-editor-outlined .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-valid.dx-editor-filled .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-valid.dx-editor-outlined .dx-texteditor-input-container::after {
-  right: 12px;
+  right: 7px;
 }
 .dx-swatch-additional .dx-rtl .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid.dx-editor-filled .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid.dx-editor-outlined .dx-texteditor-input-container::after,
@@ -4494,52 +4494,52 @@
 .dx-swatch-additional .dx-rtl.dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid.dx-editor-outlined .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl.dx-show-clear-button:not(.dx-texteditor-empty).dx-valid.dx-editor-filled .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl.dx-show-clear-button:not(.dx-texteditor-empty).dx-valid.dx-editor-outlined .dx-texteditor-input-container::after {
-  left: 12px;
+  left: 7px;
   right: auto;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-valid .dx-texteditor-input-container::after {
-  right: 6px;
+  right: 3.5px;
 }
 .dx-swatch-additional .dx-rtl .dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl .dx-show-clear-button:not(.dx-texteditor-empty).dx-valid .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl.dx-show-clear-button:not(.dx-texteditor-empty).dx-invalid .dx-texteditor-input-container::after,
 .dx-swatch-additional .dx-rtl.dx-show-clear-button:not(.dx-texteditor-empty).dx-valid .dx-texteditor-input-container::after {
-  left: 6px;
+  left: 3.5px;
   right: auto;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-underlined .dx-texteditor-input {
-  padding-right: 46px;
+  padding-right: 30px;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-underlined.dx-rtl .dx-texteditor-input {
-  padding-left: 46px;
+  padding-left: 30px;
   padding-right: 0;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-filled .dx-texteditor-input,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-outlined .dx-texteditor-input {
-  padding-right: 62px;
+  padding-right: 41px;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-filled.dx-rtl .dx-texteditor-input,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-outlined.dx-rtl .dx-texteditor-input {
-  padding: 15px 16px 14px 62px;
+  padding: 9px 11px 8px 41px;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-filled .dx-texteditor-input-container .dx-pending-indicator,
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-outlined .dx-texteditor-input-container .dx-pending-indicator {
-  right: 12px;
+  right: 7px;
 }
 .dx-swatch-additional .dx-rtl .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-filled .dx-texteditor-input-container .dx-pending-indicator,
 .dx-swatch-additional .dx-rtl .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-outlined .dx-texteditor-input-container .dx-pending-indicator,
 .dx-swatch-additional .dx-rtl.dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-filled .dx-texteditor-input-container .dx-pending-indicator,
 .dx-swatch-additional .dx-rtl.dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending.dx-editor-outlined .dx-texteditor-input-container .dx-pending-indicator {
-  left: 12px;
+  left: 7px;
   right: auto;
 }
 .dx-swatch-additional .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending .dx-texteditor-input-container .dx-pending-indicator {
-  right: 6px;
+  right: 3.5px;
 }
 .dx-swatch-additional .dx-rtl .dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending .dx-texteditor-input-container .dx-pending-indicator,
 .dx-swatch-additional .dx-rtl.dx-show-clear-button:not(.dx-texteditor-empty).dx-validation-pending .dx-texteditor-input-container .dx-pending-indicator {
-  left: 6px;
+  left: 3.5px;
   right: auto;
 }
 .dx-swatch-additional .dx-invalid.dx-texteditor.dx-state-hover::after {
@@ -4554,12 +4554,12 @@
   pointer-events: none;
   position: absolute;
   top: 50%;
-  margin-top: -11px;
-  width: 22px;
-  height: 22px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
   text-align: center;
-  line-height: 23px;
-  font-size: 14px;
+  line-height: 17px;
+  font-size: 13px;
   font-weight: 500;
   background-color: #f44336;
   color: rgba(0,0,0,.87);
@@ -4591,13 +4591,13 @@
 .dx-swatch-additional .dx-editor-filled .dx-texteditor-buttons-container:last-child > .dx-numberbox-spin-container:last-child,
 .dx-swatch-additional .dx-editor-outlined .dx-texteditor-buttons-container:last-child > .dx-dropdowneditor-button:last-child,
 .dx-swatch-additional .dx-editor-outlined .dx-texteditor-buttons-container:last-child > .dx-numberbox-spin-container:last-child {
-  margin-right: 8px;
+  margin-right: 3px;
 }
 .dx-swatch-additional .dx-editor-filled .dx-texteditor-buttons-container:last-child > .dx-clear-button-area + div:empty:last-child,
 .dx-swatch-additional .dx-editor-filled .dx-texteditor-buttons-container:last-child > .dx-clear-button-area:last-child,
 .dx-swatch-additional .dx-editor-outlined .dx-texteditor-buttons-container:last-child > .dx-clear-button-area + div:empty:last-child,
 .dx-swatch-additional .dx-editor-outlined .dx-texteditor-buttons-container:last-child > .dx-clear-button-area:last-child {
-  margin-right: 12px;
+  margin-right: 7px;
 }
 .dx-swatch-additional .dx-rtl.dx-editor-filled .dx-texteditor-buttons-container:first-child > .dx-button:first-child,
 .dx-swatch-additional .dx-rtl.dx-editor-outlined .dx-texteditor-buttons-container:first-child > .dx-button:first-child {
@@ -4628,19 +4628,19 @@
 .dx-swatch-additional .dx-rtl.dx-editor-filled .dx-texteditor-buttons-container:last-child > .dx-numberbox-spin-container:last-child,
 .dx-swatch-additional .dx-rtl.dx-editor-outlined .dx-texteditor-buttons-container:last-child > .dx-dropdowneditor-button:last-child,
 .dx-swatch-additional .dx-rtl.dx-editor-outlined .dx-texteditor-buttons-container:last-child > .dx-numberbox-spin-container:last-child {
-  margin-left: 8px;
+  margin-left: 3px;
   margin-right: 0;
 }
 .dx-swatch-additional .dx-rtl.dx-editor-filled .dx-texteditor-buttons-container:last-child > .dx-clear-button-area + div:empty:last-child,
 .dx-swatch-additional .dx-rtl.dx-editor-filled .dx-texteditor-buttons-container:last-child > .dx-clear-button-area:last-child,
 .dx-swatch-additional .dx-rtl.dx-editor-outlined .dx-texteditor-buttons-container:last-child > .dx-clear-button-area + div:empty:last-child,
 .dx-swatch-additional .dx-rtl.dx-editor-outlined .dx-texteditor-buttons-container:last-child > .dx-clear-button-area:last-child {
-  margin-left: 12px;
+  margin-left: 7px;
   margin-right: 0;
 }
 .dx-swatch-additional .dx-texteditor-label {
   position: absolute;
-  font-size: 12px;
+  font-size: 11px;
   color: gray;
   white-space: nowrap;
   -webkit-user-select: none;
@@ -4685,7 +4685,7 @@
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  min-width: 16px;
+  min-width: 11px;
 }
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-label {
@@ -4695,12 +4695,12 @@
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-lookup .dx-lookup-field,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-label .dx-texteditor-input,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-label.dx-lookup .dx-lookup-field {
-  padding-top: 21px;
-  padding-bottom: 8px;
+  padding-top: 15px;
+  padding-bottom: 2px;
 }
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-textarea .dx-texteditor-container,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-label.dx-textarea .dx-texteditor-container {
-  padding-top: 21px;
+  padding-top: 15px;
 }
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-textarea .dx-placeholder::before,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-textarea .dx-texteditor-input,
@@ -4710,19 +4710,19 @@
 }
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-textarea .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-label.dx-textarea .dx-texteditor-label {
-  top: 7px;
+  top: 4px;
 }
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-label .dx-texteditor-label {
-  font-size: 12px;
-  height: 12px;
-  line-height: 12px;
-  top: 7px;
+  font-size: 11px;
+  height: 11px;
+  line-height: 11px;
+  top: 4px;
   margin-top: 0;
 }
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label .dx-placeholder::before,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-label .dx-placeholder::before {
-  padding-top: 21px;
+  padding-top: 15px;
 }
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-lookup-empty .dx-placeholder,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly .dx-placeholder,
@@ -4742,21 +4742,21 @@
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly .dx-texteditor-label {
   -webkit-transition: font-size .2s cubic-bezier(0, 0, .2, 1),top .2s cubic-bezier(0, 0, .2, 1),-webkit-transform .2s cubic-bezier(0, 0, .2, 1);
   transition: transform .2s cubic-bezier(0, 0, .2, 1),font-size .2s cubic-bezier(0, 0, .2, 1),top .2s cubic-bezier(0, 0, .2, 1),-webkit-transform .2s cubic-bezier(0, 0, .2, 1);
-  font-size: 16px;
+  font-size: 13px;
   top: 50%;
-  margin-top: -8px;
-  height: 16px;
-  line-height: 16px;
+  margin-top: -6.5px;
+  height: 13px;
+  line-height: 13px;
 }
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly.dx-textarea .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-lookup-empty.dx-textarea .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-textarea .dx-texteditor-label {
-  top: 21px;
+  top: 15px;
   margin-top: 0;
-  font-size: 16px;
-  line-height: 16px;
-  height: 16px;
+  font-size: 13px;
+  line-height: 13px;
+  height: 13px;
 }
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly.dx-textarea .dx-placeholder,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-lookup-empty.dx-textarea .dx-placeholder,
@@ -4772,21 +4772,21 @@
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-dropdowneditor-active .dx-lookup-field,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-state-focused .dx-lookup-field,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-textarea.dx-state-focused .dx-lookup-field {
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-dropdowneditor-active .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-state-focused .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-textarea.dx-state-focused .dx-texteditor-label {
-  font-size: 12px;
-  height: 12px;
-  line-height: 12px;
-  top: 7px;
+  font-size: 11px;
+  height: 11px;
+  line-height: 11px;
+  top: 4px;
   margin-top: 0;
 }
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-textarea .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-state-focused.dx-textarea .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-filled.dx-texteditor-with-floating-label.dx-textarea.dx-state-focused.dx-textarea .dx-texteditor-label {
-  top: 7px;
+  top: 4px;
 }
 .dx-swatch-additional .dx-editor-outlined .dx-texteditor-label {
   top: 0;
@@ -4798,7 +4798,7 @@
 }
 .dx-swatch-additional .dx-editor-outlined .dx-texteditor-label .dx-label span {
   position: relative;
-  font-size: 16px;
+  font-size: 13px;
   top: 0;
   margin-top: 0;
 }
@@ -4809,15 +4809,15 @@
   box-sizing: border-box;
 }
 .dx-swatch-additional .dx-editor-outlined .dx-texteditor-label .dx-label-before {
-  border-radius: 4px 0 0 4px;
-  min-width: 16px;
+  border-radius: 2px 0 0 2px;
+  min-width: 11px;
 }
 .dx-swatch-additional .dx-editor-outlined .dx-texteditor-label .dx-label-after {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  min-width: 16px;
-  border-radius: 0 4px 4px 0;
+  min-width: 11px;
+  border-radius: 0 2px 2px 0;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty {
@@ -4842,11 +4842,11 @@
   transition: transform .2s cubic-bezier(0, 0, .2, 1),font-size .2s cubic-bezier(0, 0, .2, 1),top .2s cubic-bezier(0, 0, .2, 1),-webkit-transform .2s cubic-bezier(0, 0, .2, 1);
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  font-size: 16px;
+  font-size: 13px;
   top: 50%;
-  margin-top: -8px;
-  height: 16px;
-  line-height: 16px;
+  margin-top: -6.5px;
+  height: 13px;
+  line-height: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty .dx-texteditor-label .dx-label-before {
@@ -4860,7 +4860,7 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-textarea .dx-texteditor-label .dx-label span {
-  top: 15px;
+  top: 9px;
   margin-top: 0;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty .dx-placeholder,
@@ -4908,11 +4908,11 @@
   transition: transform .2s cubic-bezier(0, 0, .2, 1),font-size .2s cubic-bezier(0, 0, .2, 1),top .2s cubic-bezier(0, 0, .2, 1),-webkit-transform .2s cubic-bezier(0, 0, .2, 1);
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  font-size: 16px;
+  font-size: 13px;
   top: 50%;
-  margin-top: -8px;
-  height: 16px;
-  line-height: 16px;
+  margin-top: -6.5px;
+  height: 13px;
+  line-height: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-invalid .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-invalid .dx-texteditor-label .dx-label-before {
@@ -4926,7 +4926,7 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-invalid.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-invalid.dx-textarea .dx-texteditor-label .dx-label span {
-  top: 15px;
+  top: 9px;
   margin-top: 0;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-invalid .dx-placeholder,
@@ -4990,11 +4990,11 @@
   transition: transform .2s cubic-bezier(0, 0, .2, 1),font-size .2s cubic-bezier(0, 0, .2, 1),top .2s cubic-bezier(0, 0, .2, 1),-webkit-transform .2s cubic-bezier(0, 0, .2, 1);
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  font-size: 16px;
+  font-size: 13px;
   top: 50%;
-  margin-top: -8px;
-  height: 16px;
-  line-height: 16px;
+  margin-top: -6.5px;
+  height: 13px;
+  line-height: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly .dx-texteditor-label .dx-label-before,
@@ -5020,7 +5020,7 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-disabled.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-hover.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea .dx-texteditor-label .dx-label span {
-  top: 15px;
+  top: 9px;
   margin-top: 0;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled .dx-placeholder,
@@ -5149,8 +5149,8 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label {
   padding: 0;
   height: 100%;
-  -webkit-box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset 2px 0 transparent,inset -2px 0 transparent;
-  box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset 2px 0 transparent,inset -2px 0 transparent;
+  -webkit-box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset 2px 0 transparent,inset -2px 0 transparent;
+  box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset 2px 0 transparent,inset -2px 0 transparent;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label span,
@@ -5180,11 +5180,11 @@
   transition: transform .2s cubic-bezier(0, 0, .2, 1),font-size .2s cubic-bezier(0, 0, .2, 1),top .2s cubic-bezier(0, 0, .2, 1),-webkit-transform .2s cubic-bezier(0, 0, .2, 1);
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  font-size: 16px;
+  font-size: 13px;
   top: 50%;
-  margin-top: -8px;
-  height: 16px;
-  line-height: 16px;
+  margin-top: -6.5px;
+  height: 13px;
+  line-height: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-before,
@@ -5210,8 +5210,8 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-hover.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-before {
-  -webkit-box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 transparent,inset 2px 0 #ff5722;
-  box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 transparent,inset 2px 0 #ff5722;
+  -webkit-box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 transparent,inset 2px 0 #03a9f4;
+  box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 transparent,inset 2px 0 #03a9f4;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-after,
@@ -5237,8 +5237,8 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-hover.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-after {
-  -webkit-box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 #ff5722,inset 2px 0 transparent;
-  box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 #ff5722,inset 2px 0 transparent;
+  -webkit-box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 #03a9f4,inset 2px 0 transparent;
+  box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 #03a9f4,inset 2px 0 transparent;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-state-hover.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-textarea .dx-texteditor-label .dx-label span,
@@ -5264,7 +5264,7 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-hover.dx-textarea.dx-state-focused.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-state-hover.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-textarea .dx-texteditor-label .dx-label span {
-  top: 15px;
+  top: 9px;
   margin-top: 0;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused .dx-placeholder,
@@ -5367,8 +5367,8 @@
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-hover.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-before {
-  -webkit-box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 #ff5722,inset 2px 0 transparent;
-  box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 #ff5722,inset 2px 0 transparent;
+  -webkit-box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 #03a9f4,inset 2px 0 transparent;
+  box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 #03a9f4,inset 2px 0 transparent;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-rtl .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-state-hover.dx-rtl .dx-texteditor-label .dx-label-after,
@@ -5418,8 +5418,8 @@
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-hover.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-after {
-  -webkit-box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 transparent,inset 2px 0 #ff5722;
-  box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 transparent,inset 2px 0 #ff5722;
+  -webkit-box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 transparent,inset 2px 0 #03a9f4;
+  box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 transparent,inset 2px 0 #03a9f4;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-invalid,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-state-hover.dx-invalid,
@@ -5532,11 +5532,11 @@
   transition: transform .2s cubic-bezier(0, 0, .2, 1),font-size .2s cubic-bezier(0, 0, .2, 1),top .2s cubic-bezier(0, 0, .2, 1),-webkit-transform .2s cubic-bezier(0, 0, .2, 1);
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  font-size: 16px;
+  font-size: 13px;
   top: 50%;
-  margin-top: -8px;
-  height: 16px;
-  line-height: 16px;
+  margin-top: -6.5px;
+  height: 13px;
+  line-height: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-invalid .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label-before,
@@ -5616,7 +5616,7 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-hover.dx-textarea.dx-state-focused.dx-state-hover.dx-invalid.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-invalid.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-state-hover.dx-invalid.dx-textarea .dx-texteditor-label .dx-label span {
-  top: 15px;
+  top: 9px;
   margin-top: 0;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-invalid .dx-placeholder,
@@ -5796,11 +5796,11 @@
   transition: transform .2s cubic-bezier(0, 0, .2, 1),font-size .2s cubic-bezier(0, 0, .2, 1),top .2s cubic-bezier(0, 0, .2, 1),-webkit-transform .2s cubic-bezier(0, 0, .2, 1);
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  font-size: 16px;
+  font-size: 13px;
   top: 50%;
-  margin-top: -8px;
-  height: 16px;
-  line-height: 16px;
+  margin-top: -6.5px;
+  height: 13px;
+  line-height: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover .dx-texteditor-label .dx-label-before {
@@ -5814,7 +5814,7 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover.dx-textarea .dx-texteditor-label .dx-label span {
-  top: 15px;
+  top: 9px;
   margin-top: 0;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover .dx-placeholder,
@@ -5858,13 +5858,13 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover.dx-dropdowneditor-active .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover.dx-dropdowneditor-active .dx-texteditor-label .dx-label span {
-  -webkit-transform: translate(0,-6px);
-  transform: translate(0,-6px);
-  font-size: 12px;
+  -webkit-transform: translate(0,-5.5px);
+  transform: translate(0,-5.5px);
+  font-size: 11px;
   margin-top: 0;
   top: 0;
-  height: 12px;
-  line-height: 12px;
+  height: 11px;
+  line-height: 11px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover.dx-dropdowneditor-active .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover.dx-dropdowneditor-active .dx-texteditor-label .dx-label-before {
@@ -5884,7 +5884,7 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover.dx-dropdowneditor-active .dx-lookup-field,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover.dx-dropdowneditor-active .dx-lookup-field {
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover.dx-dropdowneditor-active.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover.dx-dropdowneditor-active.dx-rtl .dx-texteditor-label .dx-label-before,
@@ -5923,11 +5923,11 @@
   transition: transform .2s cubic-bezier(0, 0, .2, 1),font-size .2s cubic-bezier(0, 0, .2, 1),top .2s cubic-bezier(0, 0, .2, 1),-webkit-transform .2s cubic-bezier(0, 0, .2, 1);
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  font-size: 16px;
+  font-size: 13px;
   top: 50%;
-  margin-top: -8px;
-  height: 16px;
-  line-height: 16px;
+  margin-top: -6.5px;
+  height: 13px;
+  line-height: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label-before {
@@ -5941,7 +5941,7 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover.dx-invalid.dx-textarea .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover.dx-invalid.dx-textarea .dx-texteditor-label .dx-label span {
-  top: 15px;
+  top: 9px;
   margin-top: 0;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover.dx-invalid .dx-placeholder,
@@ -5985,13 +5985,13 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-dropdowneditor-active .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-dropdowneditor-active .dx-texteditor-label .dx-label span {
-  -webkit-transform: translate(0,-6px);
-  transform: translate(0,-6px);
-  font-size: 12px;
+  -webkit-transform: translate(0,-5.5px);
+  transform: translate(0,-5.5px);
+  font-size: 11px;
   margin-top: 0;
   top: 0;
-  height: 12px;
-  line-height: 12px;
+  height: 11px;
+  line-height: 11px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-dropdowneditor-active .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-dropdowneditor-active .dx-texteditor-label .dx-label-before {
@@ -6011,7 +6011,7 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-dropdowneditor-active .dx-lookup-field,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-dropdowneditor-active .dx-lookup-field {
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-dropdowneditor-active.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-dropdowneditor-active.dx-rtl .dx-texteditor-label .dx-label-before,
@@ -6034,11 +6034,11 @@
   box-shadow: none;
   outline: 0;
   position: relative;
-  margin-top: 6px;
+  margin-top: 5.5px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-textarea .dx-texteditor-input-container,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea .dx-texteditor-input-container {
-  padding-top: 15px;
+  padding-top: 9px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-textarea .dx-texteditor-input-container .dx-texteditor-input,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea .dx-texteditor-input-container .dx-texteditor-input {
@@ -6079,13 +6079,13 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-disabled .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label span {
-  -webkit-transform: translate(0,-6px);
-  transform: translate(0,-6px);
-  font-size: 12px;
+  -webkit-transform: translate(0,-5.5px);
+  transform: translate(0,-5.5px);
+  font-size: 11px;
   margin-top: 0;
   top: 0;
-  height: 12px;
-  line-height: 12px;
+  height: 11px;
+  line-height: 11px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-disabled .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly .dx-texteditor-label .dx-label-before,
@@ -6125,7 +6125,7 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-disabled .dx-lookup-field,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly .dx-lookup-field,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly.dx-state-hover .dx-lookup-field {
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-disabled.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly.dx-rtl .dx-texteditor-label .dx-label-before,
@@ -6176,13 +6176,13 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-invalid .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-invalid .dx-texteditor-label .dx-label span {
-  -webkit-transform: translate(0,-6px);
-  transform: translate(0,-6px);
-  font-size: 12px;
+  -webkit-transform: translate(0,-5.5px);
+  transform: translate(0,-5.5px);
+  font-size: 11px;
   margin-top: 0;
   top: 0;
-  height: 12px;
-  line-height: 12px;
+  height: 11px;
+  line-height: 11px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-invalid .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-invalid .dx-texteditor-label .dx-label-before {
@@ -6202,7 +6202,7 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-invalid .dx-lookup-field,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-invalid .dx-lookup-field {
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-invalid.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-invalid.dx-rtl .dx-texteditor-label .dx-label-before,
@@ -6230,13 +6230,13 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label .dx-texteditor-label .dx-label span {
-  -webkit-transform: translate(0,-6px);
-  transform: translate(0,-6px);
-  font-size: 12px;
+  -webkit-transform: translate(0,-5.5px);
+  transform: translate(0,-5.5px);
+  font-size: 11px;
   top: 0;
   margin-top: 0;
-  height: 13px;
-  line-height: 12px;
+  height: 12px;
+  line-height: 11px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label .dx-texteditor-label .dx-label-before {
@@ -6252,7 +6252,7 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-floating-label .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-label .dx-texteditor-label .dx-label-before {
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 2px 2px 0;
   -webkit-box-shadow: inset 0 -1px rgba(255,255,255,.42),inset 0 1px rgba(255,255,255,.42),inset -1px 0 rgba(255,255,255,.42),inset 1px 0 transparent;
   box-shadow: inset 0 -1px rgba(255,255,255,.42),inset 0 1px rgba(255,255,255,.42),inset -1px 0 rgba(255,255,255,.42),inset 1px 0 transparent;
 }
@@ -6260,7 +6260,7 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-rtl .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-floating-label .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-label .dx-texteditor-label .dx-label-after {
-  border-radius: 4px 0 0 4px;
+  border-radius: 2px 0 0 2px;
   -webkit-box-shadow: inset 0 -1px rgba(255,255,255,.42),inset 0 1px rgba(255,255,255,.42),inset -1px 0 transparent,inset 1px 0 rgba(255,255,255,.42);
   box-shadow: inset 0 -1px rgba(255,255,255,.42),inset 0 1px rgba(255,255,255,.42),inset -1px 0 transparent,inset 1px 0 rgba(255,255,255,.42);
 }
@@ -6283,13 +6283,13 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-hover .dx-texteditor-label .dx-label span {
-  -webkit-transform: translate(0,-6px);
-  transform: translate(0,-6px);
-  font-size: 12px;
+  -webkit-transform: translate(0,-5.5px);
+  transform: translate(0,-5.5px);
+  font-size: 11px;
   margin-top: 0;
   top: 0;
-  height: 12px;
-  line-height: 12px;
+  height: 11px;
+  line-height: 11px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-hover .dx-texteditor-label .dx-label-before {
@@ -6309,7 +6309,7 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover .dx-lookup-field,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-hover .dx-lookup-field {
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-hover.dx-rtl .dx-texteditor-label .dx-label-before,
@@ -6344,13 +6344,13 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label span {
-  -webkit-transform: translate(0,-6px);
-  transform: translate(0,-6px);
-  font-size: 12px;
+  -webkit-transform: translate(0,-5.5px);
+  transform: translate(0,-5.5px);
+  font-size: 11px;
   margin-top: 0;
   top: 0;
-  height: 12px;
-  line-height: 12px;
+  height: 11px;
+  line-height: 11px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label-before {
@@ -6370,7 +6370,7 @@
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover.dx-invalid .dx-lookup-field,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-hover.dx-invalid .dx-lookup-field {
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover.dx-invalid.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-hover.dx-invalid.dx-rtl .dx-texteditor-label .dx-label-before,
@@ -6429,8 +6429,8 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label {
   height: 100%;
-  -webkit-box-shadow: inset 0 -2px #ff5722,inset 0 2px transparent,inset 2px 0 transparent,inset -2px 0 transparent;
-  box-shadow: inset 0 -2px #ff5722,inset 0 2px transparent,inset 2px 0 transparent,inset -2px 0 transparent;
+  -webkit-box-shadow: inset 0 -2px #03a9f4,inset 0 2px transparent,inset 2px 0 transparent,inset -2px 0 transparent;
+  box-shadow: inset 0 -2px #03a9f4,inset 0 2px transparent,inset 2px 0 transparent,inset -2px 0 transparent;
   padding: 0 4px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused .dx-texteditor-label .dx-label span,
@@ -6445,13 +6445,13 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label span {
-  -webkit-transform: translate(0,-6px);
-  transform: translate(0,-6px);
-  font-size: 12px;
+  -webkit-transform: translate(0,-5.5px);
+  transform: translate(0,-5.5px);
+  font-size: 11px;
   margin-top: 0;
   top: 0;
-  height: 12px;
-  line-height: 12px;
+  height: 11px;
+  line-height: 11px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-before,
@@ -6465,8 +6465,8 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-before {
-  -webkit-box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 transparent,inset 2px 0 #ff5722;
-  box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 transparent,inset 2px 0 #ff5722;
+  -webkit-box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 transparent,inset 2px 0 #03a9f4;
+  box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 transparent,inset 2px 0 #03a9f4;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-after,
@@ -6480,8 +6480,8 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-after {
-  -webkit-box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 #ff5722,inset 2px 0 transparent;
-  box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 #ff5722,inset 2px 0 transparent;
+  -webkit-box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 #03a9f4,inset 2px 0 transparent;
+  box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 #03a9f4,inset 2px 0 transparent;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused .dx-texteditor-label .dx-label-before,
@@ -6521,7 +6521,7 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-focused.dx-state-hover .dx-lookup-field,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused .dx-lookup-field,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-state-hover .dx-lookup-field {
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-state-hover.dx-rtl .dx-texteditor-label .dx-label-before,
@@ -6547,8 +6547,8 @@
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-label.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-before {
-  -webkit-box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 #ff5722,inset 2px 0 transparent;
-  box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 #ff5722,inset 2px 0 transparent;
+  -webkit-box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 #03a9f4,inset 2px 0 transparent;
+  box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 #03a9f4,inset 2px 0 transparent;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-rtl .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-state-hover.dx-rtl .dx-texteditor-label .dx-label-after,
@@ -6574,8 +6574,8 @@
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-label.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label-after,
 .dx-swatch-additional .dx-rtl .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label-after {
-  -webkit-box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 transparent,inset 2px 0 #ff5722;
-  box-shadow: inset 0 -2px #ff5722,inset 0 2px #ff5722,inset -2px 0 transparent,inset 2px 0 #ff5722;
+  -webkit-box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 transparent,inset 2px 0 #03a9f4;
+  box-shadow: inset 0 -2px #03a9f4,inset 0 2px #03a9f4,inset -2px 0 transparent,inset 2px 0 #03a9f4;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-invalid,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-state-hover.dx-invalid,
@@ -6636,13 +6636,13 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-focused.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-invalid .dx-texteditor-label .dx-label span,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label span {
-  -webkit-transform: translate(0,-6px);
-  transform: translate(0,-6px);
-  font-size: 12px;
+  -webkit-transform: translate(0,-5.5px);
+  transform: translate(0,-5.5px);
+  font-size: 11px;
   margin-top: 0;
   top: 0;
-  height: 12px;
-  line-height: 12px;
+  height: 11px;
+  line-height: 11px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-invalid .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label-before,
@@ -6712,7 +6712,7 @@
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-state-focused.dx-state-hover.dx-invalid .dx-lookup-field,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-invalid .dx-lookup-field,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-state-hover.dx-invalid .dx-lookup-field {
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-invalid.dx-rtl .dx-texteditor-label .dx-label-before,
 .dx-swatch-additional .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-state-hover.dx-invalid.dx-rtl .dx-texteditor-label .dx-label-before,
@@ -6774,23 +6774,23 @@
   transform: translate(0,0);
   top: 0;
   margin-top: 0;
-  height: 12px;
-  line-height: 12px;
+  height: 11px;
+  line-height: 11px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label .dx-placeholder::before,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-label .dx-placeholder::before {
-  padding-top: 16px;
+  padding-top: 10px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label .dx-texteditor-input,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-lookup .dx-lookup-field,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-label .dx-texteditor-input,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-label.dx-lookup .dx-lookup-field {
-  padding-top: 16px;
-  padding-bottom: 7px;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-textarea .dx-texteditor-container,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-label.dx-textarea .dx-texteditor-container {
-  padding-top: 16px;
+  padding-top: 10px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-textarea .dx-placeholder::before,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-textarea .dx-texteditor-input,
@@ -6812,7 +6812,7 @@
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-textarea.dx-state-focused .dx-lookup-field,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-label.dx-state-focused .dx-lookup-field,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-label.dx-textarea.dx-state-focused .dx-lookup-field {
-  font-size: 16px;
+  font-size: 13px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-state-focused .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-textarea.dx-state-focused .dx-texteditor-label,
@@ -6820,9 +6820,9 @@
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-label.dx-textarea.dx-state-focused .dx-texteditor-label {
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  font-size: 12px;
-  height: 12px;
-  line-height: 12px;
+  font-size: 11px;
+  height: 11px;
+  line-height: 11px;
   top: 0;
   margin-top: 0;
 }
@@ -6834,7 +6834,7 @@
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-label.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text {
-  height: 28px;
+  height: 22px;
   margin: 1px 5px 3px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text .dx-button-content,
@@ -6845,7 +6845,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding-top: 5px;
+  padding-top: 4px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text .dx-button-content .dx-icon,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-label.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text .dx-button-content .dx-icon {
@@ -6859,7 +6859,7 @@
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text:not(.dx-button-has-text),
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-label.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text:not(.dx-button-has-text) {
-  min-width: 28px;
+  min-width: 22px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text:not(.dx-button-has-text) .dx-button-content,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-label.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text:not(.dx-button-has-text) .dx-button-content {
@@ -6908,22 +6908,22 @@
   transition: transform .2s cubic-bezier(0, 0, .2, 1),font-size .2s cubic-bezier(0, 0, .2, 1),top .2s cubic-bezier(0, 0, .2, 1),-webkit-transform .2s cubic-bezier(0, 0, .2, 1);
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  font-size: 16px;
+  font-size: 13px;
   top: 50%;
-  height: 16px;
-  margin-top: -8px;
-  line-height: 16px;
+  height: 13px;
+  margin-top: -6.5px;
+  line-height: 13px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly.dx-textarea .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-textarea .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-textarea .dx-texteditor-label {
-  top: 16px;
+  top: 10px;
   margin-top: 0;
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 13px;
+  line-height: 13px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly.dx-textarea .dx-placeholder,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-textarea .dx-placeholder,
@@ -6941,11 +6941,11 @@
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-textarea.dx-state-focused .dx-texteditor-label {
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  font-size: 12px;
+  font-size: 11px;
   top: 0;
   margin-top: 0;
-  height: 12px;
-  line-height: 12px;
+  height: 11px;
+  line-height: 11px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-textarea .dx-texteditor-label,
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-floating-label.dx-state-focused.dx-textarea .dx-texteditor-label,
@@ -6953,7 +6953,7 @@
   top: 0;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text {
-  height: 28px;
+  height: 22px;
   margin: 1px 5px 3px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text .dx-button-content {
@@ -6963,7 +6963,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding-top: 5px;
+  padding-top: 4px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text .dx-button-content .dx-icon {
   -ms-flex-item-align: center;
@@ -6974,7 +6974,7 @@
   margin-top: 3px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text:not(.dx-button-has-text) {
-  min-width: 28px;
+  min-width: 22px;
 }
 .dx-swatch-additional .dx-editor-underlined.dx-texteditor-with-before-buttons .dx-texteditor-buttons-container > .dx-button.dx-button-mode-text:not(.dx-button-has-text) .dx-button-content {
   padding: 2px;
@@ -7001,12 +7001,12 @@
   pointer-events: none;
   position: absolute;
   top: 50%;
-  margin-top: -11px;
-  width: 22px;
-  height: 22px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
   text-align: center;
-  line-height: 23px;
-  font-size: 20px;
+  line-height: 17px;
+  font-size: 19px;
   font-weight: 700;
   font-family: DXIcons,sans-serif;
   color: #8bc34a;
@@ -7021,9 +7021,9 @@
   pointer-events: none;
   position: absolute;
   top: 50%;
-  margin-top: -11px;
-  width: 22px;
-  height: 22px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
 }
 .dx-swatch-additional .dx-rtl .dx-placeholder,
 .dx-swatch-additional .dx-rtl .dx-placeholder::before {
@@ -7041,58 +7041,58 @@
 .dx-swatch-additional .dx-searchbox.dx-editor-underlined .dx-icon-search {
   position: absolute;
   top: 50%;
-  margin-top: -15px;
-  width: 30px;
-  height: 30px;
-  background-position: 4px 4px;
-  background-size: 22px 22px;
-  padding: 4px 8px 4px 0;
-  font-size: 22px;
+  margin-top: -10.75px;
+  width: 21.5px;
+  height: 21.5px;
+  background-position: 2px 2px;
+  background-size: 16px 16px;
+  padding: 2px 5.5px 2px 0;
+  font-size: 16px;
   text-align: center;
-  line-height: 22px;
+  line-height: 16px;
 }
 .dx-swatch-additional .dx-rtl .dx-searchbox.dx-editor-underlined .dx-icon-search,
 .dx-swatch-additional .dx-rtl.dx-searchbox.dx-editor-underlined .dx-icon-search {
   padding-right: 0;
-  padding-left: 8px;
+  padding-left: 5.5px;
 }
 .dx-swatch-additional .dx-searchbox.dx-editor-underlined .dx-placeholder::before,
 .dx-swatch-additional .dx-searchbox.dx-editor-underlined .dx-texteditor-input {
-  padding-left: 30px;
+  padding-left: 21.5px;
 }
 .dx-swatch-additional .dx-rtl .dx-searchbox.dx-editor-underlined .dx-placeholder::before,
 .dx-swatch-additional .dx-rtl .dx-searchbox.dx-editor-underlined .dx-texteditor-input,
 .dx-swatch-additional .dx-rtl.dx-searchbox.dx-editor-underlined .dx-placeholder::before,
 .dx-swatch-additional .dx-rtl.dx-searchbox.dx-editor-underlined .dx-texteditor-input {
   padding-left: 0;
-  padding-right: 30px;
+  padding-right: 21.5px;
 }
 .dx-swatch-additional .dx-searchbox.dx-editor-filled .dx-icon-search,
 .dx-swatch-additional .dx-searchbox.dx-editor-outlined .dx-icon-search {
   position: absolute;
   top: 50%;
-  margin-top: -23px;
-  width: 46px;
-  height: 46px;
-  background-position: 12px 12px;
-  background-size: 22px 22px;
-  padding: 12px 8px 12px 16px;
-  font-size: 22px;
+  margin-top: -16.25px;
+  width: 32.5px;
+  height: 32.5px;
+  background-position: 8px 8px;
+  background-size: 16px 16px;
+  padding: 8px 5.5px 8px 11px;
+  font-size: 16px;
   text-align: center;
-  line-height: 22px;
+  line-height: 16px;
 }
 .dx-swatch-additional .dx-rtl .dx-searchbox.dx-editor-filled .dx-icon-search,
 .dx-swatch-additional .dx-rtl .dx-searchbox.dx-editor-outlined .dx-icon-search,
 .dx-swatch-additional .dx-rtl.dx-searchbox.dx-editor-filled .dx-icon-search,
 .dx-swatch-additional .dx-rtl.dx-searchbox.dx-editor-outlined .dx-icon-search {
-  padding-right: 16px;
-  padding-left: 8px;
+  padding-right: 11px;
+  padding-left: 5.5px;
 }
 .dx-swatch-additional .dx-searchbox.dx-editor-filled .dx-placeholder::before,
 .dx-swatch-additional .dx-searchbox.dx-editor-filled .dx-texteditor-input,
 .dx-swatch-additional .dx-searchbox.dx-editor-outlined .dx-placeholder::before,
 .dx-swatch-additional .dx-searchbox.dx-editor-outlined .dx-texteditor-input {
-  padding-left: 46px;
+  padding-left: 32.5px;
 }
 .dx-swatch-additional .dx-rtl .dx-searchbox.dx-editor-filled .dx-placeholder::before,
 .dx-swatch-additional .dx-rtl .dx-searchbox.dx-editor-filled .dx-texteditor-input,
@@ -7102,8 +7102,8 @@
 .dx-swatch-additional .dx-rtl.dx-searchbox.dx-editor-filled .dx-texteditor-input,
 .dx-swatch-additional .dx-rtl.dx-searchbox.dx-editor-outlined .dx-placeholder::before,
 .dx-swatch-additional .dx-rtl.dx-searchbox.dx-editor-outlined .dx-texteditor-input {
-  padding-left: 16px;
-  padding-right: 46px;
+  padding-left: 11px;
+  padding-right: 32.5px;
 }
 .dx-swatch-additional .dx-searchbar {
   padding-bottom: 5px;
@@ -7202,7 +7202,7 @@
 .dx-swatch-additional .dx-loadindicator-segment-inner {
   position: relative;
   height: 100%;
-  border-color: #ff5722 #ff5722 transparent;
+  border-color: #03a9f4 #03a9f4 transparent;
   border-width: .12em;
   border-style: solid;
   -webkit-animation: none;
@@ -7454,10 +7454,10 @@
 }
 .dx-swatch-additional .dx-treeview-node-loadindicator {
   right: 0;
-  top: 13px;
-  left: 2px;
-  width: 20px;
-  height: 20px;
+  top: 8px;
+  left: 0;
+  width: 18px;
+  height: 18px;
 }
 .dx-swatch-additional .dx-rtl .dx-treeview-node .dx-checkbox {
   left: auto;
@@ -7471,31 +7471,31 @@
   padding-right: 8px;
 }
 .dx-swatch-additional .dx-rtl .dx-treeview-node {
-  padding-right: 24px;
+  padding-right: 16px;
 }
 .dx-swatch-additional .dx-rtl .dx-treeview-item .dx-treeview-item-content > .dx-icon {
   margin-left: 5px;
 }
 .dx-swatch-additional .dx-rtl .dx-treeview-item-with-checkbox .dx-treeview-item {
-  padding-right: 40px;
+  padding-right: 31px;
 }
 .dx-swatch-additional .dx-rtl .dx-treeview-item-with-checkbox .dx-checkbox {
-  right: 35px;
+  right: 26px;
   overflow: visible;
 }
 .dx-swatch-additional .dx-rtl .dx-treeview-select-all-item {
   padding-left: 0;
-  padding-right: 35px;
+  padding-right: 26px;
 }
 .dx-swatch-additional .dx-rtl .dx-treeview-select-all-item .dx-checkbox-text {
   padding-left: 0;
-  padding-right: 31px;
+  padding-right: 20px;
 }
 .dx-swatch-additional .dx-treeview-search {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .dx-swatch-additional .dx-treeview-with-search > .dx-scrollable {
-  height: calc(100% - 41px);
+  height: calc(100% - 37px);
 }
 .dx-swatch-additional .dx-treeview-border-visible {
   border: 1px solid #515159;
@@ -7508,24 +7508,24 @@
 }
 .dx-swatch-additional .dx-treeview-select-all-item {
   border-bottom: 1px solid #515159;
-  padding: 15px 0 15px 35px;
+  padding: 10px 0 10px 26px;
 }
 .dx-swatch-additional .dx-treeview-select-all-item .dx-checkbox-text {
-  padding-left: 31px;
+  padding-left: 20px;
 }
 .dx-swatch-additional .dx-treeview-node {
-  padding-left: 24px;
+  padding-left: 16px;
 }
 .dx-swatch-additional .dx-state-selected > .dx-treeview-item {
   color: #fff;
 }
 .dx-swatch-additional .dx-treeview-item-with-checkbox .dx-treeview-item {
   color: #fff;
-  padding-left: 40px;
+  padding-left: 31px;
 }
 .dx-swatch-additional .dx-treeview-item-with-checkbox .dx-checkbox {
-  top: 14px;
-  left: 35px;
+  top: 10px;
+  left: 26px;
 }
 .dx-swatch-additional .dx-treeview-item-without-checkbox.dx-state-selected > .dx-treeview-item {
   color: #fff;
@@ -7541,22 +7541,22 @@
 .dx-swatch-additional .dx-treeview-item {
   display: block;
   cursor: pointer;
-  padding: 13px 8px;
-  min-height: 48px;
-  line-height: 22px;
+  padding: 10px 8px;
+  min-height: 36px;
+  line-height: 16px;
 }
 .dx-swatch-additional .dx-treeview-item .dx-treeview-item-content > .dx-icon {
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   background-position: 0 0;
-  background-size: 24px 24px;
+  background-size: 18px 18px;
   padding: 0;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
-  line-height: 24px;
+  line-height: 18px;
 }
 .dx-swatch-additional .dx-treeview-item.dx-state-hover {
   background-color: rgba(255,255,255,.05);
@@ -7565,11 +7565,11 @@
 .dx-swatch-additional .dx-treeview-toggle-item-visibility {
   position: absolute;
   cursor: pointer;
-  font: 24px/24px DXIcons;
+  font: 18px/18px DXIcons;
   text-align: center;
   color: rgba(255,255,255,.54);
-  width: 24px;
-  height: 48px;
+  width: 16px;
+  height: 36px;
   top: 0;
   left: 0;
 }
@@ -7577,23 +7577,23 @@
   content: "\f010";
   position: absolute;
   display: block;
-  width: 24px;
+  width: 18px;
   top: 50%;
-  margin-top: -12px;
+  margin-top: -9px;
   left: 50%;
-  margin-left: -12px;
+  margin-left: -9px;
 }
 .dx-swatch-additional .dx-treeview-toggle-item-visibility.dx-treeview-toggle-item-visibility-opened {
-  font: 24px/24px DXIcons;
+  font: 18px/18px DXIcons;
   text-align: center;
 }
 .dx-swatch-additional .dx-treeview-toggle-item-visibility.dx-treeview-toggle-item-visibility-opened::before {
   content: "\f016";
   position: absolute;
   display: block;
-  width: 24px;
+  width: 18px;
   top: 50%;
-  margin-top: -12px;
+  margin-top: -9px;
   left: 50%;
-  margin-left: -12px;
+  margin-left: -9px;
 }
