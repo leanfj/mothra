@@ -23,15 +23,15 @@ export class ClientesService {
     return this.getAllClienteUseCase.execute()
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return this.getClienteByIDUseCase.execute(id)
   }
 
-  update(id: number, updateClienteDto: ClienteInputDTO) {
+  update(id: string, updateClienteDto: ClienteInputDTO) {
     return this.updateClienteUseCase.execute(id, updateClienteDto)
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return this.deleteClienteUseCase.execute(id)
   }
 }

@@ -21,7 +21,7 @@ function withNavigationWatcher(Component, path) {
 
     useEffect(() => {
       setNavigationData({ currentPath: path });
-    }, [path, setNavigationData]);
+    }, [setNavigationData]);
 
     return <Component {...props} />;
   }

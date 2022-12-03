@@ -40,7 +40,7 @@ export class ClientesController {
   @Get(':id')
   async findOne(@Param('id') id: string) {
     try {
-      const clienteData = await this.clientesService.findOne(+id)
+      const clienteData = await this.clientesService.findOne(id)
       return clienteData
     } catch (error) {
       throw new HttpException(
@@ -54,15 +54,9 @@ export class ClientesController {
   }
 
   @Patch(':id')
-  async update(
-    @Param('id') id: string,
-    @Body() updateClienteDto: ClienteInputDTO
-  ) {
+  async update(@Param('id') id: string, @Body() updateClienteDto: any) {
     try {
-      const clientData = await this.clientesService.update(
-        +id,
-        updateClienteDto
-      )
+      const clientData = await this.clientesService.update(id, updateClienteDto)
       return clientData
     } catch (error) {
       throw new HttpException(
@@ -78,7 +72,7 @@ export class ClientesController {
   @Delete(':id')
   async remove(@Param('id') id: string) {
     try {
-      return await this.clientesService.remove(+id)
+      return await this.clientesService.remove(id)
     } catch (error) {
       throw new HttpException(
         {

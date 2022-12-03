@@ -1,5 +1,5 @@
 const appInfo = {
-    title: 'Web'
+    title: 'Mothra Web'
 };
 export default appInfo;
 

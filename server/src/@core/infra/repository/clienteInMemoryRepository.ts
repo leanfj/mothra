@@ -9,7 +9,7 @@ export default class ClienteInMemoryRepository implements ClienteRepository {
     return this.clientes
   }
 
-  async findById(id: number): Promise<Cliente> {
+  async findById(id: string): Promise<Cliente> {
     const cliente = this.clientes.find((cliente) => cliente.id === id)
 
     if (!cliente) {
@@ -44,30 +44,21 @@ export default class ClienteInMemoryRepository implements ClienteRepository {
     return newCliente
   }
 
-  async update(id: number, cliente: ClienteInputDTO): Promise<Cliente> {
-    const newCliente = new Cliente(
-      cliente.id,
-      cliente.nome,
-      cliente.email,
-      cliente.telefone,
-      cliente.endereco,
-      cliente.cidade,
-      cliente.estado,
-      cliente.dataAtualizacao
-    )
-
+  async update(id: string, input: any): Promise<Cliente> {
     const index = this.clientes.findIndex((c) => c.id === id)
 
     if (index === -1) {
       throw new Error('Cliente não encontrado')
     }
 
-    this.clientes[index] = newCliente
+    const cliente = this.clientes[index]
 
-    return newCliente
+    this.clientes[index] = { ...cliente, ...input }
+
+    return this.clientes[index]
   }
 
-  async delete(id: number): Promise<void> {
+  async delete(id: string): Promise<void> {
     const index = this.clientes.findIndex((c) => c.id === id)
 
     if (index === -1) {

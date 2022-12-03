@@ -1,5 +1,7 @@
+import { randomUUID } from 'crypto'
+
 export default class Cliente {
-  id: number
+  id: string
   nome: string
   email: string
   telefone: string
@@ -10,7 +12,7 @@ export default class Cliente {
   dataAtualizacao?: Date
 
   constructor(
-    id: number,
+    id: string,
     nome: string,
     email: string,
     telefone: string,
@@ -19,7 +21,7 @@ export default class Cliente {
     estado: string,
     dataAtualizacao?: Date
   ) {
-    this.id = id
+    this.id = id || randomUUID()
     this.nome = nome
     this.email = email
     this.telefone = telefone

@@ -10,7 +10,8 @@ import { AuthProvider, useAuth } from './contexts/auth';
 import { useScreenSizeClass } from './utils/media-query';
 import Content from './Content';
 import UnauthenticatedContent from './UnauthenticatedContent';
-
+import ptbrMessages from './localization/messages/ptbr.json';
+import { locale, loadMessages } from "devextreme/localization";
 function App() {
   const { user, loading } = useAuth();
 
@@ -27,6 +28,8 @@ function App() {
 
 export default function Root() {
   const screenSizeClass = useScreenSizeClass();
+  loadMessages(ptbrMessages);
+  locale(navigator.language);
 
   return (
     <Router>

@@ -1,5 +1,5 @@
 export default class ClienteViewDTO {
-  id: number
+  id: string
   nome: string
   email: string
   telefone: string

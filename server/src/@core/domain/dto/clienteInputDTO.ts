@@ -1,8 +1,8 @@
 import { IsDate, IsEmail, IsNotEmpty, IsOptional } from 'class-validator'
 
 export class ClienteInputDTO {
-  @IsNotEmpty()
-  id: number
+  @IsOptional()
+  id?: string
 
   @IsNotEmpty()
   nome: string

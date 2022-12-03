@@ -4,7 +4,7 @@ import ClienteRepository from '../../../domain/repository/clienteRepository'
 export default class GetClienteByIDUseCase {
   constructor(private clienteRepository: ClienteRepository) {}
 
-  async execute(id: number): Promise<ClienteViewDTO> {
+  async execute(id: string): Promise<ClienteViewDTO> {
     const clienteData = await this.clienteRepository.findById(id)
 
     return {
