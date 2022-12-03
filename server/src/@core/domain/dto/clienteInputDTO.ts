@@ -1,15 +1,28 @@
-import { IsEmail } from 'class-validator';
+import { IsDate, IsEmail, IsNotEmpty, IsOptional } from 'class-validator'
 
 export class ClienteInputDTO {
-  id: number;
-  nome: string;
+  @IsNotEmpty()
+  id: number
+
+  @IsNotEmpty()
+  nome: string
 
   @IsEmail()
-  email: string;
-  
-  telefone: string;
-  endereco: string;
-  cidade: string;
-  estado: string;
-  dataAtualizacao?: Date;
+  email: string
+
+  @IsNotEmpty()
+  telefone: string
+
+  @IsNotEmpty()
+  endereco: string
+
+  @IsNotEmpty()
+  cidade: string
+
+  @IsNotEmpty()
+  estado: string
+
+  @IsOptional()
+  @IsDate()
+  dataAtualizacao?: Date
 }

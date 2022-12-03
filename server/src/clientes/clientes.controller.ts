@@ -1,42 +1,92 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, HttpException, HttpStatus } from '@nestjs/common';
-import { ClienteInputDTO } from '../@core/domain/dto/clienteInputDTO';
-import { ClientesService } from './clientes.service';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  HttpException,
+  HttpStatus
+} from '@nestjs/common'
+import { ClienteInputDTO } from '../@core/domain/dto/clienteInputDTO'
+import { ClientesService } from './clientes.service'
 
 @Controller('clientes')
 export class ClientesController {
   constructor(private readonly clientesService: ClientesService) {}
 
   @Post()
-  create(@Body() createClienteDto: ClienteInputDTO) {
-    return this.clientesService.create(createClienteDto);
+  async create(@Body() createClienteDto: ClienteInputDTO) {
+    try {
+      const clienteData = await this.clientesService.create(createClienteDto)
+      return clienteData
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.BAD_REQUEST,
+          error: error.message
+        },
+        HttpStatus.BAD_REQUEST
+      )
+    }
   }
 
   @Get()
   findAll() {
-    return this.clientesService.findAll();
+    return this.clientesService.findAll()
   }
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
-    const data = await this.clientesService.findOne(+id);
-    
-    if(!data) {
-      throw new HttpException({
-        status: HttpStatus.NOT_FOUND,
-        error: 'Not Found',
-      }, HttpStatus.NOT_FOUND);
+    try {
+      const clienteData = await this.clientesService.findOne(+id)
+      return clienteData
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: error.message
+        },
+        HttpStatus.NOT_FOUND
+      )
     }
-
-    return data;
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateClienteDto: ClienteInputDTO) {
-    return this.clientesService.update(+id, updateClienteDto);
+  async update(
+    @Param('id') id: string,
+    @Body() updateClienteDto: ClienteInputDTO
+  ) {
+    try {
+      const clientData = await this.clientesService.update(
+        +id,
+        updateClienteDto
+      )
+      return clientData
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: error.message
+        },
+        HttpStatus.NOT_FOUND
+      )
+    }
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.clientesService.remove(+id);
+  async remove(@Param('id') id: string) {
+    try {
+      return await this.clientesService.remove(+id)
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: error.message
+        },
+        HttpStatus.NOT_FOUND
+      )
+    }
   }
 }
