@@ -24,6 +24,7 @@ export default class ClienteInMemoryRepository implements ClienteRepository {
       cliente.id,
       cliente.nome,
       cliente.email,
+      cliente.genero,
       cliente.telefone,
       cliente.endereco,
       cliente.cidade,

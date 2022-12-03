@@ -11,6 +11,9 @@ export class ClienteInputDTO {
   email: string
 
   @IsNotEmpty()
+  genero: string
+
+  @IsNotEmpty()
   telefone: string
 
   @IsNotEmpty()

@@ -11,6 +11,7 @@ export default class GetClienteByIDUseCase {
       id: clienteData.id,
       nome: clienteData.nome,
       email: clienteData.email,
+      genero: clienteData.genero,
       telefone: clienteData.telefone,
       endereco: clienteData.endereco,
       cidade: clienteData.cidade,

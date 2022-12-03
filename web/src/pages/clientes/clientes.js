@@ -113,7 +113,11 @@ const baseUrl = process.env.REACT_APP_API_URL;
 const store = new CustomStore({
   key: 'id',
   load: async (loadOptions) => {
-    return await axios.get(`${baseUrl}/clientes`)
+    return await axios.get(`${baseUrl}/clientes`).then((data) => {
+
+      console.log("🚀 ~ file: clientes.js:118 ~ returnawaitaxios.get ~ data", data)
+      return data
+    })
   },
   insert: async (values) => {
     console.log("🚀 ~ file: clientes.js:119 ~ insert: ~ values", values)

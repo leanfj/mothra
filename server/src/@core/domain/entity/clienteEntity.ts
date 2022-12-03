@@ -4,6 +4,7 @@ export default class Cliente {
   id: string
   nome: string
   email: string
+  genero: string
   telefone: string
   endereco: string
   cidade: string
@@ -15,6 +16,7 @@ export default class Cliente {
     id: string,
     nome: string,
     email: string,
+    genero: string,
     telefone: string,
     endereco: string,
     cidade: string,
@@ -24,6 +26,7 @@ export default class Cliente {
     this.id = id || randomUUID()
     this.nome = nome
     this.email = email
+    this.genero = genero
     this.telefone = telefone
     this.endereco = endereco
     this.cidade = cidade

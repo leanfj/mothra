@@ -10,6 +10,7 @@ describe('CreateClienteUseCase', () => {
     const cliente: ClienteInputDTO = {
       nome: 'Cliente 1',
       email: '',
+      genero: 'Masculino',
       telefone: '999999999',
       endereco: 'Rua 1',
       cidade: 'Cidade 1',
