@@ -9,7 +9,7 @@ import {
   HttpException,
   HttpStatus
 } from '@nestjs/common'
-import { ClienteInputDTO } from '../@core/domain/dto/clienteInputDTO'
+import { ClienteInputDTO } from '../@core/domain/dto/cliente/clienteInputDTO'
 import { ClientesService } from './clientes.service'
 
 @Controller('clientes')

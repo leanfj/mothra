@@ -1,4 +1,4 @@
-import ClienteViewDTO from '../../../domain/dto/clienteViewDTO'
+import ClienteViewDTO from '../../../domain/dto/cliente/clienteViewDTO'
 import ClienteRepository from '../../../domain/repository/clienteRepository'
 
 export default class GetAllClienteUseCase {

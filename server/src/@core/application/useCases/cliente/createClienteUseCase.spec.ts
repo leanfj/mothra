@@ -1,4 +1,4 @@
-import { ClienteInputDTO } from '../../../domain/dto/clienteInputDTO'
+import { ClienteInputDTO } from '../../../domain/dto/cliente/clienteInputDTO'
 import ClienteInMemoryRepository from '../../../infra/repository/clienteInMemoryRepository'
 import CreateClienteUseCase from './createClienteUseCase'
 

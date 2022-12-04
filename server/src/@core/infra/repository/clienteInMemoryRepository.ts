@@ -1,4 +1,4 @@
-import { ClienteInputDTO } from 'src/@core/domain/dto/clienteInputDTO'
+import { ClienteInputDTO } from '../../domain/dto/cliente/clienteInputDTO'
 import Cliente from '../../domain/entity/clienteEntity'
 import ClienteRepository from '../../domain/repository/clienteRepository'
 
@@ -32,11 +32,11 @@ export default class ClienteInMemoryRepository implements ClienteRepository {
       cliente.dataAtualizacao
     )
 
-    const clientData = this.clientes.find(
+    const clienteData = this.clientes.find(
       (cliente) => cliente.id === newCliente.id
     )
 
-    if (clientData) {
+    if (clienteData) {
       throw new Error('Cliente já existe')
     }
 
@@ -46,7 +46,7 @@ export default class ClienteInMemoryRepository implements ClienteRepository {
   }
 
   async update(id: string, input: any): Promise<Cliente> {
-    const index = this.clientes.findIndex((c) => c.id === id)
+    const index = this.clientes.findIndex((cliente) => cliente.id === id)
 
     if (index === -1) {
       throw new Error('Cliente não encontrado')

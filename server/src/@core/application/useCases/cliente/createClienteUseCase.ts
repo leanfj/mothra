@@ -1,5 +1,5 @@
-import ClienteViewDTO from 'src/@core/domain/dto/clienteViewDTO'
-import { ClienteInputDTO } from '../../../domain/dto/clienteInputDTO'
+import ClienteViewDTO from '../../../domain/dto/cliente/clienteViewDTO'
+import { ClienteInputDTO } from '../../../domain/dto/cliente/clienteInputDTO'
 import Cliente from '../../../domain/entity/clienteEntity'
 import ClienteRepository from '../../../domain/repository/clienteRepository'
 

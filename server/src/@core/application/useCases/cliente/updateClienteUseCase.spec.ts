@@ -1,38 +1,42 @@
-import { ClienteInputDTO } from '../../../domain/dto/clienteInputDTO';
-import ClienteInMemoryRepository from '../../../infra/repository/clienteInMemoryRepository';
-import UpdateClienteUseCase from './updateClienteUseCase';
+import { ClienteInputDTO } from '../../../domain/dto/cliente/clienteInputDTO'
+import ClienteInMemoryRepository from '../../../infra/repository/clienteInMemoryRepository'
+import UpdateClienteUseCase from './updateClienteUseCase'
 
 describe('UpdateClienteUseCase', () => {
-  it('should be update a Cliente',async () => {
-    const clienteRepository = new ClienteInMemoryRepository();
-    const updateClienteUseCase = new UpdateClienteUseCase(clienteRepository);
-    
+  it('should be update a Cliente', async () => {
+    const clienteRepository = new ClienteInMemoryRepository()
+    const updateClienteUseCase = new UpdateClienteUseCase(clienteRepository)
+
     const cliente: ClienteInputDTO = {
-      id: 1,
       nome: 'Cliente 1',
       email: '',
+      genero: 'Masculino',
       telefone: '999999999',
       endereco: 'Rua 1',
       cidade: 'Cidade 1',
-      estado: 'Estado 1',
-    };
-    await clienteRepository.create(cliente)
+      estado: 'Estado 1'
+    }
+    const clienteCreated = await clienteRepository.create(cliente)
 
-    const clienteData = await clienteRepository.findById(1)
+    const clienteData = await clienteRepository.findById(clienteCreated.id)
 
     const newClienteData: ClienteInputDTO = {
-      id: 1,
       nome: 'Cliente 1',
       email: 'email@email.com',
+      genero: 'Feminino',
       telefone: '999999999',
       endereco: 'Rua 1',
       cidade: 'Cidade 1',
       estado: 'Estado 1',
       dataAtualizacao: new Date()
-    };
+    }
 
-    const clienteUpdated = await updateClienteUseCase.execute(clienteData.id, newClienteData)
+    const clienteUpdated = await updateClienteUseCase.execute(
+      clienteData.id,
+      newClienteData
+    )
 
-    expect(newClienteData.email).toBe(clienteUpdated.email);
-  });
-});
+    expect(newClienteData.email).toBe(clienteUpdated.email)
+    expect(newClienteData.genero).toBe(clienteUpdated.genero)
+  })
+})

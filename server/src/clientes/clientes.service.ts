@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { ClienteInputDTO } from '../@core/domain/dto/clienteInputDTO'
+import { ClienteInputDTO } from '../@core/domain/dto/cliente/clienteInputDTO'
 import GetAllClienteUseCase from '../@core/application/useCases/cliente/getAllClienteUseCase'
 import CreateClienteUseCase from '../@core/application/useCases/cliente/createClienteUseCase'
 import GetClienteByIDUseCase from '../@core/application/useCases/cliente/getClienteByIdUseCase'

@@ -1,4 +1,4 @@
-import ClienteViewDTO from 'src/@core/domain/dto/clienteViewDTO'
+import ClienteViewDTO from '../../../domain/dto/cliente/clienteViewDTO'
 import ClienteRepository from '../../../domain/repository/clienteRepository'
 
 export default class UpdateClienteUseCase {
@@ -6,10 +6,6 @@ export default class UpdateClienteUseCase {
 
   async execute(id: string, input: any): Promise<ClienteViewDTO> {
     const clienteData = await this.clienteRepository.update(id, input)
-    console.log(
-      '🚀 ~ file: updateClienteUseCase.ts:9 ~ UpdateClienteUseCase ~ execute ~ clienteData',
-      clienteData
-    )
 
     return {
       id: clienteData.id,
