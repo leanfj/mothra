@@ -28,8 +28,7 @@ export default class ClienteInMemoryRepository implements ClienteRepository {
       cliente.telefone,
       cliente.endereco,
       cliente.cidade,
-      cliente.estado,
-      cliente.dataAtualizacao
+      cliente.estado
     )
 
     const clienteData = this.clientes.find(

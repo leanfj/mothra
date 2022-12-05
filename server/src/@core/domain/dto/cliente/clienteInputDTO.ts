@@ -24,8 +24,4 @@ export class ClienteInputDTO {
 
   @IsNotEmpty()
   estado: string
-
-  @IsOptional()
-  @IsDate()
-  dataAtualizacao?: Date
 }

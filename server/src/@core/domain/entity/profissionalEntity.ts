@@ -9,7 +9,7 @@ export default class Profissional {
   endereco: string
   cidade: string
   estado: string
-  dataCadastro: Date
+  dataCadastro?: Date
   dataAtualizacao?: Date
 
   constructor(
@@ -20,8 +20,7 @@ export default class Profissional {
     telefone: string,
     endereco: string,
     cidade: string,
-    estado: string,
-    dataAtualizacao?: Date
+    estado: string
   ) {
     this.id = id || randomUUID()
     this.nome = nome
@@ -31,7 +30,5 @@ export default class Profissional {
     this.endereco = endereco
     this.cidade = cidade
     this.estado = estado
-    this.dataCadastro = new Date()
-    this.dataAtualizacao = dataAtualizacao || null
   }
 }

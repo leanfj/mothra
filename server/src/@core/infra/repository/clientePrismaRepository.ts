@@ -33,8 +33,7 @@ export default class ClientePrismaRepository implements ClienteRepository {
       cliente.telefone,
       cliente.endereco,
       cliente.cidade,
-      cliente.estado,
-      cliente.dataAtualizacao
+      cliente.estado
     )
 
     const clienteData = await this.prisma.cliente.findUnique({
@@ -56,9 +55,7 @@ export default class ClientePrismaRepository implements ClienteRepository {
         telefone: newCliente.telefone,
         endereco: newCliente.endereco,
         cidade: newCliente.cidade,
-        estado: newCliente.estado,
-        dataCadastro: newCliente.dataCadastro,
-        dataAtualizacao: newCliente.dataAtualizacao
+        estado: newCliente.estado
       }
     })
   }
@@ -74,9 +71,20 @@ export default class ClientePrismaRepository implements ClienteRepository {
       throw new Error('Cliente não encontrado')
     }
 
+    const newCliente = new Cliente(
+      cliente.id,
+      cliente.nome,
+      cliente.email,
+      cliente.genero,
+      cliente.telefone,
+      cliente.endereco,
+      cliente.cidade,
+      cliente.estado
+    )
+
     const updatedCliente = await this.prisma.cliente.update({
       where: { id: cliente.id },
-      data: { ...cliente, ...input }
+      data: { ...newCliente, ...input }
     })
 
     return updatedCliente

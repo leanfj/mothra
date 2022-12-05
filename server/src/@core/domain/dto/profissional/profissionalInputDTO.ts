@@ -1,4 +1,4 @@
-import { IsDate, IsEmail, IsNotEmpty, IsOptional } from 'class-validator'
+import { IsEmail, IsNotEmpty, IsOptional } from 'class-validator'
 
 export class ProfissionalInputDTO {
   @IsOptional()
@@ -24,8 +24,4 @@ export class ProfissionalInputDTO {
 
   @IsNotEmpty()
   estado: string
-
-  @IsOptional()
-  @IsDate()
-  dataAtualizacao?: Date
 }

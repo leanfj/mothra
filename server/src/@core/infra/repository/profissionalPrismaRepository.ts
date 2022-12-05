@@ -10,13 +10,20 @@ export default class ProfissionalPrismaRepository
   constructor(private readonly prisma: PrismaClient) {}
 
   async findAll(): Promise<Profissional[]> {
-    return await this.prisma.profissional.findMany()
+    return await this.prisma.profissional.findMany({
+      include: {
+        servicos: true
+      }
+    })
   }
 
   async findById(id: string): Promise<Profissional> {
     const profissional = await this.prisma.profissional.findUnique({
       where: {
         id
+      },
+      include: {
+        servicos: true
       }
     })
 
@@ -36,8 +43,7 @@ export default class ProfissionalPrismaRepository
       profissional.telefone,
       profissional.endereco,
       profissional.cidade,
-      profissional.estado,
-      profissional.dataAtualizacao
+      profissional.estado
     )
 
     const profissionalData = await this.prisma.profissional.findUnique({
@@ -59,9 +65,7 @@ export default class ProfissionalPrismaRepository
         telefone: newProfissional.telefone,
         endereco: newProfissional.endereco,
         cidade: newProfissional.cidade,
-        estado: newProfissional.estado,
-        dataCadastro: newProfissional.dataCadastro,
-        dataAtualizacao: newProfissional.dataAtualizacao
+        estado: newProfissional.estado
       }
     })
   }
@@ -77,9 +81,20 @@ export default class ProfissionalPrismaRepository
       throw new Error('Profisional não encontrado')
     }
 
+    const newProfissional = new Profissional(
+      profissional.id,
+      profissional.nome,
+      profissional.email,
+      profissional.genero,
+      profissional.telefone,
+      profissional.endereco,
+      profissional.cidade,
+      profissional.estado
+    )
+
     const updatedProfissional = await this.prisma.profissional.update({
       where: { id: profissional.id },
-      data: { ...profissional, ...input }
+      data: { ...newProfissional, ...input }
     })
 
     return updatedProfissional

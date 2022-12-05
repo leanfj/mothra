@@ -32,8 +32,7 @@ export default class ProfissionalInMemoryRepository
       profissionalInput.telefone,
       profissionalInput.endereco,
       profissionalInput.cidade,
-      profissionalInput.estado,
-      profissionalInput.dataAtualizacao
+      profissionalInput.estado
     )
 
     const profissionalData = this.profissionais.find(

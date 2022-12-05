@@ -14,10 +14,16 @@ import DataGrid, {
   Editing,
   ColumnChooser,
   SearchPanel,
-  Lookup
+  Lookup,
+  FormItem,
 } from 'devextreme-react/data-grid';
+import 'devextreme-react/list';
+import ArrayStore from 'devextreme/data/array_store';
 
 export default function Profissional() {
+
+
+  const [servicos, setServicos] = React.useState([]);
 
   const generoList = [
     { nome: 'Masculino' },
@@ -40,6 +46,16 @@ export default function Profissional() {
         columnHidingEnabled={true}
         allowColumnResizing={true}
         columnMinWidth={100}
+        onRowInserting={
+          (e) => {
+            e.data.servicos = servicos
+          }
+        }
+        onRowClick={
+          (e) => {
+            servicos = e.data.servicos
+          }
+        }
       >
         <Paging defaultPageSize={10} />
 
@@ -52,7 +68,9 @@ export default function Profissional() {
           allowAdding={true}
           confirmDelete={true}
           useIcons={true}
-        />
+        >
+
+        </Editing>
 
         <FilterRow visible={true} />
 
@@ -102,7 +120,33 @@ export default function Profissional() {
           caption={'Estado'}
           hidingPriority={1}
         />
+        <Column
+          dataField={'servicos'}
+          caption={'Serviços'}
+          hidingPriority={1}
+          visible={false}
+        >
+          <FormItem editorType="dxList" editorOptions={{
+            dataSource: new ArrayStore({
+              data: [
+                { id: 1, nome: 'Corte' },
+                { id: 2, nome: 'Barba' },
+                { id: 3, nome: 'Corte + Barba' },
+                { id: 4, nome: 'Corte + Barba + Bigode' },
+              ]
+            }),
+            height: 100,
+            selectionMode: 'multiple',
+            keyExpr: 'id',
+            displayExpr: 'nome',
+            onOptionChanged: function (args) {
+              if (args.name === 'selectedItems') {
+                setServicos(args.value);
+              }
+            }
 
+          }} />
+        </Column>
       </DataGrid>
     </React.Fragment>
   )
@@ -119,6 +163,8 @@ const store = new CustomStore({
     })
   },
   insert: async (values) => {
+    console.log("🚀 ~ file: profissional.js:155 ~ insert: ~ values", values)
+
     return axios.post(`${baseUrl}/profissional`, values).then(data => data).catch(err => {
       if (err) {
         const data = err.response.data.message;

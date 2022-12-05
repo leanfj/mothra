@@ -15,8 +15,7 @@ export default class UpdateClienteUseCase {
       telefone: clienteData.telefone,
       endereco: clienteData.endereco,
       cidade: clienteData.cidade,
-      estado: clienteData.estado,
-      dataAtualizacao: clienteData.dataAtualizacao
+      estado: clienteData.estado
     }
   }
 }

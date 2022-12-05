@@ -16,6 +16,10 @@ export const navigation = [
         text: 'Profissional',
         path: '/profissional'
       },
+      {
+        text: 'Serviço',
+        path: '/servico'
+      },
       // {
       //   text: 'Tasks',
       //   path: '/tasks'

@@ -7,7 +7,7 @@ export default class CreateProfissionalUseCase {
   constructor(private profissionalRepository: ProfissionalRepository) {}
 
   async execute(input: ProfissionalInputDTO): Promise<ProfissionalViewDTO> {
-    const cliente = new Profissional(
+    const profissional = new Profissional(
       input.id,
       input.nome,
       input.email,
@@ -18,17 +18,19 @@ export default class CreateProfissionalUseCase {
       input.estado
     )
 
-    const clienteData = await this.profissionalRepository.create(cliente)
+    const profissionalData = await this.profissionalRepository.create(
+      profissional
+    )
 
     return {
-      id: clienteData.id,
-      nome: clienteData.nome,
-      email: clienteData.email,
-      genero: clienteData.genero,
-      telefone: clienteData.telefone,
-      endereco: clienteData.endereco,
-      cidade: clienteData.cidade,
-      estado: clienteData.estado
+      id: profissionalData.id,
+      nome: profissionalData.nome,
+      email: profissionalData.email,
+      genero: profissionalData.genero,
+      telefone: profissionalData.telefone,
+      endereco: profissionalData.endereco,
+      cidade: profissionalData.cidade,
+      estado: profissionalData.estado
     }
   }
 }

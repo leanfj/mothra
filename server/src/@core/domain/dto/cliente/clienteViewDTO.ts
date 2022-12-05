@@ -7,5 +7,4 @@ export default class ClienteViewDTO {
   endereco: string
   cidade: string
   estado: string
-  dataAtualizacao?: Date
 }

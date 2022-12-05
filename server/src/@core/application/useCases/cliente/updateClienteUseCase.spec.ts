@@ -27,8 +27,7 @@ describe('UpdateClienteUseCase', () => {
       telefone: '999999999',
       endereco: 'Rua 1',
       cidade: 'Cidade 1',
-      estado: 'Estado 1',
-      dataAtualizacao: new Date()
+      estado: 'Estado 1'
     }
 
     const clienteUpdated = await updateClienteUseCase.execute(

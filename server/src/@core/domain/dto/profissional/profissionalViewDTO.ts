@@ -7,5 +7,4 @@ export default class ProfissionalViewDTO {
   endereco: string
   cidade: string
   estado: string
-  dataAtualizacao?: Date
 }

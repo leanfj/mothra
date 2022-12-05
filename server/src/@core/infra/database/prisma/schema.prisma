@@ -19,12 +19,12 @@ model cliente {
   endereco        String
   cidade          String
   estado          String
-  dataCadastro    DateTime
-  dataAtualizacao DateTime?
+  dataCadastro    DateTime? @default(now())
+  dataAtualizacao DateTime? @updatedAt
 }
 
 model profissional {
-  id              String    @id
+  id              String                @id
   nome            String
   email           String
   genero          String
@@ -32,6 +32,27 @@ model profissional {
   endereco        String
   cidade          String
   estado          String
-  dataCadastro    DateTime
-  dataAtualizacao DateTime?
+  servicos        servicoProfissional[]
+  dataCadastro    DateTime?             @default(now())
+  dataAtualizacao DateTime?             @updatedAt
+}
+
+model servico {
+  id              String                @id
+  nome            String
+  descricao       String
+  valor           Float
+  profissionais   servicoProfissional[]
+  dataCadastro    DateTime?             @default(now())
+  dataAtualizacao DateTime?             @updatedAt
+}
+
+model servicoProfissional {
+  id              String       @id
+  profissional    profissional @relation(fields: [profissionalId], references: [id])
+  profissionalId  String
+  servico         servico      @relation(fields: [servicoId], references: [id])
+  servicoId       String
+  dataCadastro    DateTime?    @default(now())
+  dataAtualizacao DateTime?    @updatedAt
 }

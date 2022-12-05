@@ -15,8 +15,7 @@ export default class UpdateProfissionalUseCase {
       telefone: profissionalData.telefone,
       endereco: profissionalData.endereco,
       cidade: profissionalData.cidade,
-      estado: profissionalData.estado,
-      dataAtualizacao: profissionalData.dataAtualizacao
+      estado: profissionalData.estado
     }
   }
 }
