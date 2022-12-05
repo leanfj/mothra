@@ -25,5 +25,6 @@ describe('CreateProfissionalUseCase', () => {
     )
 
     expect(profissional.nome).toBe(profissionalData.nome)
+    expect(profissional.endereco).toBe('Rua 1')
   })
 })

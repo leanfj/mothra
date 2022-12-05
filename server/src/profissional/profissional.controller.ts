@@ -7,6 +7,7 @@ import {
   Param,
   Delete
 } from '@nestjs/common'
+import { ProfissionalInputDTO } from '../@core/domain/dto/profissional/profissionalInputDTO'
 import { ProfissionalService } from './profissional.service'
 
 @Controller('profissional')
@@ -14,7 +15,7 @@ export class ProfissionalController {
   constructor(private readonly profissionalService: ProfissionalService) {}
 
   @Post()
-  create(@Body() createProfissionalDto: CreateProfissionalDto) {
+  create(@Body() createProfissionalDto: ProfissionalInputDTO) {
     return this.profissionalService.create(createProfissionalDto)
   }
 
@@ -25,19 +26,16 @@ export class ProfissionalController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.profissionalService.findOne(+id)
+    return this.profissionalService.findOne(id)
   }
 
   @Patch(':id')
-  update(
-    @Param('id') id: string,
-    @Body() updateProfissionalDto: UpdateProfissionalDto
-  ) {
-    return this.profissionalService.update(+id, updateProfissionalDto)
+  update(@Param('id') id: string, @Body() updateProfissionalDto: any) {
+    return this.profissionalService.update(id, updateProfissionalDto)
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.profissionalService.remove(+id)
+    return this.profissionalService.remove(id)
   }
 }

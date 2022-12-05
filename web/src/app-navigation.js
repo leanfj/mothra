@@ -10,7 +10,11 @@ export const navigation = [
     items: [
       {
         text: 'Clientes',
-        path: '/clientes'
+        path: '/cliente'
+      },
+      {
+        text: 'Profissional',
+        path: '/profissional'
       },
       // {
       //   text: 'Tasks',

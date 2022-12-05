@@ -12,7 +12,7 @@ import {
 import { ClienteInputDTO } from '../@core/domain/dto/cliente/clienteInputDTO'
 import { ClientesService } from './clientes.service'
 
-@Controller('clientes')
+@Controller('cliente')
 export class ClientesController {
   constructor(private readonly clientesService: ClientesService) {}
 

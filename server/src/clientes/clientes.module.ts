@@ -2,13 +2,15 @@ import { Module } from '@nestjs/common'
 
 import { ClientesService } from './clientes.service'
 import { ClientesController } from './clientes.controller'
-import ClienteInMemoryRepository from '../@core/infra/repository/clienteInMemoryRepository'
 import CreateClienteUseCase from '../@core/application/useCases/cliente/createClienteUseCase'
 import ClienteRepository from '../@core/domain/repository/clienteRepository'
 import GetClienteByIDUseCase from '../@core/application/useCases/cliente/getClienteByIdUseCase'
-import GetAllClienteUseCase from 'src/@core/application/useCases/cliente/getAllClienteUseCase'
-import UpdateClienteUseCase from 'src/@core/application/useCases/cliente/updateClienteUseCase'
-import DeleteClienteUseCase from 'src/@core/application/useCases/cliente/deleteClienteUseCase'
+import GetAllClienteUseCase from '../@core/application/useCases/cliente/getAllClienteUseCase'
+import UpdateClienteUseCase from '../@core/application/useCases/cliente/updateClienteUseCase'
+import DeleteClienteUseCase from '../@core/application/useCases/cliente/deleteClienteUseCase'
+import ClientePrismaRepository from '../@core/infra/repository/clientePrismaRepository'
+import { PrismaClient } from '@prisma/client'
+import ClienteInMemoryRepository from '../@core/infra/repository/clienteInMemoryRepository'
 
 @Module({
   controllers: [ClientesController],
@@ -19,39 +21,45 @@ import DeleteClienteUseCase from 'src/@core/application/useCases/cliente/deleteC
       useClass: ClienteInMemoryRepository
     },
     {
+      provide: 'ClientePrismaRepository',
+      useFactory: () => {
+        return new ClientePrismaRepository(new PrismaClient())
+      }
+    },
+    {
       provide: CreateClienteUseCase,
       useFactory: (clienteRepository: ClienteRepository) => {
         return new CreateClienteUseCase(clienteRepository)
       },
-      inject: ['ClienteInMemoryRepository']
+      inject: ['ClientePrismaRepository']
     },
     {
       provide: GetClienteByIDUseCase,
       useFactory: (clienteRepository: ClienteRepository) => {
         return new GetClienteByIDUseCase(clienteRepository)
       },
-      inject: ['ClienteInMemoryRepository']
+      inject: ['ClientePrismaRepository']
     },
     {
       provide: GetAllClienteUseCase,
       useFactory: (clienteRepository: ClienteRepository) => {
         return new GetAllClienteUseCase(clienteRepository)
       },
-      inject: ['ClienteInMemoryRepository']
+      inject: ['ClientePrismaRepository']
     },
     {
       provide: UpdateClienteUseCase,
       useFactory: (clienteRepository: ClienteRepository) => {
         return new UpdateClienteUseCase(clienteRepository)
       },
-      inject: ['ClienteInMemoryRepository']
+      inject: ['ClientePrismaRepository']
     },
     {
       provide: DeleteClienteUseCase,
       useFactory: (clienteRepository: ClienteRepository) => {
         return new DeleteClienteUseCase(clienteRepository)
       },
-      inject: ['ClienteInMemoryRepository']
+      inject: ['ClientePrismaRepository']
     }
   ]
 })

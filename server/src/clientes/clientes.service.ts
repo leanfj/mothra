@@ -3,8 +3,8 @@ import { ClienteInputDTO } from '../@core/domain/dto/cliente/clienteInputDTO'
 import GetAllClienteUseCase from '../@core/application/useCases/cliente/getAllClienteUseCase'
 import CreateClienteUseCase from '../@core/application/useCases/cliente/createClienteUseCase'
 import GetClienteByIDUseCase from '../@core/application/useCases/cliente/getClienteByIdUseCase'
-import UpdateClienteUseCase from 'src/@core/application/useCases/cliente/updateClienteUseCase'
-import DeleteClienteUseCase from 'src/@core/application/useCases/cliente/deleteClienteUseCase'
+import UpdateClienteUseCase from '../@core/application/useCases/cliente/updateClienteUseCase'
+import DeleteClienteUseCase from '../@core/application/useCases/cliente/deleteClienteUseCase'
 
 @Injectable()
 export class ClientesService {

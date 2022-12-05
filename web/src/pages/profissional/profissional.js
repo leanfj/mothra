@@ -17,7 +17,7 @@ import DataGrid, {
   Lookup
 } from 'devextreme-react/data-grid';
 
-export default function Clientes() {
+export default function Profissional() {
 
   const generoList = [
     { nome: 'Masculino' },
@@ -28,7 +28,7 @@ export default function Clientes() {
 
   return (
     <React.Fragment>
-      <h2 className={'content-block'}>Clientes</h2>
+      <h2 className={'content-block'}>Profissional</h2>
 
       <DataGrid
         className={'dx-card wide-card'}
@@ -113,13 +113,13 @@ const baseUrl = process.env.REACT_APP_API_URL;
 const store = new CustomStore({
   key: 'id',
   load: async (loadOptions) => {
-    return await axios.get(`${baseUrl}/cliente`).then((data) => {
+    return await axios.get(`${baseUrl}/profissional`).then((data) => {
 
       return data
     })
   },
   insert: async (values) => {
-    return axios.post(`${baseUrl}/cliente`, values).then(data => data).catch(err => {
+    return axios.post(`${baseUrl}/profissional`, values).then(data => data).catch(err => {
       if (err) {
         const data = err.response.data.message;
         if (data.length > 1) {
@@ -130,10 +130,10 @@ const store = new CustomStore({
     });
   },
   update: (key, values) => {
-    return axios.patch(`${baseUrl}/cliente/${key}`, values)
+    return axios.patch(`${baseUrl}/profissional/${key}`, values)
   },
   remove: (key) => {
-    return axios.delete(`${baseUrl}/cliente/${key}`)
+    return axios.delete(`${baseUrl}/profissional/${key}`)
   }
 });
 
