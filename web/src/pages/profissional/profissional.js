@@ -1,9 +1,7 @@
-
-
 import React from 'react';
 import CustomStore from 'devextreme/data/custom_store';
 import DataSource from 'devextreme/data/data_source';
-
+import ArrayStore from 'devextreme/data/array_store';
 import axios from 'axios';
 
 import DataGrid, {
@@ -15,15 +13,32 @@ import DataGrid, {
   ColumnChooser,
   SearchPanel,
   Lookup,
+  Selection,
+  Scrolling,
   FormItem,
+  List
 } from 'devextreme-react/data-grid';
 import 'devextreme-react/list';
-import ArrayStore from 'devextreme/data/array_store';
+import 'devextreme-react/text-area';
+import 'devextreme-react/drop-down-box';
 
 export default function Profissional() {
-
-
   const [servicos, setServicos] = React.useState([]);
+  const [servicosSelected, setServicosSelected] = React.useState([]);
+
+
+  React.useEffect(() => {
+    async function fetchData () {
+      try {
+        const {data} = await axios
+          .get(`${baseUrl}/servico`)
+        setServicos(data);
+      } catch (error) {
+        throw new Error (error);
+      }  
+    }
+    fetchData();
+  }, []);
 
   const generoList = [
     { nome: 'Masculino' },
@@ -31,6 +46,20 @@ export default function Profissional() {
     { nome: 'Outro' },
     { nome: 'Prefiro não dizer' },
   ]
+
+  const dataGridRender = () => {
+    return (
+      <DataGrid
+        dataSource={servicos}
+        columns={['nome', 'preco']}
+        hoverStateEnabled={true} >
+        <Selection mode="multiple" />
+        <Scrolling mode="virtual" />
+        <Paging enabled={true} pageSize={10} />
+        <FilterRow visible={true} />
+      </DataGrid>
+    );
+  }
 
   return (
     <React.Fragment>
@@ -46,16 +75,7 @@ export default function Profissional() {
         columnHidingEnabled={true}
         allowColumnResizing={true}
         columnMinWidth={100}
-        onRowInserting={
-          (e) => {
-            e.data.servicos = servicos
-          }
-        }
-        onRowClick={
-          (e) => {
-            servicos = e.data.servicos
-          }
-        }
+        
       >
         <Paging defaultPageSize={10} />
 
@@ -68,6 +88,9 @@ export default function Profissional() {
           allowAdding={true}
           confirmDelete={true}
           useIcons={true}
+          form={{
+            colCount: 2
+          }}
         >
 
         </Editing>
@@ -121,36 +144,31 @@ export default function Profissional() {
           hidingPriority={1}
         />
         <Column
-          dataField={'servicos'}
           caption={'Serviços'}
-          hidingPriority={1}
+          dataField='servicos'
           visible={false}
-        >
-          <FormItem editorType="dxList" editorOptions={{
-            dataSource: new ArrayStore({
-              data: [
-                { id: 1, nome: 'Corte' },
-                { id: 2, nome: 'Barba' },
-                { id: 3, nome: 'Corte + Barba' },
-                { id: 4, nome: 'Corte + Barba + Bigode' },
-              ]
-            }),
-            height: 100,
-            selectionMode: 'multiple',
-            keyExpr: 'id',
-            displayExpr: 'nome',
-            onOptionChanged: function (args) {
-              if (args.name === 'selectedItems') {
-                setServicos(args.value);
-              }
-            }
-
-          }} />
+        >          
+          <FormItem 
+            editorType="dxDropDownBox"
+            editorOptions={{
+              dataSource: servicos,
+              valueExpr: 'id',
+              displayExpr: 'nome',
+              placeholder: 'Selecione os serviços',
+              selectedItemKeys: servicosSelected,
+              contentRender: { dataGridRender },
+              
+            }}  
+          />
         </Column>
       </DataGrid>
     </React.Fragment>
   )
+
+  
 }
+
+
 
 const baseUrl = process.env.REACT_APP_API_URL;
 
@@ -158,13 +176,10 @@ const store = new CustomStore({
   key: 'id',
   load: async (loadOptions) => {
     return await axios.get(`${baseUrl}/profissional`).then((data) => {
-
       return data
     })
   },
   insert: async (values) => {
-    console.log("🚀 ~ file: profissional.js:155 ~ insert: ~ values", values)
-
     return axios.post(`${baseUrl}/profissional`, values).then(data => data).catch(err => {
       if (err) {
         const data = err.response.data.message;
@@ -176,6 +191,7 @@ const store = new CustomStore({
     });
   },
   update: (key, values) => {
+    console.log(values)
     return axios.patch(`${baseUrl}/profissional/${key}`, values)
   },
   remove: (key) => {
@@ -184,3 +200,13 @@ const store = new CustomStore({
 });
 
 const dataSource = new DataSource(store)
+
+// new ArrayStore({
+//   // data: [
+//   //   { id: 1, nome: 'Corte' },
+//   //   { id: 2, nome: 'Barba' },
+//   //   { id: 3, nome: 'Corte + Barba' },
+//   //   { id: 4, nome: 'Corte + Barba + Bigode' },
+//   // ]
+              
+// })
