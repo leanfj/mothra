@@ -31,6 +31,10 @@ export class ProfissionalController {
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateProfissionalDto: any) {
+    console.log(
+      '🚀 ~ file: profissional.controller.ts:34 ~ ProfissionalController ~ update ~ updateProfissionalDto',
+      updateProfissionalDto
+    )
     return this.profissionalService.update(id, updateProfissionalDto)
   }
 

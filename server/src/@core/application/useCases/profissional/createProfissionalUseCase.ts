@@ -15,7 +15,8 @@ export default class CreateProfissionalUseCase {
       input.telefone,
       input.endereco,
       input.cidade,
-      input.estado
+      input.estado,
+      input.servicos
     )
 
     const profissionalData = await this.profissionalRepository.create(
@@ -30,7 +31,8 @@ export default class CreateProfissionalUseCase {
       telefone: profissionalData.telefone,
       endereco: profissionalData.endereco,
       cidade: profissionalData.cidade,
-      estado: profissionalData.estado
+      estado: profissionalData.estado,
+      servicos: profissionalData.servicos
     }
   }
 }

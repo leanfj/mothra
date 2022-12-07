@@ -8,16 +8,17 @@ export default class GetAllProfissionalUseCase {
   async execute(): Promise<ProfissionalInputDTO[]> {
     const allProfissionais = await this.profissionalRepository.findAll()
 
-    return allProfissionais.map((cliente: ProfissionalViewDTO) => {
+    return allProfissionais.map((propfissional: ProfissionalViewDTO) => {
       return {
-        id: cliente.id,
-        nome: cliente.nome,
-        email: cliente.email,
-        genero: cliente.genero,
-        telefone: cliente.telefone,
-        endereco: cliente.endereco,
-        cidade: cliente.cidade,
-        estado: cliente.estado
+        id: propfissional.id,
+        nome: propfissional.nome,
+        email: propfissional.email,
+        genero: propfissional.genero,
+        telefone: propfissional.telefone,
+        endereco: propfissional.endereco,
+        cidade: propfissional.cidade,
+        estado: propfissional.estado,
+        servicos: propfissional.servicos
       }
     })
   }

@@ -9,6 +9,7 @@ export default class Profissional {
   endereco: string
   cidade: string
   estado: string
+  servicos?: any[]
   dataCadastro?: Date
   dataAtualizacao?: Date
 
@@ -20,7 +21,8 @@ export default class Profissional {
     telefone: string,
     endereco: string,
     cidade: string,
-    estado: string
+    estado: string,
+    servicos?: any[]
   ) {
     this.id = id || randomUUID()
     this.nome = nome
@@ -30,5 +32,6 @@ export default class Profissional {
     this.endereco = endereco
     this.cidade = cidade
     this.estado = estado
+    this.servicos = servicos
   }
 }

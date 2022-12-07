@@ -7,4 +7,5 @@ export default class ProfissionalViewDTO {
   endereco: string
   cidade: string
   estado: string
+  servicos?: string[]
 }

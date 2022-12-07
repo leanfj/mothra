@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client'
+import { randomUUID } from 'crypto'
 
 import ProfissionalRepository from '../../domain/repository/profissionalRepository'
 import Profissional from '../../domain/entity/profissionalEntity'
@@ -10,9 +11,22 @@ export default class ProfissionalPrismaRepository
   constructor(private readonly prisma: PrismaClient) {}
 
   async findAll(): Promise<Profissional[]> {
-    return await this.prisma.profissional.findMany({
+    const profissionalList = await this.prisma.profissional.findMany({
       include: {
-        servicos: true
+        servicos: {
+          select: {
+            servicoId: true
+          }
+        }
+      }
+    })
+
+    return profissionalList.map(({ servicos, ...rest }) => {
+      return {
+        ...rest,
+        servicos: servicos.map(({ servicoId }) => {
+          return servicoId
+        })
       }
     })
   }
@@ -56,6 +70,33 @@ export default class ProfissionalPrismaRepository
       throw new Error('Profissional já existe')
     }
 
+    if (profissional.servicos) {
+      return await this.prisma.profissional.create({
+        data: {
+          id: newProfissional.id,
+          nome: newProfissional.nome,
+          email: newProfissional.email,
+          genero: newProfissional.genero,
+          telefone: newProfissional.telefone,
+          endereco: newProfissional.endereco,
+          cidade: newProfissional.cidade,
+          estado: newProfissional.estado,
+          servicos: {
+            create: profissional.servicos.map((servicoId) => {
+              return {
+                servico: {
+                  connect: {
+                    id: servicoId
+                  }
+                },
+                id: randomUUID()
+              }
+            })
+          }
+        }
+      })
+    }
+
     return await this.prisma.profissional.create({
       data: {
         id: newProfissional.id,
@@ -91,6 +132,37 @@ export default class ProfissionalPrismaRepository
       profissional.cidade,
       profissional.estado
     )
+    if (input.hasOwnProperty('servicos')) {
+      const servicosList = input.servicos
+      delete input.servicos
+
+      const updatedProfissional = await this.prisma.profissional.update({
+        where: { id: profissional.id },
+        data: {
+          ...newProfissional,
+          ...input,
+          servicos: {
+            create: servicosList.map((servicoId) => {
+              return {
+                servico: {
+                  connect: {
+                    id: servicoId
+                  }
+                },
+                id: randomUUID()
+              }
+            }),
+            deleteMany: {
+              servicoId: {
+                notIn: servicosList
+              }
+            }
+          }
+        }
+      })
+
+      return updatedProfissional
+    }
 
     const updatedProfissional = await this.prisma.profissional.update({
       where: { id: profissional.id },
@@ -108,7 +180,7 @@ export default class ProfissionalPrismaRepository
     })
 
     if (!profissional) {
-      throw new Error('Cliente Profissionalencontrado')
+      throw new Error('Profissional encontrado')
     }
 
     await this.prisma.profissional.delete({

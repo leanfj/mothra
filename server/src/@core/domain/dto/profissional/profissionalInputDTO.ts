@@ -24,4 +24,7 @@ export class ProfissionalInputDTO {
 
   @IsNotEmpty()
   estado: string
+
+  @IsOptional()
+  servicos?: string[]
 }

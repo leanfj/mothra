@@ -49,9 +49,9 @@ model servico {
 
 model servicoProfissional {
   id              String       @id
-  profissional    profissional @relation(fields: [profissionalId], references: [id])
+  profissional    profissional @relation(fields: [profissionalId], references: [id], onDelete: Cascade)
   profissionalId  String
-  servico         servico      @relation(fields: [servicoId], references: [id])
+  servico         servico      @relation(fields: [servicoId], references: [id], onDelete: Cascade)
   servicoId       String
   dataCadastro    DateTime?    @default(now())
   dataAtualizacao DateTime?    @updatedAt

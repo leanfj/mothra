@@ -28,6 +28,10 @@ export class ProfissionalService {
   }
 
   update(id: string, updateProfissionalDto: ProfissionalInputDTO) {
+    console.log(
+      '🚀 ~ file: profissional.service.ts:31 ~ ProfissionalService ~ update ~ updateProfissionalDto',
+      updateProfissionalDto
+    )
     return this.updateProfissionalUseCase.execute(id, updateProfissionalDto)
   }
 

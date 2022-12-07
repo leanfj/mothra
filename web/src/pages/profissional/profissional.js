@@ -13,19 +13,13 @@ import DataGrid, {
   ColumnChooser,
   SearchPanel,
   Lookup,
-  Selection,
-  Scrolling,
   FormItem,
-  List
 } from 'devextreme-react/data-grid';
-import 'devextreme-react/list';
-import 'devextreme-react/text-area';
-import 'devextreme-react/drop-down-box';
+import 'devextreme-react/tag-box';
+
 
 export default function Profissional() {
   const [servicos, setServicos] = React.useState([]);
-  const [servicosSelected, setServicosSelected] = React.useState([]);
-
 
   React.useEffect(() => {
     async function fetchData () {
@@ -46,20 +40,6 @@ export default function Profissional() {
     { nome: 'Outro' },
     { nome: 'Prefiro não dizer' },
   ]
-
-  const dataGridRender = () => {
-    return (
-      <DataGrid
-        dataSource={servicos}
-        columns={['nome', 'preco']}
-        hoverStateEnabled={true} >
-        <Selection mode="multiple" />
-        <Scrolling mode="virtual" />
-        <Paging enabled={true} pageSize={10} />
-        <FilterRow visible={true} />
-      </DataGrid>
-    );
-  }
 
   return (
     <React.Fragment>
@@ -147,20 +127,10 @@ export default function Profissional() {
           caption={'Serviços'}
           dataField='servicos'
           visible={false}
-        >          
-          <FormItem 
-            editorType="dxDropDownBox"
-            editorOptions={{
-              dataSource: servicos,
-              valueExpr: 'id',
-              displayExpr: 'nome',
-              placeholder: 'Selecione os serviços',
-              selectedItemKeys: servicosSelected,
-              contentRender: { dataGridRender },
-              
-            }}  
-          />
-        </Column>
+        >
+          <FormItem editorType={'dxTagBox'} editorOptions={{ items: servicos, valueExpr: 'id', displayExpr: 'nome', showSelectionControls: true, showClearButton: true, placeholder: 'Selecione os serviços' }} />
+         </Column> 
+        
       </DataGrid>
     </React.Fragment>
   )
@@ -176,6 +146,7 @@ const store = new CustomStore({
   key: 'id',
   load: async (loadOptions) => {
     return await axios.get(`${baseUrl}/profissional`).then((data) => {
+      console.log(data)
       return data
     })
   },
