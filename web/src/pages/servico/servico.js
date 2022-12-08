@@ -74,7 +74,7 @@ export default function Servico() {
         <Column
           dataField={'valor'}
           caption={'Valor'}
-          format={'currency'}
+          format={{ style: 'currency', currency: 'BRL', useGrouping: true, minimumSignificantDigits: 2 }}
           dataType={'number'}
           hidingPriority={4}
         />
