@@ -1,5 +1,4 @@
 import { Test, TestingModule } from '@nestjs/testing'
-import ProfissionalViewDTO from 'src/@core/domain/dto/profissional/profissionalViewDTO'
 import DeleteClienteUseCase from '../@core/application/useCases/cliente/deleteClienteUseCase'
 import GetAllClienteUseCase from '../@core/application/useCases/cliente/getAllClienteUseCase'
 import UpdateClienteUseCase from '../@core/application/useCases/cliente/updateClienteUseCase'

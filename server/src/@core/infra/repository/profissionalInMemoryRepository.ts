@@ -1,4 +1,4 @@
-import ProfissionalRepository from 'src/@core/domain/repository/profissionalRepository'
+import ProfissionalRepository from '../../../@core/domain/repository/profissionalRepository'
 import { ProfissionalInputDTO } from '../../domain/dto/profissional/profissionalInputDTO'
 import Profissional from '../../domain/entity/profissionalEntity'
 

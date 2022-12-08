@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client'
-import { ProfissionalInputDTO } from 'src/@core/domain/dto/profissional/profissionalInputDTO'
+import { ProfissionalInputDTO } from '../../../@core/domain/dto/profissional/profissionalInputDTO'
 import ProfissionalPrismaRepository from './profissionalPrismaRepository'
 
 describe('ProfissionalPrismaRepository', () => {
