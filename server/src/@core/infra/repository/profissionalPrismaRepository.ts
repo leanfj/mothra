@@ -142,6 +142,7 @@ export default class ProfissionalPrismaRepository
           ...newProfissional,
           ...input,
           servicos: {
+            deleteMany: {},
             create: servicosList.map((servicoId) => {
               return {
                 servico: {
@@ -151,12 +152,7 @@ export default class ProfissionalPrismaRepository
                 },
                 id: randomUUID()
               }
-            }),
-            deleteMany: {
-              servicoId: {
-                notIn: servicosList
-              }
-            }
+            })
           }
         }
       })
