@@ -1,7 +1,6 @@
 import React from 'react';
 import CustomStore from 'devextreme/data/custom_store';
 import DataSource from 'devextreme/data/data_source';
-import ArrayStore from 'devextreme/data/array_store';
 import axios from 'axios';
 
 import DataGrid, {
@@ -18,7 +17,7 @@ import DataGrid, {
 import 'devextreme-react/tag-box';
 
 
-export default function Profissional() {
+export default function Profissionais() {
   const [servicos, setServicos] = React.useState([]);
 
   React.useEffect(() => {
@@ -43,7 +42,7 @@ export default function Profissional() {
 
   return (
     <React.Fragment>
-      <h2 className={'content-block'}>Profissional</h2>
+      <h2 className={'content-block'}>Profissionais</h2>
 
       <DataGrid
         className={'dx-card wide-card'}

@@ -1,22 +1,26 @@
-import { HomePage, ClientesPage, ProfissionalPage, ServicoPage } from './pages';
+import { HomePage, ClientesPage, ProfissionaisPage, ServicosPage, TasksPage, AgendamentosPage } from './pages';
 import { withNavigationWatcher } from './contexts/navigation';
 
 const routes = [
-    // {
-    //     path: '/tasks',
-    //     element: TasksPage
-    // },
     {
-        path: '/cliente',
+        path: '/tasks',
+        element: TasksPage
+    },
+    {
+        path: '/clientes',
         element: ClientesPage
     },
     {
-        path: '/profissional',
-        element: ProfissionalPage
+        path: '/profissionais',
+        element: ProfissionaisPage
     },
     {
-        path: '/servico',
-        element: ServicoPage
+        path: '/servicos',
+        element: ServicosPage
+    },
+    {
+        path: '/agendamentos',
+        element: AgendamentosPage
     },
     {
         path: '/home',

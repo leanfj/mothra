@@ -16,11 +16,11 @@ import DataGrid, {
   SearchPanel,
 } from 'devextreme-react/data-grid';
 
-export default function Servico() {
+export default function Servicos() {
 
   return (
     <React.Fragment>
-      <h2 className={'content-block'}>Serviço</h2>
+      <h2 className={'content-block'}>Serviços</h2>
 
       <DataGrid
         className={'dx-card wide-card'}

@@ -10,20 +10,34 @@ export const navigation = [
     items: [
       {
         text: 'Clientes',
-        path: '/cliente'
+        path: '/clientes',
+        icon: 'group'
       },
       {
-        text: 'Profissional',
-        path: '/profissional'
+        text: 'Profissionais',
+        path: '/profissionais',
+        icon: 'group'
       },
       {
-        text: 'Serviço',
-        path: '/servico'
+        text: 'Serviços',
+        path: '/servicos',
+        icon: 'selectall'
       },
-      // {
-      //   text: 'Tasks',
-      //   path: '/tasks'
-      // }
+      {
+        text: 'Tasks',
+        path: '/tasks'
+      }
+    ]
+  },
+  {
+    text: 'Módulos',
+    icon: 'mediumiconslayout',
+    items: [
+      {
+        text: 'Agendamentos',
+        path: '/agendamentos',
+        icon: 'event'
+      },
     ]
   }
 ];
