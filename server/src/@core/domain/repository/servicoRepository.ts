@@ -1,9 +1,8 @@
 import Servico from '../entity/servicoEntity'
-
-export default interface ServicoRepository {
-  findAll(): Promise<Servico[]>
-  findById(id: string): Promise<Servico>
-  create(servico: Servico): Promise<Servico>
-  update(id: string, servico: Servico): Promise<Servico>
-  delete(id: string): Promise<void>
+export default abstract class ServicoRepository {
+  abstract findAll(): Promise<Servico[]>
+  abstract findById(id: string): Promise<Servico>
+  abstract create(servico: Servico): Promise<Servico>
+  abstract update(id: string, servico: Servico): Promise<Servico>
+  abstract delete(id: string): Promise<void>
 }
