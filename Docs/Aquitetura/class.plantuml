@@ -1,0 +1,67 @@
+@startuml
+
+class Usuario {
+  id: String
+  login: String
+  senha: String
+  dataCadastro: Date
+  dataAtualizacao: Date
+}
+
+class Pessoa {
+  id: String
+  nome: String
+  email: String
+  genero: String
+  telefone: String
+  endereco: String
+  cidade: String
+  estado: String
+  dataCadastro: Date
+  dataAtualizacao: Date
+}
+
+class Cliente extends Pessoa {
+
+}
+
+class Profissional extends Pessoa {
+  servicos: Servicos
+  
+}
+
+class Servicos {
+  id: string
+  nome: string
+  descricao: string
+  valor: number
+  dataCadastro: Date
+  dataAtualizacao: Date
+}
+
+class Agendamento {
+  id: string
+  data: Date
+  hora: Date
+  cliente: Cliente
+  profissional: Profissional
+  servico: Servicos
+  dataCadastro: Date
+  dataAtualizacao: Date
+}
+
+class ServicoProfissional {
+  id: string
+  profissional: Profissional
+  servico: Servicos
+  dataCadastro: Date
+  dataAtualizacao: Date
+}
+
+Servicos "0..*" - "0..*" Profissional
+(Servicos, Profissional) .. ServicoProfissional
+
+
+
+
+@enduml

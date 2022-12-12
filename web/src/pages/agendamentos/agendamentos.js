@@ -3,12 +3,18 @@ import Scheduler from 'devextreme-react/scheduler';
 import CustomStore from 'devextreme/data/custom_store';
 import DataSource from 'devextreme/data/data_source';
 import './agendamentos.scss';
-import { data } from './data.js';
 
-const currentDate = new Date();
 const views = ['week', 'month'];
 
 export default function Agendamentos() {
+  const [currentDate, setCurrentDate] = React.useState(new Date());
+  const handleCurrentDateChange = React.useCallback((e) => {
+    if(e.name === 'currentDate') {
+      setCurrentDate(e.value);
+    }
+    
+  }, [setCurrentDate]);
+
   return (
     <React.Fragment>
       <h2 className={'content-block'}>Agendamentos</h2>
@@ -22,6 +28,7 @@ export default function Agendamentos() {
             defaultCurrentDate={currentDate}
             height={600}
             startDayHour={8}
+            onOptionChanged={handleCurrentDateChange}
           />
         </div>
       </div>

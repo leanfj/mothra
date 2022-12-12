@@ -9,8 +9,8 @@ import GetAllClienteUseCase from '../@core/application/useCases/cliente/getAllCl
 import UpdateClienteUseCase from '../@core/application/useCases/cliente/updateClienteUseCase'
 import DeleteClienteUseCase from '../@core/application/useCases/cliente/deleteClienteUseCase'
 import ClientePrismaRepository from '../@core/infra/repository/clientePrismaRepository'
-import { PrismaClient } from '@prisma/client'
 import ClienteInMemoryRepository from '../@core/infra/repository/clienteInMemoryRepository'
+import { PrismaService } from 'src/prisma-service/prisma-service.service'
 
 @Module({
   controllers: [ClientesController],
@@ -23,7 +23,7 @@ import ClienteInMemoryRepository from '../@core/infra/repository/clienteInMemory
     {
       provide: 'ClientePrismaRepository',
       useFactory: () => {
-        return new ClientePrismaRepository(new PrismaClient())
+        return new ClientePrismaRepository(new PrismaService())
       }
     },
     {

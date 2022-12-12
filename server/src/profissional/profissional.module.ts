@@ -8,8 +8,8 @@ import GetProfissionalByIDUseCase from '../@core/application/useCases/profission
 import GetAllProfissionalUseCase from '../@core/application/useCases/profissional/getAllProfissionalUseCase'
 import UpdateProfissionalUseCase from '../@core/application/useCases/profissional/updateProfissionalUseCase'
 import DeleteProfissionalUseCase from '../@core/application/useCases/profissional/deleteProfissionalUseCase'
-import { PrismaClient } from '@prisma/client'
 import ProfissionalPrismaRepository from '../@core/infra/repository/profissionalPrismaRepository'
+import { PrismaService } from 'src/prisma-service/prisma-service.service'
 
 @Module({
   controllers: [ProfissionalController],
@@ -22,7 +22,7 @@ import ProfissionalPrismaRepository from '../@core/infra/repository/profissional
     {
       provide: 'ProfissionalPrismaRepository',
       useFactory: () => {
-        return new ProfissionalPrismaRepository(new PrismaClient())
+        return new ProfissionalPrismaRepository(new PrismaService())
       }
     },
     {

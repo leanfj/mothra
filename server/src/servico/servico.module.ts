@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common'
 
-import { PrismaClient } from '@prisma/client'
 import ServicoPrismaRepository from '../@core/infra/repository/servicoPrismaRepository'
 import CreateServicoUseCase from '../@core/application/useCases/servico/createServicoUseCase'
 import DeleteServicoUseCase from '../@core/application/useCases/servico/deleteServicoUseCase'
@@ -11,6 +10,7 @@ import ServicoRepository from '../@core/domain/repository/servicoRepository'
 import ServicoInMemoryRepository from '../@core/infra/repository/servicoInMemoryRepository'
 import { ServicoController } from './servico.controller'
 import { ServicoService } from './servico.service'
+import { PrismaService } from 'src/prisma-service/prisma-service.service'
 
 @Module({
   controllers: [ServicoController],
@@ -23,7 +23,7 @@ import { ServicoService } from './servico.service'
     {
       provide: 'ServicoPrismaRepository',
       useFactory: () => {
-        return new ServicoPrismaRepository(new PrismaClient())
+        return new ServicoPrismaRepository(new PrismaService())
       }
     },
     {
