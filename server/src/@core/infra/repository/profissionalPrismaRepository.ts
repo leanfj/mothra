@@ -9,8 +9,35 @@ export default class ProfissionalPrismaRepository
   implements ProfissionalRepository
 {
   constructor(private readonly prisma: PrismaClient) {}
+  async getServicosByProfissionalId(id: string): Promise<any> {
+    const profissional = await this.prisma.profissional.findUnique({
+      where: {
+        id
+      },
+      select: {
+        servicos: {
+          select: {
+            servicoId: true,
+            servico: {
+              select: {
+                nome: true
+              }
+            }
+          }
+        }
+      }
+    })
+    console.log("🚀 ~ file: profissionalPrismaRepository.ts:30 ~ getServicosByProfissionalId ~ profissional", profissional)
+    
+    if (!profissional) {
+      throw new Error('Profissional não encontrado')
+    }
+
+    return profissional
+  }
 
   async findAll(): Promise<Profissional[]> {
+    
     const profissionalList = await this.prisma.profissional.findMany({
       include: {
         servicos: {

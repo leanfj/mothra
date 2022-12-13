@@ -5,6 +5,9 @@ import Profissional from '../../domain/entity/profissionalEntity'
 export default class ProfissionalInMemoryRepository
   implements ProfissionalRepository
 {
+  getServicosByProfissionalId(id: string): Promise<Profissional> {
+    throw new Error('Method not implemented.')
+  }
   private profissionais: Profissional[] = []
 
   async findAll(): Promise<Profissional[]> {
