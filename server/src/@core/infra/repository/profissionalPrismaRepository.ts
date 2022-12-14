@@ -27,7 +27,6 @@ export default class ProfissionalPrismaRepository
         }
       }
     })
-    console.log("🚀 ~ file: profissionalPrismaRepository.ts:30 ~ getServicosByProfissionalId ~ profissional", profissional)
     
     if (!profissional) {
       throw new Error('Profissional não encontrado')

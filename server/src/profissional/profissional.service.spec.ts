@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing'
-import DeleteClienteUseCase from '../@core/application/useCases/cliente/deleteClienteUseCase'
-import GetAllClienteUseCase from '../@core/application/useCases/cliente/getAllClienteUseCase'
-import UpdateClienteUseCase from '../@core/application/useCases/cliente/updateClienteUseCase'
+import DeleteProfissionalUseCase from '../@core/application/useCases/profissional/deleteProfissionalUseCase'
+import GetAllProfissionalUseCase from '../@core/application/useCases/profissional/getAllProfissionalUseCase'
+import UpdateProfissionalUseCase from '../@core/application/useCases/profissional/updateProfissionalUseCase'
 import CreateProfissionalUseCase from '../@core/application/useCases/profissional/createProfissionalUseCase'
 import GetProfissionalByIDUseCase from '../@core/application/useCases/profissional/getProfissionalByIdUseCase'
 import ProfissionalRepository from '../@core/domain/repository/profissionalRepository'
@@ -34,23 +34,23 @@ describe('ProfissionalService', () => {
           inject: ['ProfissionalInMemoryRepository']
         },
         {
-          provide: GetAllClienteUseCase,
+          provide: GetAllProfissionalUseCase,
           useFactory: (profissionalRepository: ProfissionalRepository) => {
-            return new GetAllClienteUseCase(profissionalRepository)
+            return new GetAllProfissionalUseCase(profissionalRepository)
           },
           inject: ['ProfissionalInMemoryRepository']
         },
         {
-          provide: UpdateClienteUseCase,
+          provide: UpdateProfissionalUseCase,
           useFactory: (profissionalRepository: ProfissionalRepository) => {
-            return new UpdateClienteUseCase(profissionalRepository)
+            return new UpdateProfissionalUseCase(profissionalRepository)
           },
           inject: ['ProfissionalInMemoryRepository']
         },
         {
-          provide: DeleteClienteUseCase,
+          provide: DeleteProfissionalUseCase,
           useFactory: (profissionalRepository: ProfissionalRepository) => {
-            return new DeleteClienteUseCase(profissionalRepository)
+            return new DeleteProfissionalUseCase(profissionalRepository)
           },
           inject: ['ProfissionalInMemoryRepository']
         }

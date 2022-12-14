@@ -25,29 +25,29 @@ export default class ServicoPrismaRepository implements ServicoRepository {
   }
 
   async create(servico: ServicoInputDTO): Promise<Servico> {
-    const newServico = new Servico(
+    const novoServico = new Servico(
       servico.id,
       servico.nome,
       servico.descricao,
       servico.valor
     )
 
-    const servicoData = await this.prisma.servico.findMany({
+    const servicoDados = await this.prisma.servico.findMany({
       where: {
-        nome: newServico.nome
+        nome: novoServico.nome
       }
     })
 
-    if (servicoData.length > 0) {
+    if (servicoDados.length > 0) {
       throw new Error('Serviço já existe')
     }
 
     return await this.prisma.servico.create({
       data: {
-        id: newServico.id,
-        nome: newServico.nome,
-        descricao: newServico.descricao,
-        valor: newServico.valor
+        id: novoServico.id,
+        nome: novoServico.nome,
+        descricao: novoServico.descricao,
+        valor: novoServico.valor
       }
     })
   }

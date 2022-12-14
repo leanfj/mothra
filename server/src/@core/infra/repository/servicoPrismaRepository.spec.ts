@@ -1,9 +1,11 @@
 import { PrismaClient } from '@prisma/client'
+import { PrismaService } from '../../../prisma-service/prisma-service.service'
 import { ServicoInputDTO } from '../../domain/dto/servico/servicoInputDTO'
 import ServicoPrismaRepository from './servicoPrismaRepository'
 
 describe('ServicoPrismaRepository', () => {
   let prisma: PrismaClient
+  let prismaService: PrismaService
   let servicoPrismaRepository: ServicoPrismaRepository
   const servico: ServicoInputDTO = {
     nome: 'Serviço Teste',
@@ -13,7 +15,8 @@ describe('ServicoPrismaRepository', () => {
 
   beforeAll(async () => {
     prisma = new PrismaClient()
-    servicoPrismaRepository = new ServicoPrismaRepository(prisma)
+    prismaService = new PrismaService()
+    servicoPrismaRepository = new ServicoPrismaRepository(prismaService)
   })
 
   afterAll(async () => {

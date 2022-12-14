@@ -7,12 +7,8 @@ export default class CreateServicoUseCase {
   constructor(private servicoRepository: ServicoRepository) {}
 
   async execute(input: ServicoInputDTO): Promise<ServicoViewDTO> {
-    const servico = new Servico(
-      input.id,
-      input.nome,
-      input.descricao,
-      input.valor
-    )
+    const { descricao, nome, valor, id } = input
+    const servico = new Servico(id, nome, descricao, valor)
 
     const servicoData = await this.servicoRepository.create(servico)
 
