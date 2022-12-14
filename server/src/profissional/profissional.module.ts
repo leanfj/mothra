@@ -15,15 +15,20 @@ import { PrismaService } from 'src/prisma-service/prisma-service.service'
   controllers: [ProfissionalController],
   providers: [
     ProfissionalService,
+    PrismaService,
     {
       provide: 'ProfissionalInMemoryRepository',
       useClass: ProfissionalInMemoryRepository
     },
     {
       provide: 'ProfissionalPrismaRepository',
-      useFactory: () => {
-        return new ProfissionalPrismaRepository(new PrismaService())
-      }
+      // useFactory: () => {
+      //   return new ProfissionalPrismaRepository(new PrismaService())
+      // }
+      useFactory: (prisma: PrismaService) => {
+        return new ProfissionalPrismaRepository(prisma)
+      },
+      inject: [PrismaService]
     },
     {
       provide: CreateProfissionalUseCase,

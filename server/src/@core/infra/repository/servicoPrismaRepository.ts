@@ -1,10 +1,10 @@
-import { PrismaClient } from '@prisma/client'
+import { PrismaService } from 'src/prisma-service/prisma-service.service'
 import { ServicoInputDTO } from '../../domain/dto/servico/servicoInputDTO'
 import Servico from '../../domain/entity/servicoEntity'
 import ServicoRepository from '../../domain/repository/servicoRepository'
 
 export default class ServicoPrismaRepository implements ServicoRepository {
-  constructor(private readonly prisma: PrismaClient) {}
+  constructor(private readonly prisma: PrismaService) {}
 
   async findAll(): Promise<Servico[]> {
     return await this.prisma.servico.findMany()

@@ -16,15 +16,20 @@ import { PrismaService } from 'src/prisma-service/prisma-service.service'
   controllers: [ServicoController],
   providers: [
     ServicoService,
+    PrismaService,
     {
       provide: 'ServicoInMemoryRepository',
       useClass: ServicoInMemoryRepository
     },
     {
       provide: 'ServicoPrismaRepository',
-      useFactory: () => {
-        return new ServicoPrismaRepository(new PrismaService())
-      }
+      // useFactory: () => {
+      //   return new ServicoPrismaRepository(new PrismaService())
+      // }
+      useFactory: (prisma: PrismaService) => {
+        return new ServicoPrismaRepository(prisma)
+      },
+      inject: [PrismaService]
     },
     {
       provide: CreateServicoUseCase,

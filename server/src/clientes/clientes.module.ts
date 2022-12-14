@@ -16,15 +16,20 @@ import { PrismaService } from 'src/prisma-service/prisma-service.service'
   controllers: [ClientesController],
   providers: [
     ClientesService,
+    PrismaService,
     {
       provide: 'ClienteInMemoryRepository',
       useClass: ClienteInMemoryRepository
     },
     {
       provide: 'ClientePrismaRepository',
-      useFactory: () => {
-        return new ClientePrismaRepository(new PrismaService())
-      }
+      // useFactory: () => {
+      //   return new ClientePrismaRepository(new PrismaService())
+      // }
+      useFactory: (prisma: PrismaService) => {
+        return new ClientePrismaRepository(prisma)
+      },
+      inject: [PrismaService]
     },
     {
       provide: CreateClienteUseCase,
