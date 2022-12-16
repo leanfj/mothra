@@ -9,26 +9,32 @@ import {
   HttpException,
   HttpStatus
 } from '@nestjs/common'
+import { CreateServicoUseCaseResponse } from 'src/@core/application/useCases/servico/createServicoUseCase'
 import { ServicoInputDTO } from '../@core/domain/dto/servico/servicoInputDTO'
 import { ServicoService } from './servico.service'
+import { ServicoViewModel } from './servicoViewModel'
 
-@Controller('servico')
+@Controller('servicos')
 export class ServicoController {
   constructor(private readonly servicoService: ServicoService) {}
 
   @Post()
-  async create(@Body() createServicoDto: ServicoInputDTO) {
+  async create(@Body() body: ServicoInputDTO) {
     try {
-      const servicoData = await this.servicoService.create(createServicoDto)
-      return servicoData
+      const { servico } = await this.servicoService.create(body)
+      
+      return ServicoViewModel.toView(servico)
+    
     } catch (error) {
-      throw new HttpException(
-        {
-          status: HttpStatus.BAD_REQUEST,
-          error: error.message
-        },
-        HttpStatus.BAD_REQUEST
-      )
+      if (error instanceof Error) {
+        throw new HttpException(
+          {
+            status: HttpStatus.NOT_FOUND,
+            error: error.message
+          },
+          HttpStatus.NOT_FOUND
+        )
+      }
     }
   }
 
@@ -43,13 +49,15 @@ export class ServicoController {
       const servicoData = await this.servicoService.findOne(id)
       return servicoData
     } catch (error) {
-      throw new HttpException(
-        {
-          status: HttpStatus.NOT_FOUND,
-          error: error.message
-        },
-        HttpStatus.NOT_FOUND
-      )
+      if (error instanceof Error) {
+        throw new HttpException(
+          {
+            status: HttpStatus.NOT_FOUND,
+            error: error.message
+          },
+          HttpStatus.NOT_FOUND
+        )
+      }
     }
   }
 
@@ -59,13 +67,15 @@ export class ServicoController {
       const ServicoData = await this.servicoService.update(id, updateServicoDto)
       return ServicoData
     } catch (error) {
-      throw new HttpException(
-        {
-          status: HttpStatus.NOT_FOUND,
-          error: error.message
-        },
-        HttpStatus.NOT_FOUND
-      )
+      if (error instanceof Error) {
+        throw new HttpException(
+          {
+            status: HttpStatus.NOT_FOUND,
+            error: error.message
+          },
+          HttpStatus.NOT_FOUND
+        )
+      }
     }
   }
 
@@ -74,13 +84,15 @@ export class ServicoController {
     try {
       return await this.servicoService.remove(id)
     } catch (error) {
-      throw new HttpException(
-        {
-          status: HttpStatus.NOT_FOUND,
-          error: error.message
-        },
-        HttpStatus.NOT_FOUND
-      )
+      if (error instanceof Error) {
+        throw new HttpException(
+          {
+            status: HttpStatus.NOT_FOUND,
+            error: error.message
+          },
+          HttpStatus.NOT_FOUND
+        )
+      }
     }
   }
 }

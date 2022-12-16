@@ -1,13 +1,17 @@
-import { PrismaService } from 'src/prisma-service/prisma-service.service'
-import { ServicoInputDTO } from '../../domain/dto/servico/servicoInputDTO'
+import { DescricaoServico } from 'src/@core/domain/valueObjects/descricaoServicoValueObjects'
+import { PrismaService } from '../../../prisma-service/prisma-service.service'
 import Servico from '../../domain/entity/servicoEntity'
 import ServicoRepository from '../../domain/repository/servicoRepository'
+import { ServicoPrismaMapper } from '../database/prisma/mappers/servicoPrismaMapper'
 
 export default class ServicoPrismaRepository implements ServicoRepository {
   constructor(private readonly prisma: PrismaService) {}
 
   async findAll(): Promise<Servico[]> {
-    return await this.prisma.servico.findMany()
+    const servicos = await this.prisma.servico.findMany() 
+    return servicos.map(servico => {
+      return ServicoPrismaMapper.toDomain(servico)
+    })
   }
 
   async findById(id: string): Promise<Servico> {
@@ -21,20 +25,13 @@ export default class ServicoPrismaRepository implements ServicoRepository {
       throw new Error('Serviço não encontrado')
     }
 
-    return servico
+    return ServicoPrismaMapper.toDomain(servico)
   }
 
-  async create(servico: ServicoInputDTO): Promise<Servico> {
-    const novoServico = new Servico(
-      servico.id,
-      servico.nome,
-      servico.descricao,
-      servico.valor
-    )
-
+  async create(servico: Servico): Promise<void> {
     const servicoDados = await this.prisma.servico.findMany({
       where: {
-        nome: novoServico.nome
+        nome: servico.nome
       }
     })
 
@@ -42,40 +39,30 @@ export default class ServicoPrismaRepository implements ServicoRepository {
       throw new Error('Serviço já existe')
     }
 
-    return await this.prisma.servico.create({
-      data: {
-        id: novoServico.id,
-        nome: novoServico.nome,
-        descricao: novoServico.descricao,
-        valor: novoServico.valor
-      }
+    const servicoNovo = ServicoPrismaMapper.toPersistence(servico)
+
+    await this.prisma.servico.create({
+      data: servicoNovo
     })
   }
 
-  async update(id: string, input: any): Promise<Servico> {
-    const servico = await this.prisma.servico.findUnique({
+  async update(servico: Servico): Promise<void> {
+    const servicoDados = await this.prisma.servico.findUnique({
       where: {
-        id
+        id: servico.id
       }
     })
 
-    if (!servico) {
+    if (!servicoDados) {
       throw new Error('Serviço não encontrado')
     }
 
-    const newServico = new Servico(
-      servico.id,
-      servico.nome,
-      servico.descricao,
-      servico.valor
-    )
+    const servicoNovo = ServicoPrismaMapper.toPersistence(servico)
 
-    const updatedServico = await this.prisma.servico.update({
+    await this.prisma.servico.update({
       where: { id: servico.id },
-      data: { ...newServico, ...input }
+      data: { ...servicoNovo}
     })
-
-    return updatedServico
   }
 
   async delete(id: string): Promise<void> {

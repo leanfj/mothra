@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import CreateServicoUseCase from '../@core/application/useCases/servico/createServicoUseCase'
+import CreateServicoUseCase, { CreateServicoUseCaseResponse } from '../@core/application/useCases/servico/createServicoUseCase'
 import DeleteServicoUseCase from '../@core/application/useCases/servico/deleteServicoUseCase'
 import GetAllServicoUseCase from '../@core/application/useCases/servico/getAllServicoUseCase'
 import GetServicoByIDUseCase from '../@core/application/useCases/servico/getServicoByIdUseCase'
@@ -15,7 +15,7 @@ export class ServicoService {
     private updateServicoUseCase: UpdateServicoUseCase,
     private deleteServicoUseCase: DeleteServicoUseCase
   ) {}
-  create(createServicoDto: ServicoInputDTO) {
+  create(createServicoDto: ServicoInputDTO): Promise<CreateServicoUseCaseResponse> {
     return this.createServicoUseCase.execute(createServicoDto)
   }
 

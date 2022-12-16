@@ -1,9 +1,6 @@
-import { IsDate, IsNotEmpty, IsOptional } from 'class-validator'
+import { IsNotEmpty } from 'class-validator'
 
 export class ServicoInputDTO {
-  @IsOptional()
-  id?: string
-
   @IsNotEmpty()
   nome: string
 

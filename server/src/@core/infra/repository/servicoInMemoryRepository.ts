@@ -1,9 +1,8 @@
-import { ServicoInputDTO } from '../../domain/dto/servico/servicoInputDTO'
 import Servico from '../../domain/entity/servicoEntity'
 import ServicoRepository from '../../domain/repository/servicoRepository'
 
 export default class ServicoInMemoryRepository implements ServicoRepository {
-  private servicos: Servico[] = []
+  public servicos: Servico[] = []
 
   async findAll(): Promise<Servico[]> {
     return this.servicos
@@ -19,25 +18,10 @@ export default class ServicoInMemoryRepository implements ServicoRepository {
     return servico
   }
 
-  async create(servico: ServicoInputDTO): Promise<Servico> {
-    const newServico = new Servico(
-      servico.id,
-      servico.nome,
-      servico.descricao,
-      servico.valor
-    )
+  async create(servico: Servico): Promise<void> {
 
-    const servicoData = this.servicos.find(
-      (servico) => servico.id === newServico.id
-    )
+    this.servicos.push(servico)
 
-    if (servicoData) {
-      throw new Error('Serviço já existe')
-    }
-
-    this.servicos.push(newServico)
-
-    return newServico
   }
 
   async update(id: string, input: any): Promise<Servico> {

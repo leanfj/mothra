@@ -1,19 +1,16 @@
-import ServicoViewDTO from '../../../domain/dto/servico/servicoViewDTO'
+import Servico from 'src/@core/domain/entity/servicoEntity'
 import ServicoRepository from '../../../domain/repository/servicoRepository'
+
+interface GetAllServicoUseCaseResponse {
+  servicos: Servico[]
+}
 
 export default class GetAllServicoUseCase {
   constructor(private servicoRepository: ServicoRepository) {}
 
-  async execute(): Promise<ServicoViewDTO[]> {
-    const allServicos = await this.servicoRepository.findAll()
+  async execute(): Promise<GetAllServicoUseCaseResponse> {
+    const servicos = await this.servicoRepository.findAll()
 
-    return allServicos.map((servico: ServicoViewDTO) => {
-      return {
-        id: servico.id,
-        nome: servico.nome,
-        descricao: servico.descricao,
-        valor: servico.valor
-      }
-    })
+    return { servicos }
   }
 }
