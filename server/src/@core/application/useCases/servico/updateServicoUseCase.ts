@@ -1,17 +1,15 @@
-import ServicoViewDTO from '../../../domain/dto/servico/servicoViewDTO'
+import Servico from 'src/@core/domain/entity/servicoEntity'
 import ServicoRepository from '../../../domain/repository/servicoRepository'
 
+export interface UpdateServicoUseCaseResponse {
+  servico: Servico
+}
 export default class UpdateServicoUseCase {
   constructor(private servicoRepository: ServicoRepository) {}
 
-  async execute(id: string, input: any): Promise<ServicoViewDTO> {
-    const servicoData = await this.servicoRepository.update(id, input)
+  async execute(id: string, input: Servico): Promise<UpdateServicoUseCaseResponse> {
+    const servico = await this.servicoRepository.update(id, input)
 
-    return {
-      id: servicoData.id,
-      nome: servicoData.nome,
-      descricao: servicoData.descricao,
-      valor: servicoData.valor
-    }
+    return { servico }
   }
 }

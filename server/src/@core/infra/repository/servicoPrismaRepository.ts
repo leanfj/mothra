@@ -1,4 +1,4 @@
-import { DescricaoServico } from 'src/@core/domain/valueObjects/descricaoServicoValueObjects'
+import { DescricaoServico } from '../../../@core/domain/valueObjects/descricaoServicoValueObjects'
 import { PrismaService } from '../../../prisma-service/prisma-service.service'
 import Servico from '../../domain/entity/servicoEntity'
 import ServicoRepository from '../../domain/repository/servicoRepository'
@@ -9,12 +9,10 @@ export default class ServicoPrismaRepository implements ServicoRepository {
 
   async findAll(): Promise<Servico[]> {
     const servicos = await this.prisma.servico.findMany() 
-    return servicos.map(servico => {
-      return ServicoPrismaMapper.toDomain(servico)
-    })
+    return servicos.map(ServicoPrismaMapper.toDomain)
   }
 
-  async findById(servicoId: string): Promise<Servico | null> {
+  async findById(servicoId: string): Promise<Servico> {
     const servico = await this.prisma.servico.findUnique({
       where: {
         id: servicoId
@@ -46,10 +44,10 @@ export default class ServicoPrismaRepository implements ServicoRepository {
     })
   }
 
-  async update(servico: Servico): Promise<void> {
+  async update(id: string, data: any): Promise<Servico> {
     const servicoDados = await this.prisma.servico.findUnique({
       where: {
-        id: servico.id
+        id: id
       }
     })
 
@@ -57,12 +55,18 @@ export default class ServicoPrismaRepository implements ServicoRepository {
       throw new Error('Serviço não encontrado')
     }
 
-    const servicoNovo = ServicoPrismaMapper.toPersistence(servico)
-
     await this.prisma.servico.update({
-      where: { id: servico.id },
-      data: { ...servicoNovo}
+      where: { id },
+      data: { ...servicoDados, ...data}
     })
+
+    const servicoAtualizado = await this.prisma.servico.findUnique({
+      where: {
+        id: id
+      }
+    })
+
+    return ServicoPrismaMapper.toDomain(servicoAtualizado)
 
   }
 

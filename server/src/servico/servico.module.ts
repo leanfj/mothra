@@ -25,7 +25,7 @@ import { PrismaService } from 'src/prisma-service/prisma-service.service'
       provide: 'ServicoPrismaRepository',
       // useFactory: () => {
       //   return new ServicoPrismaRepository(new PrismaService())
-      // }
+      // },
       useFactory: (prisma: PrismaService) => {
         return new ServicoPrismaRepository(prisma)
       },

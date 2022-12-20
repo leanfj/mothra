@@ -89,13 +89,13 @@ const baseUrl = process.env.REACT_APP_API_URL;
 const store = new CustomStore({
   key: 'id',
   load: async (loadOptions) => {
-    return await axios.get(`${baseUrl}/servico`).then((data) => {
-
+    return await axios.get(`${baseUrl}/servicos`).then((data) => {
+      
       return data
     })
   },
   insert: async (values) => {
-    return axios.post(`${baseUrl}/servico`, values).then(data => data).catch(err => {
+    return axios.post(`${baseUrl}/servicos`, values).then(data => data).catch(err => {
       if (err) {
         const data = err.response.data.message;
         if (data.length > 1) {
@@ -106,10 +106,10 @@ const store = new CustomStore({
     });
   },
   update: (key, values) => {
-    return axios.patch(`${baseUrl}/servico/${key}`, values)
+    return axios.patch(`${baseUrl}/servicos/${key}`, values)
   },
   remove: (key) => {
-    return axios.delete(`${baseUrl}/servico/${key}`)
+    return axios.delete(`${baseUrl}/servicos/${key}`)
   }
 });
 

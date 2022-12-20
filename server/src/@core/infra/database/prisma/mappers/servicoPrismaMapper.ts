@@ -1,6 +1,6 @@
 import Servico from "../../../../domain/entity/servicoEntity"
 import {servico as rawServico} from "@prisma/client"
-import { DescricaoServico } from "src/@core/domain/valueObjects/descricaoServicoValueObjects"
+import { DescricaoServico } from "../../../../../@core/domain/valueObjects/descricaoServicoValueObjects"
 
 export class ServicoPrismaMapper {
   static toPersistence(servico: Servico) {

@@ -25,14 +25,16 @@ export default class ServicoInMemoryRepository implements ServicoRepository {
 
   }
 
-  async update(servico: Servico): Promise<void> {
-    const index = this.servicos.findIndex((servico) => servico.id === servico.id)
+  async update(id: string, servico: Servico): Promise<Servico> {
+    const index = this.servicos.findIndex((servico) => servico.id === id)
 
     if (index === -1) {
       throw new Error('Serviço não encontrado')
     }
 
     this.servicos[index] = servico
+
+    return this.servicos[index]
 
   }
 

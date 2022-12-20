@@ -1,3 +1,4 @@
+import ServicoPrismaRepository from 'src/@core/infra/repository/servicoPrismaRepository'
 import { ServicoInputDTO } from '../../../domain/dto/servico/servicoInputDTO'
 import ServicoInMemoryRepository from '../../../infra/repository/servicoInMemoryRepository'
 import GetAllServicoUseCase from './getAllServicoUseCase'

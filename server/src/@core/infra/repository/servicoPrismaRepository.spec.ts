@@ -29,7 +29,8 @@ describe('ServicoPrismaRepository', () => {
   })
 
   it('should be able to create a new Serviço', async () => {
-    const servicoData = await servicoPrismaRepository.create(servico)
-    expect(servicoData.nome).toBe(servico.nome)
+    const servicoData = await servicoPrismaRepository.findAll()
+    console.log("🚀 ~ file: servicoPrismaRepository.spec.ts:33 ~ it ~ servicoData", servicoData)
+
   })
 })

@@ -1,11 +1,17 @@
 import { Injectable } from '@nestjs/common'
+import Servico from '../@core/domain/entity/servicoEntity'
+import { DescricaoServico } from '../@core/domain/valueObjects/descricaoServicoValueObjects'
 import CreateServicoUseCase, {
   CreateServicoUseCaseResponse
 } from '../@core/application/useCases/servico/createServicoUseCase'
 import DeleteServicoUseCase from '../@core/application/useCases/servico/deleteServicoUseCase'
-import GetAllServicoUseCase, { GetAllServicoUseCaseResponse } from '../@core/application/useCases/servico/getAllServicoUseCase'
+import GetAllServicoUseCase, {
+  GetAllServicoUseCaseResponse
+} from '../@core/application/useCases/servico/getAllServicoUseCase'
 import GetServicoByIDUseCase from '../@core/application/useCases/servico/getServicoByIdUseCase'
-import UpdateServicoUseCase from '../@core/application/useCases/servico/updateServicoUseCase'
+import UpdateServicoUseCase, {
+  UpdateServicoUseCaseResponse
+} from '../@core/application/useCases/servico/updateServicoUseCase'
 import { ServicoInputDTO } from '../@core/domain/dto/servico/servicoInputDTO'
 
 @Injectable()
@@ -31,8 +37,11 @@ export class ServicoService {
     return this.getServicoByIDUseCase.execute(id)
   }
 
-  update(id: string, updateServicoDto: ServicoInputDTO) {
-    return this.updateServicoUseCase.execute(id, updateServicoDto)
+  update(
+    id: string,
+    data: any
+  ): Promise<UpdateServicoUseCaseResponse> {
+    return this.updateServicoUseCase.execute(id, data)
   }
 
   remove(id: string) {

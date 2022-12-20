@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common'
 import { ServicoInputDTO } from '../@core/domain/dto/servico/servicoInputDTO'
 import { ServicoService } from './servico.service'
-import { ServicoViewModel } from './servicoViewModel'
+import { ServicoViewModel } from '../@core/infra/http/viewModels/servicoViewModel'
 
 @Controller('servicos')
 export class ServicoController {
@@ -21,25 +21,25 @@ export class ServicoController {
   async create(@Body() body: ServicoInputDTO) {
     try {
       const { servico } = await this.servicoService.create(body)
-      
+
       return ServicoViewModel.toView(servico)
-    
     } catch (error) {
-      if (error instanceof Error) {
-        throw new HttpException(
-          {
-            status: HttpStatus.NOT_FOUND,
-            error: error.message
-          },
-          HttpStatus.NOT_FOUND
-        )
-      }
+      console.log("🚀 ~ file: servico.controller.ts:27 ~ ServicoController ~ create ~ error", error)
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: error.message
+        },
+        HttpStatus.NOT_FOUND
+      )
     }
   }
 
   @Get()
-  findAll() {
-    return this.servicoService.findAll()
+  async findAll() {
+    const { servicos } = await this.servicoService.findAll()
+
+    return servicos.map(ServicoViewModel.toView)
   }
 
   @Get(':id')
@@ -48,33 +48,37 @@ export class ServicoController {
       const servicoData = await this.servicoService.findOne(id)
       return servicoData
     } catch (error) {
-      if (error instanceof Error) {
-        throw new HttpException(
-          {
-            status: HttpStatus.NOT_FOUND,
-            error: error.message
-          },
-          HttpStatus.NOT_FOUND
-        )
-      }
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: error.message
+        },
+        HttpStatus.NOT_FOUND
+      )
     }
   }
 
   @Patch(':id')
-  async update(@Param('id') id: string, @Body() updateServicoDto: any) {
+  async update(@Param('id') id: string, @Body() data: any) {
+    console.log(
+      '🚀 ~ file: servico.controller.ts:67 ~ ServicoController ~ update ~ id',
+      id
+    )
+    console.log(
+      '🚀 ~ file: servico.controller.ts:67 ~ ServicoController ~ update ~ updateServicoDto',
+      data
+    )
     try {
-      const ServicoData = await this.servicoService.update(id, updateServicoDto)
+      const ServicoData = await this.servicoService.update(id, data)
       return ServicoData
     } catch (error) {
-      if (error instanceof Error) {
-        throw new HttpException(
-          {
-            status: HttpStatus.NOT_FOUND,
-            error: error.message
-          },
-          HttpStatus.NOT_FOUND
-        )
-      }
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: error.message
+        },
+        HttpStatus.NOT_FOUND
+      )
     }
   }
 
@@ -83,15 +87,13 @@ export class ServicoController {
     try {
       return await this.servicoService.remove(id)
     } catch (error) {
-      if (error instanceof Error) {
-        throw new HttpException(
-          {
-            status: HttpStatus.NOT_FOUND,
-            error: error.message
-          },
-          HttpStatus.NOT_FOUND
-        )
-      }
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: error.message
+        },
+        HttpStatus.NOT_FOUND
+      )
     }
   }
 }
