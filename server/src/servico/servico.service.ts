@@ -1,7 +1,9 @@
 import { Injectable } from '@nestjs/common'
-import CreateServicoUseCase, { CreateServicoUseCaseResponse } from '../@core/application/useCases/servico/createServicoUseCase'
+import CreateServicoUseCase, {
+  CreateServicoUseCaseResponse
+} from '../@core/application/useCases/servico/createServicoUseCase'
 import DeleteServicoUseCase from '../@core/application/useCases/servico/deleteServicoUseCase'
-import GetAllServicoUseCase from '../@core/application/useCases/servico/getAllServicoUseCase'
+import GetAllServicoUseCase, { GetAllServicoUseCaseResponse } from '../@core/application/useCases/servico/getAllServicoUseCase'
 import GetServicoByIDUseCase from '../@core/application/useCases/servico/getServicoByIdUseCase'
 import UpdateServicoUseCase from '../@core/application/useCases/servico/updateServicoUseCase'
 import { ServicoInputDTO } from '../@core/domain/dto/servico/servicoInputDTO'
@@ -15,11 +17,13 @@ export class ServicoService {
     private updateServicoUseCase: UpdateServicoUseCase,
     private deleteServicoUseCase: DeleteServicoUseCase
   ) {}
-  create(createServicoDto: ServicoInputDTO): Promise<CreateServicoUseCaseResponse> {
+  create(
+    createServicoDto: ServicoInputDTO
+  ): Promise<CreateServicoUseCaseResponse> {
     return this.createServicoUseCase.execute(createServicoDto)
   }
 
-  findAll() {
+  findAll(): Promise<GetAllServicoUseCaseResponse> {
     return this.getAllServicoUseCase.execute()
   }
 
@@ -32,6 +36,6 @@ export class ServicoService {
   }
 
   remove(id: string) {
-    return this.deleteServicoUseCase.execute(id)
+    return this.deleteServicoUseCase.execute({ id })
   }
 }

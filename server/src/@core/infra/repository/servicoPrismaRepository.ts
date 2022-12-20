@@ -14,10 +14,10 @@ export default class ServicoPrismaRepository implements ServicoRepository {
     })
   }
 
-  async findById(id: string): Promise<Servico> {
+  async findById(servicoId: string): Promise<Servico | null> {
     const servico = await this.prisma.servico.findUnique({
       where: {
-        id
+        id: servicoId
       }
     })
 
@@ -63,6 +63,7 @@ export default class ServicoPrismaRepository implements ServicoRepository {
       where: { id: servico.id },
       data: { ...servicoNovo}
     })
+
   }
 
   async delete(id: string): Promise<void> {

@@ -22,13 +22,15 @@ export class ClientesController {
       const clienteData = await this.clientesService.create(createClienteDto)
       return clienteData
     } catch (error) {
-      throw new HttpException(
-        {
-          status: HttpStatus.BAD_REQUEST,
-          error: error.message
-        },
-        HttpStatus.BAD_REQUEST
-      )
+      if (error instanceof Error) {
+        throw new HttpException(
+          {
+            status: HttpStatus.NOT_FOUND,
+            error: error.message
+          },
+          HttpStatus.NOT_FOUND
+        )
+      }
     }
   }
 
@@ -43,13 +45,15 @@ export class ClientesController {
       const clienteData = await this.clientesService.findOne(id)
       return clienteData
     } catch (error) {
-      throw new HttpException(
-        {
-          status: HttpStatus.NOT_FOUND,
-          error: error.message
-        },
-        HttpStatus.NOT_FOUND
-      )
+      if (error instanceof Error) {
+        throw new HttpException(
+          {
+            status: HttpStatus.NOT_FOUND,
+            error: error.message
+          },
+          HttpStatus.NOT_FOUND
+        )
+      }
     }
   }
 
@@ -59,13 +63,15 @@ export class ClientesController {
       const clientData = await this.clientesService.update(id, updateClienteDto)
       return clientData
     } catch (error) {
-      throw new HttpException(
-        {
-          status: HttpStatus.NOT_FOUND,
-          error: error.message
-        },
-        HttpStatus.NOT_FOUND
-      )
+      if (error instanceof Error) {
+        throw new HttpException(
+          {
+            status: HttpStatus.NOT_FOUND,
+            error: error.message
+          },
+          HttpStatus.NOT_FOUND
+        )
+      }
     }
   }
 
@@ -74,13 +80,15 @@ export class ClientesController {
     try {
       return await this.clientesService.remove(id)
     } catch (error) {
-      throw new HttpException(
-        {
-          status: HttpStatus.NOT_FOUND,
-          error: error.message
-        },
-        HttpStatus.NOT_FOUND
-      )
+      if (error instanceof Error) {
+        throw new HttpException(
+          {
+            status: HttpStatus.NOT_FOUND,
+            error: error.message
+          },
+          HttpStatus.NOT_FOUND
+        )
+      }
     }
   }
 }

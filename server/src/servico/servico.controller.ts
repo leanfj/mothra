@@ -9,7 +9,6 @@ import {
   HttpException,
   HttpStatus
 } from '@nestjs/common'
-import { CreateServicoUseCaseResponse } from 'src/@core/application/useCases/servico/createServicoUseCase'
 import { ServicoInputDTO } from '../@core/domain/dto/servico/servicoInputDTO'
 import { ServicoService } from './servico.service'
 import { ServicoViewModel } from './servicoViewModel'

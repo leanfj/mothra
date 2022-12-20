@@ -18,11 +18,7 @@ export default class CreateServicoUseCase {
 
     const { nome, descricao, valor} = input
     
-    const servico = new Servico({
-      nome,
-      descricao: new DescricaoServico(descricao),
-      valor
-    })
+    const servico = new Servico({nome, descricao: new DescricaoServico(descricao), valor})
 
     await this.servicoRepository.create(servico)
 

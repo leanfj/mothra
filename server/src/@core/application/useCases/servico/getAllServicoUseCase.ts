@@ -1,7 +1,7 @@
 import Servico from 'src/@core/domain/entity/servicoEntity'
 import ServicoRepository from '../../../domain/repository/servicoRepository'
 
-interface GetAllServicoUseCaseResponse {
+export interface GetAllServicoUseCaseResponse {
   servicos: Servico[]
 }
 

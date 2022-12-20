@@ -2,7 +2,6 @@ import { randomUUID } from 'crypto'
 import { Replace } from 'src/helpers/Replace'
 import { DescricaoServico } from '../valueObjects/descricaoServicoValueObjects'
 export interface ServicoProps {
-  _id: string
   nome: string
   descricao: DescricaoServico
   valor: number
@@ -10,14 +9,16 @@ export interface ServicoProps {
   dataAtualizacao: Date
 }
 export default class Servico {
+  private _id: string;
   private props: ServicoProps
 
-  constructor(props: Replace<ServicoProps, {dataCadastro?: Date, dataAtualizacao?: Date, _id: string }>) {
+  constructor(props: Replace<ServicoProps, {dataCadastro?: Date, dataAtualizacao?: Date}>,  id?: string ) {
+    this._id = id ?? randomUUID()
     this.props = {
       ...props,
       dataCadastro: props.dataCadastro ?? new Date(),
       dataAtualizacao: props.dataAtualizacao ?? new Date(),
-      _id: props._id ?? randomUUID()
+      
     }
   }
 
@@ -34,7 +35,7 @@ export default class Servico {
   }
 
   public get id(): string {
-    return this.props._id
+    return this._id
   }
 
   public get nome(): string {
