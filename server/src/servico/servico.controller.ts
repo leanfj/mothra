@@ -28,7 +28,7 @@ export class ServicoController {
       throw new HttpException(
         {
           status: HttpStatus.NOT_FOUND,
-          error: error.message
+          message: [error.message] // Exibição no frontend exige array
         },
         HttpStatus.NOT_FOUND
       )

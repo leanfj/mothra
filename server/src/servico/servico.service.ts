@@ -37,10 +37,7 @@ export class ServicoService {
     return this.getServicoByIDUseCase.execute(id)
   }
 
-  update(
-    id: string,
-    data: any
-  ): Promise<UpdateServicoUseCaseResponse> {
+  update(id: string, data: any): Promise<UpdateServicoUseCaseResponse> {
     return this.updateServicoUseCase.execute(id, data)
   }
 

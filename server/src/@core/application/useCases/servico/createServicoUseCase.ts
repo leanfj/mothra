@@ -14,11 +14,16 @@ export interface CreateServicoUseCaseResponse {
 export default class CreateServicoUseCase {
   constructor(private servicoRepository: ServicoRepository) {}
 
-  async execute(input: CreateServicoUseCaseRequest): Promise<CreateServicoUseCaseResponse> {
+  async execute(
+    input: CreateServicoUseCaseRequest
+  ): Promise<CreateServicoUseCaseResponse> {
+    const { nome, descricao, valor } = input
 
-    const { nome, descricao, valor} = input
-    
-    const servico = new Servico({nome, descricao: new DescricaoServico(descricao), valor})
+    const servico = new Servico({
+      nome,
+      descricao: new DescricaoServico(descricao),
+      valor
+    })
 
     await this.servicoRepository.create(servico)
 
