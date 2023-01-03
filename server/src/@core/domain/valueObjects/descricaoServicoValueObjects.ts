@@ -3,7 +3,7 @@ export class DescricaoServico {
 
   constructor(descricao: string) {
     if (!this.validarTamanhoDescricao(descricao)) {
-      throw new Error('A descrição deve ter entre 10 e 100 caracteres')
+      throw Error('A descrição deve ter entre 10 e 100 caracteres')
     }
 
     this.descricao = descricao

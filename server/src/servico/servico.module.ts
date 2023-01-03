@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common'
+import { CacheModule, Module } from '@nestjs/common'
 
 import ServicoPrismaRepository from '../@core/infra/repository/servicoPrismaRepository'
 import CreateServicoUseCase from '../@core/application/useCases/servico/createServicoUseCase'
@@ -13,6 +13,7 @@ import { ServicoService } from './servico.service'
 import { PrismaService } from 'src/prisma-service/prisma-service.service'
 
 @Module({
+  imports: [CacheModule.register()],
   controllers: [ServicoController],
   providers: [
     ServicoService,

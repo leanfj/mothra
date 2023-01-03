@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common'
+import { Module, CacheModule } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
@@ -12,7 +12,8 @@ import { PrismaService } from './prisma-service/prisma-service.service'
     ConfigModule.forRoot(),
     ClientesModule,
     ProfissionalModule,
-    ServicoModule
+    ServicoModule,
+    // CacheModule.register()
   ],
   controllers: [AppController],
   providers: [AppService, PrismaService]

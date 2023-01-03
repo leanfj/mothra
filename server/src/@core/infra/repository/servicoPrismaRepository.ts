@@ -20,7 +20,7 @@ export default class ServicoPrismaRepository implements ServicoRepository {
     })
 
     if (!servico) {
-      throw new Error('Serviço não encontrado')
+      throw Error('Serviço não encontrado')
     }
 
     return ServicoPrismaMapper.toDomain(servico)

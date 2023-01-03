@@ -7,32 +7,47 @@ import {
   Param,
   Delete,
   HttpException,
-  HttpStatus
+  HttpStatus,
+  CacheInterceptor,
+  UseInterceptors
 } from '@nestjs/common'
 import { ServicoInputDTO } from '../@core/domain/dto/servico/servicoInputDTO'
 import { ServicoService } from './servico.service'
 import { ServicoViewModel } from '../@core/infra/http/viewModels/servicoViewModel'
 
 @Controller('servicos')
+@UseInterceptors(CacheInterceptor)
 export class ServicoController {
   constructor(private readonly servicoService: ServicoService) {}
 
   @Post()
   async create(@Body() body: ServicoInputDTO) {
-    try {
-      const { servico } = await this.servicoService.create(body)
+    return await this.servicoService
+      .create(body)
+      .then(({ servico }) => ServicoViewModel.toView(servico))
+      .catch((error) => {
+        throw new HttpException(
+          {
+            status: HttpStatus.NOT_FOUND,
+            message: [error.message] // Exibição no frontend exige array
+          },
+          HttpStatus.PRECONDITION_FAILED
+        )
+      })
 
-      return ServicoViewModel.toView(servico)
-    } catch (error) {
-      console.log("🚀 ~ file: servico.controller.ts:27 ~ ServicoController ~ create ~ error", error)
-      throw new HttpException(
-        {
-          status: HttpStatus.NOT_FOUND,
-          message: [error.message] // Exibição no frontend exige array
-        },
-        HttpStatus.NOT_FOUND
-      )
-    }
+    // try {
+    //   const { servico } = await this.servicoService.create(body)
+
+    //   return ServicoViewModel.toView(servico)
+    // } catch (error) {
+    //   throw new HttpException(
+    // {
+    //   status: HttpStatus.NOT_FOUND,
+    //   message: [error.message] // Exibição no frontend exige array
+    // },
+    //     HttpStatus.NOT_FOUND
+    //   )
+    // }
   }
 
   @Get()
