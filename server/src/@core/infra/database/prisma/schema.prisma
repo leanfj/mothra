@@ -9,13 +9,11 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
   // url      = env("DATABASE_URL_SUPABASE")
-
 }
 
 generator erd {
   provider = "prisma-erd-generator"
 }
-
 model cliente {
   id              String    @id
   nome            String
@@ -28,7 +26,6 @@ model cliente {
   dataCadastro    DateTime? @default(now())
   dataAtualizacao DateTime? @updatedAt
 }
-
 model profissional {
   id              String                @id
   nome            String
@@ -42,7 +39,6 @@ model profissional {
   dataCadastro    DateTime?             @default(now())
   dataAtualizacao DateTime?             @updatedAt
 }
-
 model servico {
   id              String                @id
   nome            String
@@ -51,6 +47,77 @@ model servico {
   profissionais   servicoProfissional[]
   dataCadastro    DateTime?             @default(now())
   dataAtualizacao DateTime?             @updatedAt
+}
+
+model produto {
+  id                  String                @id
+  fornecedor          fornecedor            @relation(fields: [fornecedorId], references: [id], onDelete: Cascade)
+  fornecedorId        String
+  idProdutoFornecedor String
+  descricao           String
+  categoria           categoria             @relation(fields: [categoriaId], references: [id], onDelete: Cascade)
+  categoriaId         String
+  cor                 String
+  tamanho             String
+  valorCusto          Float
+  valorVenda          Float
+  dataCadastro        DateTime?             @default(now())
+  dataAtualizacao     DateTime?             @updatedAt
+  estoque             estoque[]
+  pedidoCompraItem pedidoCompraItem[]
+}
+
+model estoque {
+  id              String    @id
+  produto         produto   @relation(fields: [produtoId], references: [id], onDelete: Cascade)
+  produtoId       String
+  quantidade      Int
+  dataCadastro    DateTime? @default(now())
+  dataAtualizacao DateTime? @updatedAt
+}
+
+model pedidoCompra {
+  id              String                @id
+  fornecedor      fornecedor            @relation(fields: [fornecedorId], references: [id], onDelete: Cascade)
+  fornecedorId    String
+  dataCompra      DateTime?
+  dataCadastro    DateTime?             @default(now())
+  dataAtualizacao DateTime?             @updatedAt
+  itens           pedidoCompraItem[]
+}
+
+model pedidoCompraItem {
+  id              String       @id
+  pedidoCompra    pedidoCompra @relation(fields: [pedidoCompraId], references: [id], onDelete: Cascade)
+  pedidoCompraId  String
+  produto         produto      @relation(fields: [produtoId], references: [id], onDelete: Cascade)
+  produtoId       String
+  quantidade      Int
+  valorUnitario   Float
+  valorTotal      Float
+  dataCadastro    DateTime?    @default(now())
+  dataAtualizacao DateTime?    @updatedAt
+}
+
+model fornecedor {
+  id              String         @id
+  nome            String
+  email           String
+  telefone        String
+  endereco        String
+  cidade          String
+  estado          String
+  produtos        produto[]
+  dataCadastro    DateTime?      @default(now())
+  dataAtualizacao DateTime?      @updatedAt
+  pedidoCompra    pedidoCompra[]
+}
+model categoria {
+  id              String    @id
+  nome            String
+  produtos        produto[]
+  dataCadastro    DateTime? @default(now())
+  dataAtualizacao DateTime? @updatedAt
 }
 
 model servicoProfissional {
@@ -62,3 +129,4 @@ model servicoProfissional {
   dataCadastro    DateTime?    @default(now())
   dataAtualizacao DateTime?    @updatedAt
 }
+
