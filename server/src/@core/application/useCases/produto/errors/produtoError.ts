@@ -1,4 +1,4 @@
-export class ServicoError extends Error {
+export class ProdutoError extends Error {
   constructor(readonly message: string) {
     super(message)
   }

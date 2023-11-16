@@ -1,4 +1,4 @@
-import { ServicoError } from '../../application/useCases/servico/errors/servicoError'
+import { GenericError } from '../../application/errors/genericError'
 import { PrismaService } from '../../../prisma-service/prisma-service.service'
 import Servico from '../../domain/entity/servicoEntity'
 import ServicoRepository from '../../domain/repository/servicoRepository'
@@ -34,7 +34,7 @@ export default class ServicoPrismaRepository implements ServicoRepository {
     })
 
     if (servicoDados.length > 0) {
-      throw new ServicoError('Serviço já cadastrado')
+      throw new GenericError('Serviço já cadastrado')
     }
 
     const servicoNovo = ServicoPrismaMapper.toPersistence(servico)

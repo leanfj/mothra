@@ -16,12 +16,17 @@ export class ProdutoPrismaMapper {
     }
   }
 
-  static toDomain(servico: rawServico): Servico {
+  static toDomain(produto: rawProduto): Produto {
 
-    return new Servico({
-      nome: servico.nome,
-      descricao: new DescricaoServico(servico.descricao),
-      valor: servico.valor,
-    }, servico.id)
+    return new Produto({
+      descricao: produto.descricao,
+      cor: produto.cor,
+      tamanho: produto.tamanho,
+      valorCusto: produto.valorCusto,
+      valorVenda: produto.valorVenda,
+      codigoUnico: produto.categoriaId,
+      categoria: produto.categoriaId,
+      fornecedor: produto.fornecedorId
+    }, produto.id)
   }
 }

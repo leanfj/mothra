@@ -1,51 +1,51 @@
-import { ServicoError } from '../../application/useCases/servico/errors/servicoError'
+import { ProdutoError } from '../../application/errors/produtoError'
 import { PrismaService } from '../../../prisma-service/prisma-service.service'
-import Servico from '../../domain/entity/servicoEntity'
+import Produto from '../../domain/entity/produtoEntity'
 import ProdutoRepository from '../../domain/repository/produtoRepository'
-import { ServicoPrismaMapper } from '../database/prisma/mappers/servicoPrismaMapper'
+import { ProdutoPrismaMapper } from '../database/prisma/mappers/produtoPrismaMapper'
 
 export default class ProdutoPrismaRepository implements ProdutoRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  async findAll(): Promise<Servico[]> {
-    const servicos = await this.prisma.servico.findMany() 
-    return servicos.map(ServicoPrismaMapper.toDomain)
+  async findAll(): Promise<Produto[]> {
+    const produtos = await this.prisma.produto.findMany() 
+    return produtos.map(ProdutoPrismaMapper.toDomain)
   }
 
-  async findById(servicoId: string): Promise<Servico> {
-    const servico = await this.prisma.servico.findUnique({
+  async findById(produtoId: string): Promise<Produto> {
+    const produto = await this.prisma.produto.findUnique({
       where: {
-        id: servicoId
+        id: produtoId
       }
     })
 
-    if (!servico) {
-      throw Error('Serviço não encontrado')
+    if (!produto) {
+      throw Error('Produto não encontrado')
     }
 
-    return ServicoPrismaMapper.toDomain(servico)
+    return ProdutoPrismaMapper.toDomain(produto)
   }
 
-  async create(servico: Servico): Promise<void> {
-    const servicoDados = await this.prisma.servico.findMany({
+  async create(produto: Produto): Promise<void> {
+    const produtoDados = await this.prisma.produto.findMany({
       where: {
-        nome: servico.nome
+        descricao: produto.descricao
       }
     })
 
-    if (servicoDados.length > 0) {
+    if (produtoDados.length > 0) {
       throw new ServicoError('Serviço já cadastrado')
     }
 
-    const servicoNovo = ServicoPrismaMapper.toPersistence(servico)
+    const servicoNovo = ProdutoPrismaMapper.toPersistence(produto)
 
-    await this.prisma.servico.create({
+    await this.prisma.produto.create({
       data: servicoNovo
     })
   }
 
-  async update(id: string, data: any): Promise<Servico> {
-    const servicoDados = await this.prisma.servico.findUnique({
+  async update(id: string, data: any): Promise<Produto> {
+    const servicoDados = await this.prisma.produto.findUnique({
       where: {
         id: id
       }
@@ -55,23 +55,23 @@ export default class ProdutoPrismaRepository implements ProdutoRepository {
       throw new Error('Serviço não encontrado')
     }
 
-    await this.prisma.servico.update({
+    await this.prisma.produto.update({
       where: { id },
       data: { ...servicoDados, ...data}
     })
 
-    const servicoAtualizado = await this.prisma.servico.findUnique({
+    const servicoAtualizado = await this.prisma.produto.findUnique({
       where: {
         id: id
       }
     })
 
-    return ServicoPrismaMapper.toDomain(servicoAtualizado)
+    return ProdutoPrismaMapper.toDomain(servicoAtualizado)
 
   }
 
   async delete(id: string): Promise<void> {
-    const servico = await this.prisma.servico.findUnique({
+    const servico = await this.prisma.produto.findUnique({
       where: {
         id
       }
@@ -81,7 +81,7 @@ export default class ProdutoPrismaRepository implements ProdutoRepository {
       throw new Error('Serviço não encontrado')
     }
 
-    await this.prisma.servico.delete({
+    await this.prisma.produto.delete({
       where: {
         id: servico.id
       }

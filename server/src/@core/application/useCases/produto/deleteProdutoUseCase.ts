@@ -1,16 +1,16 @@
-import ServicoRepository from '../../../domain/repository/servicoRepository'
+import ProdutoRepository from '../../../domain/repository/produtoRepository'
 
-interface DeleteServicoUseCaseRequest {
+interface DeleteProdutoUseCaseRequest {
   id: string
 }
 
-type DeleteServicoUseCaseResponse = void
+type DeleteProdutoUseCaseResponse = void
 
-export default class DeleteServicoUseCase {
-  constructor(private servicoRepository: ServicoRepository) {}
+export default class DeleteProdutoUseCase {
+  constructor(private produtoRepository: ProdutoRepository) {}
 
-  async execute(request: DeleteServicoUseCaseRequest): Promise<DeleteServicoUseCaseResponse> {
+  async execute(request: DeleteProdutoUseCaseRequest): Promise<DeleteProdutoUseCaseResponse> {
     const {id} = request
-    await this.servicoRepository.delete(id)
+    await this.produtoRepository.delete(id)
   }
 }

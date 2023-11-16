@@ -1,16 +1,16 @@
-import Servico from 'src/@core/domain/entity/servicoEntity'
-import ServicoRepository from '../../../domain/repository/servicoRepository'
+import Produto from '../../../domain/entity/produtoEntity'
+import ProdutoRepository from '../../../domain/repository/produtoRepository'
 
-export interface GetAllServicoUseCaseResponse {
-  servicos: Servico[]
+export interface GetAllProdutoUseCaseResponse {
+  produtos: Produto[]
 }
 
-export default class GetAllServicoUseCase {
-  constructor(private servicoRepository: ServicoRepository) {}
+export default class GetAllProdutoUseCase {
+  constructor(private produtoRepository: ProdutoRepository) {}
 
-  async execute(): Promise<GetAllServicoUseCaseResponse> {
-    const servicos = await this.servicoRepository.findAll()
+  async execute(): Promise<GetAllProdutoUseCaseResponse> {
+    const produtos = await this.produtoRepository.findAll()
 
-    return { servicos }
+    return { produtos }
   }
 }

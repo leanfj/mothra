@@ -1,15 +1,15 @@
-import Servico from 'src/@core/domain/entity/servicoEntity'
-import ServicoRepository from '../../../domain/repository/servicoRepository'
+import Produto from '../../../domain/entity/produtoEntity'
+import ProdutoRepository from '../../../domain/repository/produtoRepository'
 
-export interface UpdateServicoUseCaseResponse {
-  servico: Servico
+export interface UpdateProdutoUseCaseResponse {
+  produto: Produto
 }
-export default class UpdateServicoUseCase {
-  constructor(private servicoRepository: ServicoRepository) {}
+export default class UpdateProdutoUseCase {
+  constructor(private produtoRepository: ProdutoRepository) {}
 
-  async execute(id: string, input: Servico): Promise<UpdateServicoUseCaseResponse> {
-    const servico = await this.servicoRepository.update(id, input)
+  async execute(id: string, input: Produto): Promise<UpdateProdutoUseCaseResponse> {
+    const produto = await this.produtoRepository.update(id, input)
 
-    return { servico }
+    return { produto }
   }
 }
